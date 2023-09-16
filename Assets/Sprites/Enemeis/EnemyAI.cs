@@ -31,15 +31,27 @@ public class EnemyAI : MonoBehaviour
     private IEnumerator MoveMe(GameObject goal)
     {
         float step = Time.deltaTime * Speed;
-        while(transform.position != goal.transform.position)
+
+        if(transform.position != goal.transform.position)
         {
             transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, step);
-            print("" + transform.position);
+            print(transform.position);
             print("Goal " + goal.transform.position);
             yield return null;
         }
-        //Pathing.Remove(goal);
-        //EnemyMove();
+
+        if (transform.position == goal.transform.position)
+        {
+            Pathing.Remove(goal);
+        }
+        if (Pathing.Capacity == 0)
+        {
+            print(Pathing.Capacity);
+            yield break;
+        }
+        print(Pathing.Count);
+        
+
     }
 
     //Damages the enemy and checks if it has died

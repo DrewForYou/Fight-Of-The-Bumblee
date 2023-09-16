@@ -345,10 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889a505dec80a00439a896917e0cea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  Strength: 0
-  Value: 0
-  Speed: 0
+  Health: 1
+  Strength: 1
+  Value: 1
+  Speed: 0.8
   EnemyRB: {fileID: 1216428605}
   EnemyCollider: {fileID: 1216428604}
   Pathing:
