@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,10 +14,13 @@ public class EnemyAI : MonoBehaviour
     public Rigidbody2D EnemyRB;
     public Collider2D EnemyCollider;
     public List<GameObject> Pathing = new List<GameObject>();
+    //public GameManager GameManager;
     private int currentTarget;
+
 
     private void Awake()
     {
+        //GameManager = ;
         EnemyMove();
     }
 
@@ -24,6 +28,7 @@ public class EnemyAI : MonoBehaviour
     public void EnemyMove()
     {
         StartCoroutine(MoveMe(Pathing[0]));
+
         //Set up corotine that takes a positoin from the list and runs till the enemy reaches that point.
     }
 
@@ -32,26 +37,26 @@ public class EnemyAI : MonoBehaviour
     {
         float step = Time.deltaTime * Speed;
 
-        if(transform.position != goal.transform.position)
+        while (Vector3.Distance(transform.position, goal.transform.position) > 0.2f)
         {
             transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, step);
-            print(transform.position);
-            print("Goal " + goal.transform.position);
+            /*print(transform.position);
+            print("Goal " + goal.transform.position);*/
             yield return null;
         }
 
-        if (transform.position == goal.transform.position)
-        {
-            Pathing.Remove(goal);
-        }
-        if (Pathing.Capacity == 0)
-        {
-            print(Pathing.Capacity);
-            yield break;
-        }
-        print(Pathing.Count);
-        
 
+        print(Pathing.Count);
+        Pathing.Remove(goal);
+
+        if (Pathing.Count > 0)
+        { 
+            EnemyMove();
+        }
+        else
+        {
+            ReachedEnd();
+        }
     }
 
     //Damages the enemy and checks if it has died
@@ -64,9 +69,25 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*
+       if(collision.gameObject.tag == "Hive")
+       {
+           ReachedEnd();
+       }
+       */
+    }
+
     public void GainHoney()
     {
-        //GameController.Honey += Value;
+        //GameManager.Honey += Value;
+        Destroy(gameObject);
+    }
+
+    private void ReachedEnd()
+    {
+        //GameManager.HiveDamaged(Damage);
         Destroy(gameObject);
     }
 }
