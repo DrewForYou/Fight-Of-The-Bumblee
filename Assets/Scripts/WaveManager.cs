@@ -20,22 +20,36 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
-        if(WaveOver && TempStart)
+        if (WaveOver && TempStart)
         {
-            if(CurrentWave < Waves.Count)
+            if (CurrentWave < Waves.Count)
             {
                 WaveOver = false;
-                StartCoroutine(WaveRun(Waves[CurrentWave]));
+                WaveRun(Waves[CurrentWave]);
             }
         }
     }
 
-    IEnumerator WaveRun(Wave wave)
+    public void WaveRun(Wave wave)
     {
-        Instantiate(wave.EnemyList[0], SpawnPoint.transform);
-
-        yield return null;
+        for(int i = 0; i < wave.EnemyList.Count; i++)
+        {
+            StartCoroutine(EnemySpawn(wave.EnemyList[i], wave.EnemySpawns[i], wave.EnemySpawnDelay[i],
+                wave));
+        }
         CurrentWave += 1;
         WaveOver = true;
+    }
+
+    IEnumerator EnemySpawn(EnemyAI enemy, int count, float delay, Wave wave)
+    {
+        while(count != 0)
+        {
+            print("Got to Corutine");
+            Instantiate(enemy, SpawnPoint.transform);
+            count--;
+            yield return new WaitForSeconds(delay);
+        }
+        print("Exited corutine");
     }
 }

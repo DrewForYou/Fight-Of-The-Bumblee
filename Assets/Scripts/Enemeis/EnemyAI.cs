@@ -15,13 +15,13 @@ public class EnemyAI : MonoBehaviour
     public Collider2D EnemyCollider;
     public List<GameObject> Pathing;
     public GameManager GameManager;
-    private int currentTarget;
+    //private int currentTarget;
 
 
     private void Awake()
     {
         GameManager = FindAnyObjectByType<GameManager>();
-        Pathing = GameManager.MapPoints;
+        Pathing = new List<GameObject>(GameManager.MapPoints);
         EnemyMove();
     }
 
@@ -44,8 +44,7 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
-
-        print(Pathing.Count);
+        //print(Pathing.Count);
         Pathing.Remove(goal);
 
         if (Pathing.Count > 0)
