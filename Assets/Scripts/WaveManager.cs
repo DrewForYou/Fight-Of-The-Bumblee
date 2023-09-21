@@ -25,6 +25,7 @@ public class WaveManager : MonoBehaviour
             if (CurrentWave < Waves.Count)
             {
                 WaveOver = false;
+                TempStart = false;
                 WaveRun(Waves[CurrentWave]);
             }
         }
@@ -38,11 +39,12 @@ public class WaveManager : MonoBehaviour
                 wave));
         }
         CurrentWave += 1;
-        WaveOver = true;
+        
     }
 
     IEnumerator EnemySpawn(EnemyAI enemy, int count, float delay, Wave wave)
     {
+        
         while(count != 0)
         {
             print("Got to Corutine");
@@ -50,6 +52,38 @@ public class WaveManager : MonoBehaviour
             count--;
             yield return new WaitForSeconds(delay);
         }
+
+        while (!WaveOver)
+        {
+            if (FindAnyObjectByType<EnemyAI>() == null)
+            {
+                WaveOver = true;
+                print("I have been run");
+            }
+            yield return null;
+        }
+        //old way of figuring out when all enemies have been spawned
+        /*
+        bool AllDone = false;
+        wave.EnemyTypeIsFinished[wave.EnemyList.IndexOf(enemy)] = true;
+        for(int i = 0; i < wave.EnemyTypeIsFinished.Count; i++)
+        {
+            if (wave.EnemyTypeIsFinished[i] == false)
+            {
+                AllDone = false;
+                break;
+            }
+            else
+            {
+                AllDone = true;
+            }
+        }
+
+        if(AllDone)
+        {
+            WaveOver = true; 
+        }
+        */
         print("Exited corutine");
     }
 }
