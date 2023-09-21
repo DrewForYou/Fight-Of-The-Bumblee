@@ -31,6 +31,8 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    //Initates wave. Note: To start a wave you need to go into game manager on the object this is
+    //Attached to and enable TempStart.
     public void WaveRun(Wave wave)
     {
         for(int i = 0; i < wave.EnemyList.Count; i++)
@@ -53,20 +55,27 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
+        //Checks when all enemies are destroyed and spawned to then enable the next wave to come.
+        //While this could be in it's own coroutine, I put it here
         while (!WaveOver)
         {
-            if (FindAnyObjectByType<EnemyAI>() == null)
+            if (FindAnyObjectByType<EnemyAI>() == null && HasEverythingSpawned(enemy, wave))
             {
                 WaveOver = true;
                 print("I have been run");
             }
             yield return null;
         }
-        //old way of figuring out when all enemies have been spawned
-        /*
+        
+        print("Exited corutine");
+    }
+
+    //This checks to make sure all enemies have been spawned
+    public bool HasEverythingSpawned(EnemyAI enemy, Wave wave)
+    {
         bool AllDone = false;
         wave.EnemyTypeIsFinished[wave.EnemyList.IndexOf(enemy)] = true;
-        for(int i = 0; i < wave.EnemyTypeIsFinished.Count; i++)
+        for (int i = 0; i < wave.EnemyTypeIsFinished.Count; i++)
         {
             if (wave.EnemyTypeIsFinished[i] == false)
             {
@@ -79,11 +88,13 @@ public class WaveManager : MonoBehaviour
             }
         }
 
-        if(AllDone)
+        if (AllDone)
         {
-            WaveOver = true; 
+            return true;
         }
-        */
-        print("Exited corutine");
+        else 
+        { 
+            return false; 
+        }
     }
 }
