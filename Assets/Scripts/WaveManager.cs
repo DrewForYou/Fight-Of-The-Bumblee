@@ -41,6 +41,9 @@ public class WaveManager : MonoBehaviour
                 wave));
         }
         CurrentWave += 1;
+
+        //Don't forget to impliment me.
+        //GameManger.Reward(wave.WaveCompletionReward);
         
     }
 
