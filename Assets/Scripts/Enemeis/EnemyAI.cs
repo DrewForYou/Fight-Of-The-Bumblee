@@ -13,14 +13,15 @@ public class EnemyAI : MonoBehaviour
     public float Speed;
     public Rigidbody2D EnemyRB;
     public Collider2D EnemyCollider;
-    public List<GameObject> Pathing = new List<GameObject>();
-    //public GameManager GameManager;
-    private int currentTarget;
+    public List<GameObject> Pathing;
+    public GameManager GameManager;
+    //private int currentTarget;
 
 
     private void Awake()
     {
-        //GameManager = ;
+        GameManager = FindAnyObjectByType<GameManager>();
+        Pathing = new List<GameObject>(GameManager.MapPoints);
         EnemyMove();
     }
 
@@ -40,13 +41,10 @@ public class EnemyAI : MonoBehaviour
         while (Vector3.Distance(transform.position, goal.transform.position) > 0.2f)
         {
             transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, step);
-            /*print(transform.position);
-            print("Goal " + goal.transform.position);*/
             yield return null;
         }
 
-
-        print(Pathing.Count);
+        //print(Pathing.Count);
         Pathing.Remove(goal);
 
         if (Pathing.Count > 0)
@@ -71,12 +69,13 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-       if(collision.gameObject.tag == "Hive")
-       {
-           ReachedEnd();
-       }
-       */
+        //Impliment Proejctile Damage
+        if(collision.gameObject.tag == "Projectile")
+        {
+            /*Impliment getting damage type*/
+            Damaged(1);
+            //Damaged(collision.GetComponenet
+        }
     }
 
     public void GainHoney()
@@ -85,7 +84,7 @@ public class EnemyAI : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void ReachedEnd()
+    public void ReachedEnd()
     {
         //GameManager.HiveDamaged(Damage);
         Destroy(gameObject);
