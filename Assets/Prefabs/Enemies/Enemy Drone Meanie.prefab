@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 344589429804571851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   Health: 2
   Strength: 1
   Value: 1
-  Speed: 1.5
+  Speed: 2
   EnemyRB: {fileID: 7836950595652352836}
   EnemyCollider: {fileID: 8634389694260645085}
   Pathing:
