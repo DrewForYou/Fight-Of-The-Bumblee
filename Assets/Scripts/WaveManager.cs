@@ -12,9 +12,11 @@ public class WaveManager : MonoBehaviour
     public bool TempStart;
     public int CurrentWave;
     public GameObject SpawnPoint;
+    public CurrencyManager CurrencyManager;
 
     private void Start()
     {
+        CurrencyManager = FindAnyObjectByType<CurrencyManager>();
         WaveOver = true;
     }
 
@@ -66,6 +68,7 @@ public class WaveManager : MonoBehaviour
             {
                 WaveOver = true;
                 print("I have been run");
+                CurrencyManager.AddCurrency(wave.WaveCompletionReward);
             }
             yield return null;
         }

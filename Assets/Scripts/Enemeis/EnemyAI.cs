@@ -15,12 +15,15 @@ public class EnemyAI : MonoBehaviour
     public Collider2D EnemyCollider;
     public List<GameObject> Pathing;
     public GameManager GameManager;
+    public CurrencyManager CurrencyManager;
     //private int currentTarget;
 
 
     private void Awake()
     {
         GameManager = FindAnyObjectByType<GameManager>();
+        CurrencyManager = FindAnyObjectByType<CurrencyManager>();
+
         Pathing = new List<GameObject>(GameManager.MapPoints);
         EnemyMove();
     }
@@ -80,13 +83,13 @@ public class EnemyAI : MonoBehaviour
 
     public void GainHoney()
     {
-        //GameManager.Honey += Value;
+        CurrencyManager.AddCurrency(Value);
         Destroy(gameObject);
     }
 
     public void ReachedEnd()
     {
-        //GameManager.HiveDamaged(Damage);
+        GameManager.Hurt(Strength);
         Destroy(gameObject);
     }
 }
