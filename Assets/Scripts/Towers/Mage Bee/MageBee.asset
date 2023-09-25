@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: MageBee
   m_EditorClassIdentifier: 
   prefab: {fileID: 5390878058619954969, guid: b54d10cd3b46d9945963475a06edc81a, type: 3}
+  TowerPrice: 15

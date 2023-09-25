@@ -32,8 +32,19 @@ public class TowerPlacement : MonoBehaviour
         // makes sure player's mouse isn't over a UI object
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            // instantiates the selected tower type prefab
-            Instantiate(activeTowerType.prefab, position, Quaternion.identity);
+            if (CurrencyManager.instance.CanAfford(activeTowerType.TowerPrice))
+            {
+                // instantiates the selected tower type prefab
+                Instantiate(activeTowerType.prefab, position, Quaternion.identity);
+
+                // deduct the cost of the tower
+                CurrencyManager.instance.DeductCurrency(activeTowerType.TowerPrice);
+            }
+
+            else
+            {
+                Debug.Log("Not enough money for tower");
+            }
         }
     }
 }
