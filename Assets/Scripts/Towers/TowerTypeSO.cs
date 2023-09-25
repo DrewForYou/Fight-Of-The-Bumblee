@@ -6,4 +6,5 @@ using UnityEngine;
 public class TowerTypeSO : ScriptableObject
 {
     public Transform prefab;
+    public int TowerPrice;
 }

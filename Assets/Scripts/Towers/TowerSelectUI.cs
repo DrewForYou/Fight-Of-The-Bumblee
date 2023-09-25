@@ -15,10 +15,13 @@ public class TowerSelectUI : MonoBehaviour
 
     private void SelectTower()
     {
-        // instantiates the selected tower type
-        TowerPlacement.instance.activeTowerType = towerType;
+        if (CurrencyManager.instance.CanAfford(towerType.TowerPrice))
+        {
+            // instantiates the selected tower type
+            TowerPlacement.instance.activeTowerType = towerType;
 
-        // enables tower placement when button is selected
-        TowerPlacement.instance.canPlaceTower = true;
+            // enables tower placement when button is selected
+            TowerPlacement.instance.canPlaceTower = true;
+        }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WarriorBee
   m_EditorClassIdentifier: 
   prefab: {fileID: 6617817254540287569, guid: 420d41695a994b84eabaf21997c279ad, type: 3}
-  sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  TowerPrice: 5
