@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b616f4dee3b0c494d8f2e827e4436276, type: 3}
   m_Name: ArcherBee
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8099134216675447623, guid: 7c288fc42226b0843a30b64fb33791d6, type: 3}
+  prefab: {fileID: 6119058169643518458, guid: 682f1a3205202a64a80530b9c8f6d902, type: 3}
   TowerPrice: 10
