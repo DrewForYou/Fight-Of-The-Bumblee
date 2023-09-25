@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: TempStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.size
@@ -4041,6 +4041,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1272942399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
+  m_PrefabInstance: {fileID: 879259346}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5808c21330d51b941ae51ac364ae5aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1303526360
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,6 +4526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputInstance: {fileID: 1510806099}
+  WaveManager: {fileID: 1272942399}
 --- !u!114 &1510806099
 MonoBehaviour:
   m_ObjectHideFlags: 0
