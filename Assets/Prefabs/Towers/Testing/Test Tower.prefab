@@ -236,7 +236,7 @@ Transform:
   - {fileID: 4652400071019211873}
   - {fileID: 7046490167476375092}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2623736034830159862
 SpriteRenderer:
@@ -305,7 +305,7 @@ MonoBehaviour:
   ActiveIcon: {fileID: 7063237736485134733}
   Weapon: {fileID: 748108272016720545}
   Attack: {fileID: 1800465011939978231, guid: 4d2e88912dab62241b306983e5710ebd, type: 3}
-  AttackingRate: 5
+  AttackingRate: 0.5
   AttackPoint: {fileID: 4177857065907260947}
   Force: 100
   EnemyTargets: []
