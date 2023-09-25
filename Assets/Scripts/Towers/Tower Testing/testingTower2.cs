@@ -63,14 +63,14 @@ public class testingTower2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Enemy")
         {
             EnemyTargets.Add(collision.gameObject);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Enemy")
         {
             ActiveIcon.GetComponent<SpriteRenderer>().color = Color.green;
             Detected = true;
@@ -79,7 +79,7 @@ public class testingTower2 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Enemy")
         {
             ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
             Detected = false;
@@ -90,5 +90,10 @@ public class testingTower2 : MonoBehaviour
         }
     }
 
-
+    public void Upgrade1()
+    {
+        AttackingRate = 5;
+        Force = 200;
+        ActiveIcon.GetComponent<SpriteRenderer>().color = Color.blue;
+    }
 }
