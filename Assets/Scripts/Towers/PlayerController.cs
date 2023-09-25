@@ -6,8 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public PlayerInput PlayerInputInstance;
+    public WaveManager WaveManager;
 
     private InputAction leftClick;
+    private InputAction space;
     void Start()
     {
         PlayerInputInstance = GetComponent<PlayerInput>();
@@ -16,13 +18,21 @@ public class PlayerController : MonoBehaviour
 
         // finds the "LeftClick" action in the current action map
         leftClick = PlayerInputInstance.currentActionMap.FindAction("LeftClick");
+        space = PlayerInputInstance.currentActionMap.FindAction("Space");
 
         leftClick.performed += LeftClick_performed;
+        space.performed += Space_performed;
+    }
+
+    private void Space_performed(InputAction.CallbackContext obj)
+    {
+        WaveManager.TempStart = true;
     }
 
     private void OnDestroy()
     {
         leftClick.performed -= LeftClick_performed;
+        space.performed -= Space_performed;
     }
 
     public void LeftClick_performed(InputAction.CallbackContext obj)
