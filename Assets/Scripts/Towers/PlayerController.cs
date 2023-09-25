@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public WaveManager WaveManager;
 
     private InputAction leftClick;
+    private InputAction rightClick;
     private InputAction space;
     void Start()
     {
@@ -18,9 +19,11 @@ public class PlayerController : MonoBehaviour
 
         // finds the "LeftClick" action in the current action map
         leftClick = PlayerInputInstance.currentActionMap.FindAction("LeftClick");
+        rightClick = PlayerInputInstance.currentActionMap.FindAction("RightClick");
         space = PlayerInputInstance.currentActionMap.FindAction("Space");
 
         leftClick.performed += LeftClick_performed;
+        rightClick.performed += RightClick_performed;
         space.performed += Space_performed;
     }
 
@@ -32,9 +35,14 @@ public class PlayerController : MonoBehaviour
     private void OnDestroy()
     {
         leftClick.performed -= LeftClick_performed;
+        rightClick.performed -= RightClick_performed;
         space.performed -= Space_performed;
     }
 
+    public void RightClick_performed(InputAction.CallbackContext obj)
+    {
+
+    }
     public void LeftClick_performed(InputAction.CallbackContext obj)
     {
         // finds the position of the player's mouse 
