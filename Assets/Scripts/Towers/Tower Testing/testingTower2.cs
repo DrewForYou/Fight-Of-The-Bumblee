@@ -90,5 +90,10 @@ public class testingTower2 : MonoBehaviour
         }
     }
 
-
+    public void Upgrade1()
+    {
+        AttackingRate = 1;
+        Force = 200;
+        ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
+    }
 }
