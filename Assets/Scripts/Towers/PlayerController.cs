@@ -41,7 +41,24 @@ public class PlayerController : MonoBehaviour
 
     public void RightClick_performed(InputAction.CallbackContext obj)
     {
+        // detect tower the player is clicking
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
+        if (hit.collider != null)
+        {
+            testingTower2 tower = hit.collider.GetComponent<testingTower2>();
+
+            if (tower != null)
+            {
+                if (CurrencyManager.instance.CanAfford(5))
+                {
+                    CurrencyManager.instance.DeductCurrency(5);
+
+                    tower.Upgrade1();
+                }
+            }
+        }
     }
     public void LeftClick_performed(InputAction.CallbackContext obj)
     {
