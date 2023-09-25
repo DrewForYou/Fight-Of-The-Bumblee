@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
         // finds the position of the player's mouse 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
+        Debug.Log(mousePosition);
+
         // instantiate the tower at the player's mouse position
         TowerPlacement.instance.PlaceTower(mousePosition);
 
