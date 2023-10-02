@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1793287817397960156}
   - component: {fileID: 523052430844140889}
   - component: {fileID: 2373698018278171697}
+  - component: {fileID: 4689103783732371306}
   m_Layer: 0
   m_Name: Chill
   m_TagString: Untagged
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4689103783732371306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015915339809750866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae77001ea98a1ac4eaf62f6803da028e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
