@@ -4,38 +4,41 @@ using UnityEngine;
 
 public class testingTower2 : MonoBehaviour
 {
-
-   // public Transform Target;
-    
+    //this is the circle that is used for debugging. just to show if
+    //green = attacking red = no attacking  blue = just got upgraded
     public GameObject ActiveIcon;
     
+   
     Vector2 Direction;
 
+    //this is the weapon the bee will be holding EX: for the archer this would be the bow
     public GameObject Weapon;
 
+    //the gameobject that will be used for the attack EX: the arrow
     public GameObject Attack;
 
+    //how often it attacks
     public float AttackingRate;
+
 
     float nextTimeToAttack = 0;
 
+    //the place it shoots from
     public Transform AttackPoint;
 
+    //how fast it shoots
     public float Force;
 
+    //Knows when enemies are in the trigger
     bool Detected = false;
 
+    //list of enemies
     public List<GameObject> EnemyTargets;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        //just saying 
         if(EnemyTargets.Count > 0)
         {
             Vector2 targetpos = EnemyTargets[0].transform.position;
@@ -47,7 +50,7 @@ public class testingTower2 : MonoBehaviour
                 Weapon.transform.up = Direction;
                 if (Time.time > nextTimeToAttack)
                 {
-                   // print(targetpos);
+                 
                     nextTimeToAttack = Time.time + 1 / AttackingRate;
                     combat();
                 }
