@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MageBeeCode : MonoBehaviour
 {
-    public GameObject ActiveIcon;
+    //public GameObject ActiveIcon;
     public GameObject Weapon;
     public GameObject Attack;
     public Vector2 Direction;
@@ -55,7 +55,7 @@ public class MageBeeCode : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<EnemyAI>())
         {
-            ActiveIcon.GetComponent<SpriteRenderer>().color = Color.green;
+            //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.green;
             Detected = true;
         }
     }
@@ -64,7 +64,7 @@ public class MageBeeCode : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<EnemyAI>())
         {
-            ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
+            //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
             Detected = false;
         }
         if (EnemyTargets.Contains(collision.gameObject))
@@ -77,6 +77,6 @@ public class MageBeeCode : MonoBehaviour
     {
         AttackingRate = 5;
         Force = 200;
-        ActiveIcon.GetComponent<SpriteRenderer>().color = Color.blue;
+        //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.blue;
     }
 }
