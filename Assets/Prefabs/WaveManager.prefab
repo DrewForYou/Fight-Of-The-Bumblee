@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8661909255273776665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97505814, y: -1.5475868, z: -0.11958977}
+  m_LocalPosition: {x: -15.59, y: 1.5, z: -0.11958977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -82,8 +82,10 @@ MonoBehaviour:
     EnemySpawns: 05000000
     EnemySpawnDelay:
     - 2.5
+    EnemyTypeIsFinished: 
     WaveCompletionReward: 30
   WaveOver: 0
   TempStart: 0
   CurrentWave: 0
   SpawnPoint: {fileID: 6887456684395495581}
+  CurrencyManager: {fileID: 0}

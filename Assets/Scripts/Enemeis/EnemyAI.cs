@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     public GameManager GameManager;
     public CurrencyManager CurrencyManager;
     //private int currentTarget;
-
+    //private GameObject goal;
 
     private void Awake()
     {
@@ -28,6 +28,7 @@ public class EnemyAI : MonoBehaviour
         EnemyMove();
     }
 
+    
     //Moves the enemy
     public void EnemyMove()
     {
@@ -39,11 +40,9 @@ public class EnemyAI : MonoBehaviour
     //Goes through and moves the enemy to the current target
     private IEnumerator MoveMe(GameObject goal)
     {
-        float step = Time.deltaTime * Speed;
-
         while (Vector3.Distance(transform.position, goal.transform.position) > 0.2f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, step);
+            transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, Time.deltaTime * Speed);
             yield return null;
         }
 
@@ -59,6 +58,30 @@ public class EnemyAI : MonoBehaviour
             ReachedEnd();
         }
     }
+    /*
+
+    private void Update()
+    {
+        float step = Time.deltaTime * Speed;
+
+        if (Vector3.Distance(transform.position, goal.transform.position) > 0.2f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, step);
+            
+        }
+
+        //print(Pathing.Count);
+        Pathing.Remove(goal);
+
+        if (Pathing.Count > 0)
+        {
+            //EnemyMove();
+        }
+        else
+        {
+            ReachedEnd();
+        }
+    }*/
 
     //Damages the enemy and checks if it has died
     public void Damaged(int damage)
@@ -69,18 +92,19 @@ public class EnemyAI : MonoBehaviour
             GainHoney();
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+ 
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         //Impliment Proejctile Damage
         if(collision.gameObject.tag == "Projectile")
         {
-            /*Impliment getting damage type*/
+            *//*Impliment getting damage type*//*
             Damaged(1);
             //Damaged(collision.GetComponenet
         }
-    }
-
+    }*/
+  
     public void GainHoney()
     {
         CurrencyManager.AddCurrency(Value);
