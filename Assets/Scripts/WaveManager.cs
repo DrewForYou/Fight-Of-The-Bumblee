@@ -13,6 +13,7 @@ public class WaveManager : MonoBehaviour
     public int CurrentWave;
     public GameObject SpawnPoint;
     public CurrencyManager CurrencyManager;
+    public GameManager GameManager;
 
     private void Start()
     {
@@ -30,6 +31,10 @@ public class WaveManager : MonoBehaviour
                 TempStart = false;
                 WaveRun(Waves[CurrentWave]);
             }
+        }
+        if(WaveOver && CurrentWave >= Waves.Count)
+        {
+            GameManager.Win();
         }
     }
 
