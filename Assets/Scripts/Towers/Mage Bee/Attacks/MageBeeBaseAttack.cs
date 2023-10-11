@@ -10,7 +10,7 @@ public class MageBeeBaseAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(this.gameObject);
+            collision.GetComponent<EnemyAI>().Damaged(Damage);
         }
     }
 }

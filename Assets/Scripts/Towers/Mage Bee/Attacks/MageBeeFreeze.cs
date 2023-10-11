@@ -8,7 +8,11 @@ public class MageBeeFreeze : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyAI>().Speed /= 2;
+            if(collision.gameObject.GetComponent<EnemyAI>().Frozen == false)
+            {
+                collision.gameObject.GetComponent<EnemyAI>().Speed /= 2;
+                collision.gameObject.GetComponent<EnemyAI>().Frozen = true;
+            }
         }
     }
 
@@ -16,7 +20,11 @@ public class MageBeeFreeze : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyAI>().Speed *= 2;
+            if(collision.gameObject.GetComponent<EnemyAI>().Frozen == true)
+            {
+                collision.gameObject.GetComponent<EnemyAI>().Frozen = false;
+                collision.gameObject.GetComponent<EnemyAI>().Speed *= 2;
+            }
         }
     }
 
