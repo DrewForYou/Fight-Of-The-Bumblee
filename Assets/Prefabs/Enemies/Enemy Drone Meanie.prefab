@@ -164,10 +164,11 @@ MonoBehaviour:
   Health: 2
   Strength: 1
   Value: 1
-  Speed: 2
+  Speed: 4
   EnemyRB: {fileID: 7836950595652352836}
   EnemyCollider: {fileID: 8634389694260645085}
   Pathing:
   - {fileID: 0}
   - {fileID: 0}
   GameManager: {fileID: 0}
+  CurrencyManager: {fileID: 0}
