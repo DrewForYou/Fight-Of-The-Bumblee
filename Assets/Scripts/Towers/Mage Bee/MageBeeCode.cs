@@ -6,13 +6,22 @@ public class MageBeeCode : MonoBehaviour
 {
     //public GameObject ActiveIcon;
     public GameObject Weapon;
-    public GameObject Attack;
+    public GameObject BaseAttack;
+    public GameObject FireBall;
+    public GameObject Freeze;
+    public GameObject Lightning;
+    public float BaseAttackingRate;
+    public float FireballAttackingRate;
+    public float LightningAttackingRate;
     public Vector2 Direction;
-    public float AttackingRate;
-    float nextTimeToAttack = 0;
+    float nextTimeToBaseAttack = 0;
+    float nextTimeToFireballAttack = 0;
+    float nextTimeToLightningAttack = 0;
     public Transform AttackPoint;
     public float Force;
     bool Detected = false;
+    bool FireballOn = false;
+    bool LightningOn = false;
     public List<GameObject> EnemyTargets;
 
  
@@ -27,20 +36,38 @@ public class MageBeeCode : MonoBehaviour
 
             if (Detected)
             {
+                //Determiens when to fire base attack
                 Weapon.transform.up = Direction;
-                if (Time.time > nextTimeToAttack)
+                if (Time.time > nextTimeToBaseAttack)
                 {
                     // print(targetpos);
-                    nextTimeToAttack = Time.time + 1 / AttackingRate;
-                    Combat();
+                    nextTimeToBaseAttack = Time.time + 1 / BaseAttackingRate;
+                    Combat(BaseAttack);
                 }
+
+                //Determines when to fire fireball
+                if (Time.time > nextTimeToFireballAttack && FireballOn)
+                {
+                    // print(targetpos);
+                    nextTimeToFireballAttack = Time.time + 1 / FireballAttackingRate;
+                    Combat(FireBall);
+                }
+
+                //Deteremines when to fire lightning
+                if (Time.time > nextTimeToLightningAttack && LightningOn)
+                {
+                    // print(targetpos);
+                    nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
+                    //Needs it's own version of Combat.
+                }
+
             }
         }
     }
 
-    void Combat()
+    void Combat(GameObject attack)
     {
-        GameObject AttackIns = Instantiate(Attack, AttackPoint.position, Quaternion.identity);
+        GameObject AttackIns = Instantiate(attack, AttackPoint.position, Quaternion.identity);
         AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
     }
 
@@ -75,8 +102,16 @@ public class MageBeeCode : MonoBehaviour
 
     public void Upgrade1()
     {
-        AttackingRate = 5;
-        Force = 200;
-        //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.blue;
+        FireballOn = true;
+    }
+
+    public void Upgrade2()
+    {
+        Freeze.gameObject.SetActive(true);
+    }
+
+    public void Upgrade3()
+    {
+        LightningOn = true;
     }
 }
