@@ -14,14 +14,16 @@ public class MageBeeCode : MonoBehaviour
     public float FireballAttackingRate;
     public float LightningAttackingRate;
     public Vector2 Direction;
+    public Vector2 Direction2;
+    public Vector2 Direction3;
     float nextTimeToBaseAttack = 0;
     float nextTimeToFireballAttack = 0;
     float nextTimeToLightningAttack = 0;
     public Transform AttackPoint;
     public float Force;
     bool Detected = false;
-    bool FireballOn = false;
-    bool LightningOn = false;
+    public bool FireballOn = false;
+    public bool LightningOn = false;
     public List<GameObject> EnemyTargets;
 
  
@@ -31,6 +33,8 @@ public class MageBeeCode : MonoBehaviour
         if (EnemyTargets.Count > 0)
         {
             Vector2 targetpos = EnemyTargets[0].transform.position;
+            Vector2 targetpos2;
+            Vector2 targetpos3;
 
             Direction = targetpos - (Vector2)transform.position;
 
@@ -40,35 +44,43 @@ public class MageBeeCode : MonoBehaviour
                 Weapon.transform.up = Direction;
                 if (Time.time > nextTimeToBaseAttack)
                 {
-                    // print(targetpos);
                     nextTimeToBaseAttack = Time.time + 1 / BaseAttackingRate;
-                    Combat(BaseAttack);
+                    Combat(BaseAttack, Direction);
                 }
 
                 //Determines when to fire fireball
                 if (Time.time > nextTimeToFireballAttack && FireballOn)
                 {
-                    // print(targetpos);
                     nextTimeToFireballAttack = Time.time + 1 / FireballAttackingRate;
-                    Combat(FireBall);
+                    Combat(FireBall, Direction);
                 }
 
                 //Deteremines when to fire lightning
                 if (Time.time > nextTimeToLightningAttack && LightningOn)
                 {
-                    // print(targetpos);
                     nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
-                    //Needs it's own version of Combat.
+                    Combat(Lightning, Direction);
+
+                    if (EnemyTargets.Count > 1)
+                    {
+                        targetpos2 = EnemyTargets[1].transform.position;
+                        Combat(Lightning, Direction2);
+                    }
+                    if (EnemyTargets.Count > 2)
+                    {
+                        targetpos3 = EnemyTargets[2].transform.position;
+                        Combat(Lightning, Direction3);
+                    }
                 }
 
             }
         }
     }
 
-    void Combat(GameObject attack)
+    void Combat(GameObject attack, Vector2 direction)
     {
         GameObject AttackIns = Instantiate(attack, AttackPoint.position, Quaternion.identity);
-        AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
+        AttackIns.GetComponent<Rigidbody2D>().AddForce(direction * Force);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
