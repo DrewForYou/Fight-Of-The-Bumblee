@@ -108,10 +108,14 @@ MonoBehaviour:
   Lightning: {fileID: 1565853196625214422, guid: b1f0136e89c944642ace1d2cafbe810c, type: 3}
   BaseAttackingRate: 1
   FireballAttackingRate: 3
-  LightningAttackingRate: 2
+  LightningAttackingRate: 10
   Direction: {x: 0, y: 0}
+  Direction2: {x: 0, y: 0}
+  Direction3: {x: 0, y: 0}
   AttackPoint: {fileID: 3668941636649190233}
   Force: 100
+  FireballOn: 0
+  LightningOn: 0
   EnemyTargets: []
 --- !u!58 &664067619854467221
 CircleCollider2D:
