@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             testingTower2 tower = hit.collider.GetComponent<testingTower2>();
 
+
             if (tower != null)
             {
                 if (CurrencyManager.instance.CanAfford(5))
@@ -64,10 +65,16 @@ public class PlayerController : MonoBehaviour
     {
         // finds the position of the player's mouse 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+
+        // this code makes it so the tower will snap to the grid - tower will be placed inside
+        // the closest grid player is clicking on. without the + 0.5f & -0.5f the towers
+        // instantiate on the middle lines of the grid - not in the middle of the grid square
+        mousePosition.x = Mathf.Round(mousePosition.x + 0.5f) - 0.5f;
+        mousePosition.y = Mathf.Round(mousePosition.y + 0.5f) - 0.5f;
         
         // instantiate the tower at the player's mouse position
         TowerPlacement.instance.PlaceTower(mousePosition);
-
+        
         Debug.Log("Player Clicked");        // let's us know the player is able
                                             // to click
     }

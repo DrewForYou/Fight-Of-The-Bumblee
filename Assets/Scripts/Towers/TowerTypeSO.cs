@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class TowerTypeSO : ScriptableObject
 {
-    public Transform prefab;
+    public Transform Prefab;
     public int TowerPrice;
 }
