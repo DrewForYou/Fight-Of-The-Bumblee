@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     public List<GameObject> Pathing;
     public GameManager GameManager;
     public CurrencyManager CurrencyManager;
+    public bool Frozen;
     //private int currentTarget;
     //private GameObject goal;
 

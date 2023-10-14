@@ -5,12 +5,24 @@ using UnityEngine;
 public class MageBeeFireball : MonoBehaviour
 {
     public int Damage;
+    public Rigidbody2D Rigidbody;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(this.gameObject);
+            GetComponent<Animator>().SetBool("HitEnemy", true);
+            Rigidbody.velocity = Vector3.zero;
+            collision.GetComponent<EnemyAI>().Damaged(Damage);
         }
+        /*else if (collision.gameObject.tag == "Walls")
+        {
+            Destroy(this.gameObject);
+        }*/
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 }
