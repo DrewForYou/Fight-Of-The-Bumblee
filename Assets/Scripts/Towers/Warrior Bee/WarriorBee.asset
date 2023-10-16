@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b616f4dee3b0c494d8f2e827e4436276, type: 3}
   m_Name: WarriorBee
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8938599246119198309, guid: 93791371c9932c64f8536af7460c485b, type: 3}
+  Prefab: {fileID: 8938599246119198309, guid: 93791371c9932c64f8536af7460c485b, type: 3}
   TowerPrice: 5
