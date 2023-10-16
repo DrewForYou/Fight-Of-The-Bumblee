@@ -71,7 +71,7 @@ public class ArcherBeeTower : Tower
         GameObject Arrow = Instantiate(ArrowPrefab, ArrowSpawnPoint.position, Quaternion.identity);
 
         ArrowBehaviour arrowBehaviour = Arrow.GetComponent<ArrowBehaviour>();
-
+        arrowBehaviour.Damage = AttackDamage;
         // this sets the target for the arrow to the current target/enemy
         arrowBehaviour.SetTarget(target);
 

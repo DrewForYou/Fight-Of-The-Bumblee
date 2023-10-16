@@ -43,6 +43,13 @@ public class ArrowBehaviour : MonoBehaviour
         // if the arrow collides with an enemy, destroy the arrow 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+
+            if (enemy != null)
+            {
+                enemy.Damaged(Damage);
+                Debug.Log("Arrow hit enemy" + enemy.Health);
+            }
             //collision.GetComponent<EnemyAI>().Damaged(Damage);
             Destroy(gameObject);
         }
