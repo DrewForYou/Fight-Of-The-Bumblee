@@ -101,4 +101,8 @@ public class WarriorBeeCode : MonoBehaviour
     {
 
     }
+    public void upgrade3()
+    {
+
+    }
 }
