@@ -2004,8 +2004,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67a58fcf76d0f243b53d8a8e25cc28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerTypeSO: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
   Upgrade1: {fileID: 1412160228}
+  Upgrade2: {fileID: 337741596}
+  Upgrade3: {fileID: 742077875}
 --- !u!1001 &868759610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3118,7 +3119,6 @@ GameObject:
   - component: {fileID: 1412160230}
   - component: {fileID: 1412160229}
   - component: {fileID: 1412160228}
-  - component: {fileID: 1412160231}
   m_Layer: 5
   m_Name: Upgrade1
   m_TagString: Untagged
@@ -3241,20 +3241,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412160226}
   m_CullTransparentMesh: 1
---- !u!114 &1412160231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412160226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67a58fcf76d0f243b53d8a8e25cc28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TowerTypeSO: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
-  Upgrade1: {fileID: 1412160228}
 --- !u!1 &1412467096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,7 +6444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf3cc48b7a3d444f89e0d2cbc7d29a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingCurrency: 20
+  startingCurrency: 50
   currencyText: {fileID: 705103666}
 --- !u!114 &1947239862
 MonoBehaviour:
