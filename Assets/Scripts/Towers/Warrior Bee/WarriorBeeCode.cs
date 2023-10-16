@@ -6,7 +6,7 @@ public class WarriorBeeCode : MonoBehaviour
 {
     //this is the circle that is used for debugging. just to show if
     //green = attacking red = no attacking  blue = just got upgraded
-    public GameObject ActiveIcon;
+  //  public GameObject ActiveIcon;
 
 
     Vector2 Direction;
@@ -75,7 +75,7 @@ public class WarriorBeeCode : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            ActiveIcon.GetComponent<SpriteRenderer>().color = Color.green;
+            //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.green;
             Detected = true;
         }
     }
@@ -84,7 +84,7 @@ public class WarriorBeeCode : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
+            //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
             Detected = false;
         }
         if (EnemyTargets.Contains(collision.gameObject))
@@ -93,10 +93,16 @@ public class WarriorBeeCode : MonoBehaviour
         }
     }
 
-    public void Upgrade1()
+    public void upgrade1()
     {
-        AttackingRate = 5;
-        Force = 200;
-        ActiveIcon.GetComponent<SpriteRenderer>().color = Color.blue;
+
+    }
+    public void upgrade2()
+    {
+
+    }
+    public void upgrade3()
+    {
+
     }
 }
