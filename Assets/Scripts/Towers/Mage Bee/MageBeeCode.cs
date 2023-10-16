@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MageBeeCode : MonoBehaviour
@@ -25,6 +26,7 @@ public class MageBeeCode : MonoBehaviour
     public bool FireballOn = false;
     public bool LightningOn = false;
     public List<GameObject> EnemyTargets;
+    
 
  
     // Update is called once per frame
@@ -38,41 +40,53 @@ public class MageBeeCode : MonoBehaviour
 
             Direction = targetpos - (Vector2)transform.position;
 
-            if (Detected)
+            
+            //Determiens when to fire base attack
+            Weapon.transform.up = Direction;
+            if (Time.time > nextTimeToBaseAttack)
             {
-                //Determiens when to fire base attack
-                Weapon.transform.up = Direction;
-                if (Time.time > nextTimeToBaseAttack)
+                if(Detected)
                 {
                     nextTimeToBaseAttack = Time.time + 1 / BaseAttackingRate;
                     Combat(BaseAttack, Direction);
+                    //BaseAttackTarget();
                 }
 
-                //Determines when to fire fireball
-                if (Time.time > nextTimeToFireballAttack && FireballOn)
+            }
+            //Determines when to fire fireball
+            if (Time.time > nextTimeToFireballAttack && FireballOn)
+            {
+                if (Detected)
                 {
                     nextTimeToFireballAttack = Time.time + 1 / FireballAttackingRate;
                     Combat(FireBall, Direction);
+                    //FireballTarget();
                 }
-
-                //Deteremines when to fire lightning
-                if (Time.time > nextTimeToLightningAttack && LightningOn)
+            }
+            
+            //Deteremines when to fire lightning
+            if (Time.time > nextTimeToLightningAttack && LightningOn)
+            {
+                if (Detected)
                 {
-                    nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
-                    Combat(Lightning, Direction);
+                    if (EnemyTargets.Count > 2)
+                    {
+                        targetpos3 = EnemyTargets[2].transform.position;
+                        Direction3 = targetpos3 - (Vector2)transform.position;
+
+                        Combat(Lightning, Direction3);
+                    }
 
                     if (EnemyTargets.Count > 1)
                     {
                         targetpos2 = EnemyTargets[1].transform.position;
+                        Direction2 = targetpos2 - (Vector2)transform.position;
                         Combat(Lightning, Direction2);
                     }
-                    if (EnemyTargets.Count > 2)
-                    {
-                        targetpos3 = EnemyTargets[2].transform.position;
-                        Combat(Lightning, Direction3);
-                    }
-                }
 
+                    nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
+                    Combat(Lightning, Direction);
+                }
             }
         }
     }
@@ -126,4 +140,26 @@ public class MageBeeCode : MonoBehaviour
     {
         LightningOn = true;
     }
+
+    /*
+    public void BaseAttackTarget()
+    {
+        Vector2 targetpos = EnemyTargets[0].transform.position;
+        Direction = targetpos - (Vector2)transform.position;
+        Weapon.transform.up = Direction;
+        Combat(BaseAttack, Direction);
+    }
+
+    public void FireballTarget()
+    {
+        Vector2 targetpos = EnemyTargets[0].transform.position;
+        Direction = targetpos - (Vector2)transform.position;
+        Weapon.transform.up = Direction;
+        Combat(FireBall, Direction);
+    }
+
+    public void LightningTarget()
+    {
+
+    }*/
 }
