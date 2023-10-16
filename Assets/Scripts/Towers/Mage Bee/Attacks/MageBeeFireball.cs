@@ -15,10 +15,10 @@ public class MageBeeFireball : MonoBehaviour
             Rigidbody.velocity = Vector3.zero;
             collision.GetComponent<EnemyAI>().Damaged(Damage);
         }
-        /*else if (collision.gameObject.tag == "Walls")
+        if (collision.gameObject.tag == "Border")
         {
             Destroy(this.gameObject);
-        }*/
+        }
     }
 
     public void Destroy()

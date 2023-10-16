@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class MageBeeCode : MonoBehaviour
+public class MageBeeCode : Tower
 {
     //public GameObject ActiveIcon;
     public GameObject Weapon;
@@ -130,17 +130,17 @@ public class MageBeeCode : MonoBehaviour
         }
     }
 
-    public void Upgrade1()
+    public override void Upgrade1()
     {
         FireballOn = true;
     }
 
-    public void Upgrade2()
+    public override void Upgrade2()
     {
         Freeze.gameObject.SetActive(true);
     }
 
-    public void Upgrade3()
+    public override void Upgrade3()
     {
         LightningOn = true;
     }
