@@ -11,9 +11,9 @@ public class TowerPlacement : MonoBehaviour
 {
     public static TowerPlacement instance;
 
-    public TowerTypeSO activeTowerType;
+    public TowerTypeSO ActiveTowerType;
 
-    public bool canPlaceTower = false;
+    public bool CanPlaceTower = false;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class TowerPlacement : MonoBehaviour
     {
         // checks if the player can place tower
                
-        if (!canPlaceTower)
+        if (!CanPlaceTower)
         {
             return;
         }
@@ -35,7 +35,7 @@ public class TowerPlacement : MonoBehaviour
         // makes sure player's mouse isn't over a UI object
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (CurrencyManager.instance.CanAfford(activeTowerType.TowerPrice))
+            if (CurrencyManager.instance.CanAfford(ActiveTowerType.TowerPrice))
             {
                 RaycastHit2D hit = Physics2D.Raycast(position, Vector2.zero);
 
@@ -43,7 +43,16 @@ public class TowerPlacement : MonoBehaviour
                 // can not be placed here
                 if (hit.collider != null && hit.collider.CompareTag("Path"))
                 {
-                    canPlaceTower = false;
+                    CanPlaceTower = false;
+                    Debug.Log("Hit object with tag: " + hit.collider.tag);
+                    Debug.Log("can't place tower here");
+                }
+
+                // this code makes it so you can't place the towers on top of
+                // each other - just make sure to add the tag "tower" 
+                if (hit.collider != null && hit.collider.CompareTag("Tower"))
+                {
+                    CanPlaceTower = false;
 
                     Debug.Log("can't place tower here");
                 }
@@ -51,20 +60,15 @@ public class TowerPlacement : MonoBehaviour
                 else
                 {
                     // instantiates the selected tower type prefab
-                    Instantiate(activeTowerType.prefab, position, Quaternion.identity);
+                    Instantiate(ActiveTowerType.Prefab, position, Quaternion.identity);
                    
                     // deduct the cost of the tower
-                    CurrencyManager.instance.DeductCurrency(activeTowerType.TowerPrice);
-                }
-                // instantiates the selected tower type prefab
-                //Instantiate(activeTowerType.prefab, position, Quaternion.identity);
+                    CurrencyManager.instance.DeductCurrency(ActiveTowerType.TowerPrice);
 
-                // deduct the cost of the tower
-                //CurrencyManager.instance.DeductCurrency(activeTowerType.TowerPrice);
-            }
-            else
-            {
-                Debug.Log("Can not place tower");
+                    // disable tower placement until player clicks another button
+                    CanPlaceTower = false;
+                }
+               
             }
         }
     }

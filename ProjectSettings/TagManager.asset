@@ -7,6 +7,8 @@ TagManager:
   - Projectile
   - Enemy
   - Path
+  - Tower
+  - Border
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - UI
   - Projectile
   - Path
-  - 
-  - 
+  - Enemy
+  - Arrow
   - 
   - 
   - 
