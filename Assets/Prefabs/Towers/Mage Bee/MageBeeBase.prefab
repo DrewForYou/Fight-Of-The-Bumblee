@@ -107,8 +107,8 @@ MonoBehaviour:
   Freeze: {fileID: 1015915339809750866, guid: 563642e48f35d6f42b4b6f4185a048d5, type: 3}
   Lightning: {fileID: 1565853196625214422, guid: b1f0136e89c944642ace1d2cafbe810c, type: 3}
   BaseAttackingRate: 1
-  FireballAttackingRate: 0.001
-  LightningAttackingRate: 0.005
+  FireballAttackingRate: 0.05
+  LightningAttackingRate: 0.1
   Direction: {x: 0, y: 0}
   Direction2: {x: 0, y: 0}
   Direction3: {x: 0, y: 0}
