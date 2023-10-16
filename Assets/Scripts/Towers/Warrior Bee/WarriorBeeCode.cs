@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarriorBeeCode : MonoBehaviour
+public class WarriorBeeCode : Tower
 {
     //this is the circle that is used for debugging. just to show if
     //green = attacking red = no attacking  blue = just got upgraded
@@ -93,15 +93,15 @@ public class WarriorBeeCode : MonoBehaviour
         }
     }
 
-    public void upgrade1()
+    public override void Upgrade1()
     {
 
     }
-    public void upgrade2()
+    public override void Upgrade2()
     {
 
     }
-    public void upgrade3()
+    public override void Upgrade3()
     {
 
     }
