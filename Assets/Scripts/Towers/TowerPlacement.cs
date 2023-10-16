@@ -44,7 +44,7 @@ public class TowerPlacement : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("Path"))
                 {
                     CanPlaceTower = false;
-
+                    Debug.Log("Hit object with tag: " + hit.collider.tag);
                     Debug.Log("can't place tower here");
                 }
 
@@ -64,12 +64,11 @@ public class TowerPlacement : MonoBehaviour
                    
                     // deduct the cost of the tower
                     CurrencyManager.instance.DeductCurrency(ActiveTowerType.TowerPrice);
+
+                    // disable tower placement until player clicks another button
+                    CanPlaceTower = false;
                 }
                
-            }
-            else
-            {
-                Debug.Log("Can not place tower");
             }
         }
     }

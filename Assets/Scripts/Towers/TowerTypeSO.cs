@@ -7,4 +7,5 @@ public class TowerTypeSO : ScriptableObject
 {
     public Transform Prefab;
     public int TowerPrice;
+    
 }

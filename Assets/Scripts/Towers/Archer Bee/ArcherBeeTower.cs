@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
-public class ArcherBeeTower : MonoBehaviour
+public class ArcherBeeTower : Tower
 {
+    public int AttackDamage;
     public float AttackRange;
-    public float AttackDamage;
-
+    
     private float attackRate = 1f;
     private float rotationSpeed = 200f;
     private float nextTimeToAttack;
@@ -20,6 +21,17 @@ public class ArcherBeeTower : MonoBehaviour
     public GameObject ArrowPrefab;
 
     public LayerMask EnemyMask;
+
+    public static ArcherBeeTower Instance;
+    //public TowerTypeSO ArcherTower;
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     private void Update()
     {
@@ -102,21 +114,36 @@ public class ArcherBeeTower : MonoBehaviour
         // the red circle is the bee's attack range
         Handles.DrawWireDisc(transform.position, transform.forward, AttackRange);
     }
-    public void Upgrade1()
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+
+            if (enemy != null)
+            {
+                enemy.Damaged(AttackDamage);
+                Debug.Log("Arrow hit enemy" + enemy.Health);
+            }
+        }
+    }
+
+    public override void Upgrade1()
     {
         AttackRange = 4f;
         attackRate = 3f;
     }
 
-    public void Upgrade2()
+    public override void Upgrade2()
     {
-        AttackDamage = 2f;
+        AttackDamage = 2;
         AttackRange = 5f;
     }
 
-    public void Upgrade3()
+    public override void Upgrade3()
     {
-        AttackDamage = 3f;
+        AttackDamage = 3;
         attackRate = 5f;
     }
     

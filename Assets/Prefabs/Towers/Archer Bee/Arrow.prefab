@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 532883435790283236}
   - component: {fileID: 1992971848485092690}
   - component: {fileID: 3620063340071184933}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -177,4 +177,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0381086b7dfa9194292ec16476431d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 1
   Rb2d: {fileID: 1992971848485092690}

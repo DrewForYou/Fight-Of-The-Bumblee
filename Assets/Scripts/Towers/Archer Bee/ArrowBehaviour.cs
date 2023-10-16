@@ -5,10 +5,12 @@ using UnityEngine;
 public class ArrowBehaviour : MonoBehaviour
 {
     private float bulletSpeed = 5f;
+    public int Damage;
 
     private Transform Target;
 
     public Rigidbody2D Rb2d;
+
 
     private void FixedUpdate()
     {
@@ -36,11 +38,12 @@ public class ArrowBehaviour : MonoBehaviour
         Target = target;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // if the arrow collides with an enemy, destroy the arrow 
-        if (other.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
+            //collision.GetComponent<EnemyAI>().Damaged(Damage);
             Destroy(gameObject);
         }
     }

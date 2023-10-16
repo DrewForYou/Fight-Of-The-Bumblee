@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public PlayerInput PlayerInputInstance;
     public WaveManager WaveManager;
-
+ 
     private InputAction leftClick;
     private InputAction rightClick;
     private InputAction space;
+
+    public GameObject Upgrades;
+    //private ArcherBeeTower selectedTower;
     void Start()
     {
         PlayerInputInstance = GetComponent<PlayerInput>();
@@ -47,19 +51,44 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            testingTower2 tower = hit.collider.GetComponent<testingTower2>();
-
-
+            //selectedTower = hit.collider.GetComponent<ArcherBeeTower>();
+            ArcherBeeTower tower = hit.collider.GetComponent<ArcherBeeTower>();
+            //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
+            
             if (tower != null)
             {
+                Upgrades.SetActive(true);
+                UpgradeButton.Instance.SelectedTower(tower);
+                /*
                 if (CurrencyManager.instance.CanAfford(5))
                 {
                     CurrencyManager.instance.DeductCurrency(5);
 
                     tower.Upgrade1();
                 }
+                */
+            }
+
+        }
+        /*
+        else 
+        {
+            MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
+
+            if (tower != null)
+            {
+                Upgrades.SetActive(true);
+                if (CurrencyManager.instance.CanAfford(5))
+                {
+                    CurrencyManager.instance.DeductCurrency(5);
+
+                    tower.Upgrade1();
+                }
+
             }
         }
+        */
+
     }
     public void LeftClick_performed(InputAction.CallbackContext obj)
     {
@@ -75,7 +104,7 @@ public class PlayerController : MonoBehaviour
         // instantiate the tower at the player's mouse position
         TowerPlacement.instance.PlaceTower(mousePosition);
         
-        Debug.Log("Player Clicked");        // let's us know the player is able
+        //Debug.Log("Player Clicked");        // let's us know the player is able
                                             // to click
     }
 }
