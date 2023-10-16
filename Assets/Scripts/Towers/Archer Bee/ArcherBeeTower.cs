@@ -58,6 +58,7 @@ public class ArcherBeeTower : Tower
             {
                 // calls on the shoot function
                 Shoot();
+                Debug.Log("Shoot");
 
                 // resets the next time to attack
                 nextTimeToAttack = 0f;
@@ -71,6 +72,7 @@ public class ArcherBeeTower : Tower
         GameObject Arrow = Instantiate(ArrowPrefab, ArrowSpawnPoint.position, Quaternion.identity);
 
         ArrowBehaviour arrowBehaviour = Arrow.GetComponent<ArrowBehaviour>();
+        arrowBehaviour.Damage = AttackDamage;
 
         // this sets the target for the arrow to the current target/enemy
         arrowBehaviour.SetTarget(target);

@@ -22,9 +22,7 @@ public class UpgradeButton : MonoBehaviour
 
     private void Start()
     {
-        Upgrade1 = GetComponent<Button>();
-        Upgrade2 = GetComponent<Button>();
-        Upgrade3 = GetComponent<Button>();
+   
         
         Upgrade1.onClick.AddListener(UpgradeButton1);
         Upgrade2.onClick.AddListener(UpgradeButton2);

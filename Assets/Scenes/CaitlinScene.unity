@@ -154,6 +154,67 @@ Transform:
   m_Father: {fileID: 743431631}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &142189198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163416127749721780, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122110660972146435, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
+      propertyPath: m_Name
+      value: ArcherBeeTower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81218181e1d1c7246bbd01f9dcc7ab04, type: 3}
 --- !u!1 &167540599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,8 +2065,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67a58fcf76d0f243b53d8a8e25cc28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerTypeSO: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
   Upgrade1: {fileID: 1412160228}
+  Upgrade2: {fileID: 337741596}
+  Upgrade3: {fileID: 742077875}
 --- !u!1001 &868759610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3118,7 +3180,6 @@ GameObject:
   - component: {fileID: 1412160230}
   - component: {fileID: 1412160229}
   - component: {fileID: 1412160228}
-  - component: {fileID: 1412160231}
   m_Layer: 5
   m_Name: Upgrade1
   m_TagString: Untagged
@@ -3241,20 +3302,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412160226}
   m_CullTransparentMesh: 1
---- !u!114 &1412160231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412160226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67a58fcf76d0f243b53d8a8e25cc28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TowerTypeSO: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
-  Upgrade1: {fileID: 1412160228}
 --- !u!1 &1412467096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,7 +6505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf3cc48b7a3d444f89e0d2cbc7d29a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingCurrency: 20
+  startingCurrency: 50
   currencyText: {fileID: 705103666}
 --- !u!114 &1947239862
 MonoBehaviour:

@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06d10cf1a002948a7816fe77e11e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: {fileID: 11400000, guid: e3a663df8d42e1247aff307c6ac35d0e, type: 2}
+  TowerType: {fileID: 11400000, guid: e3a663df8d42e1247aff307c6ac35d0e, type: 2}
 --- !u!114 &556401249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06d10cf1a002948a7816fe77e11e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
+  TowerType: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
 --- !u!114 &643315298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,6 +1257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInputInstance: {fileID: 703565063}
   WaveManager: {fileID: 1887800812}
+  Upgrades: {fileID: 0}
 --- !u!114 &703565063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,8 +1558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57d63bacd805934b88407fe0454dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTowerType: {fileID: 11400000, guid: cb4457b38a172f049ad317837023a0c0, type: 2}
-  canPlaceTower: 0
+  ActiveTowerType: {fileID: 11400000, guid: cb4457b38a172f049ad317837023a0c0, type: 2}
+  CanPlaceTower: 0
 --- !u!4 &1160758943
 Transform:
   m_ObjectHideFlags: 0
@@ -1886,7 +1887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06d10cf1a002948a7816fe77e11e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: {fileID: 11400000, guid: cb4457b38a172f049ad317837023a0c0, type: 2}
+  TowerType: {fileID: 11400000, guid: cb4457b38a172f049ad317837023a0c0, type: 2}
 --- !u!114 &1323479115
 MonoBehaviour:
   m_ObjectHideFlags: 0
