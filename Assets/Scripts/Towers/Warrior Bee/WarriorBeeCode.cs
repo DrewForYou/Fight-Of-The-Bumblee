@@ -35,6 +35,10 @@ public class WarriorBeeCode : Tower
     //list of enemies
     public List<GameObject> EnemyTargets;
 
+    public int UpgradeLevel = 0;
+
+    public int Damage = 3;
+
     // Update is called once per frame
     void Update()
     {
@@ -95,14 +99,26 @@ public class WarriorBeeCode : Tower
 
     public override void Upgrade1()
     {
-
+        if(UpgradeLevel == 0)
+        {
+            AttackingRate = 2;
+            ++UpgradeLevel;
+        }
     }
     public override void Upgrade2()
     {
-
+        if (UpgradeLevel == 1)
+        {
+            Damage = 6;
+            ++UpgradeLevel;
+        }
     }
     public override void Upgrade3()
     {
-
+        if (UpgradeLevel == 2)
+        {
+            AttackingRate = 5;
+            ++UpgradeLevel;
+        }
     }
 }

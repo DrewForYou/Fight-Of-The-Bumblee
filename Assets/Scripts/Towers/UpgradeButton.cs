@@ -15,7 +15,6 @@ public class UpgradeButton : MonoBehaviour
 
     private Tower selectedTower;
    
-    
     private void Awake()
     {
         if (Instance == null)
@@ -30,8 +29,8 @@ public class UpgradeButton : MonoBehaviour
         Upgrade2.onClick.AddListener(UpgradeButton2);
         Upgrade3.onClick.AddListener(UpgradeButton3);
 
-        Upgrade2.interactable = false;
-        Upgrade3.interactable = false;
+        //Upgrade2.interactable = false;
+        //Upgrade3.interactable = false;
     }
 
     public void SelectedTower(Tower tower)
@@ -47,8 +46,8 @@ public class UpgradeButton : MonoBehaviour
 
             selectedTower.Upgrade1();
             Upgrades.SetActive(false);
-            Upgrade1.interactable = false;
-            Upgrade2.interactable = true;
+            //Upgrade1.interactable = false;
+            //Upgrade2.interactable = true;
             
         }
     }
@@ -62,8 +61,8 @@ public class UpgradeButton : MonoBehaviour
 
             selectedTower.Upgrade2();
             Upgrades.SetActive(false);
-            Upgrade2.interactable = false;
-            Upgrade3.interactable = true;
+            //Upgrade2.interactable = false;
+            //Upgrade3.interactable = true;
         }
     }
 
@@ -76,7 +75,7 @@ public class UpgradeButton : MonoBehaviour
 
             selectedTower.Upgrade3();
             Upgrades.SetActive(false);
-            Upgrade3.interactable= false;
+            //Upgrade3.interactable= false;
         }
     }
   

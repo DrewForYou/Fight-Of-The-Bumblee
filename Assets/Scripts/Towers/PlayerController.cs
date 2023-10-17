@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            //selectedTower = hit.collider.GetComponent<ArcherBeeTower>();
+            //selectedTower = hit.collider.GetComponent<UpgradeButton>();
             ArcherBeeTower tower = hit.collider.GetComponent<ArcherBeeTower>();
             //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
             
