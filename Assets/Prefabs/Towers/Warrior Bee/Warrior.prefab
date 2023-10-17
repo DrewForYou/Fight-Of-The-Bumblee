@@ -141,8 +141,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3683692805211109208}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -27.23, y: -5.08, z: 0}
-  m_LocalScale: {x: 1.79246, y: 1.79246, z: 1.79246}
+  m_LocalPosition: {x: -27.4318, y: -5.2801, z: 0}
+  m_LocalScale: {x: 1.6202046, y: 1.6202046, z: 1.6202046}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4645803556423141331}
@@ -330,10 +330,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 1937532055122464543}
   Attack: {fileID: 8348761637227034447, guid: 7480ab0b6b5d2384cb51cd16b89591a8, type: 3}
-  AttackingRate: 1
+  AttackingRate: 0.5
   AttackPoint: {fileID: 848843970215053761}
   Force: 50
   EnemyTargets: []
+  UpgradeLevel: 0
 --- !u!58 &5987395480404057428
 CircleCollider2D:
   m_ObjectHideFlags: 0

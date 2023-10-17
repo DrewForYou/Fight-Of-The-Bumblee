@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            //selectedTower = hit.collider.GetComponent<ArcherBeeTower>();
+            //selectedTower = hit.collider.GetComponent<UpgradeButton>();
             ArcherBeeTower tower = hit.collider.GetComponent<ArcherBeeTower>();
             //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
             
@@ -59,35 +60,32 @@ public class PlayerController : MonoBehaviour
             {
                 Upgrades.SetActive(true);
                 UpgradeButton.Instance.SelectedTower(tower);
-                /*
-                if (CurrencyManager.instance.CanAfford(5))
-                {
-                    CurrencyManager.instance.DeductCurrency(5);
-
-                    tower.Upgrade1();
-                }
-                */
             }
 
         }
-        /*
-        else 
+        if (hit.collider != null)
         {
             MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
 
             if (tower != null)
             {
                 Upgrades.SetActive(true);
-                if (CurrencyManager.instance.CanAfford(5))
-                {
-                    CurrencyManager.instance.DeductCurrency(5);
-
-                    tower.Upgrade1();
-                }
-
+                UpgradeButton.Instance.SelectedTower(tower);
             }
+
         }
-        */
+
+        if (hit.collider != null)
+        {
+            WarriorBeeCode tower = hit.collider.GetComponent<WarriorBeeCode>();
+
+            if (tower != null)
+            {
+                Upgrades.SetActive(true);
+                UpgradeButton.Instance.SelectedTower(tower);
+            }
+
+        }
 
     }
     public void LeftClick_performed(InputAction.CallbackContext obj)

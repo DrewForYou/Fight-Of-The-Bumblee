@@ -11,7 +11,10 @@ public class UpgradeButton : MonoBehaviour
     public Button Upgrade2;
     public Button Upgrade3;
 
+    public GameObject Upgrades;
+
     private Tower selectedTower;
+   
     private void Awake()
     {
         if (Instance == null)
@@ -26,11 +29,13 @@ public class UpgradeButton : MonoBehaviour
         Upgrade2.onClick.AddListener(UpgradeButton2);
         Upgrade3.onClick.AddListener(UpgradeButton3);
 
+        //Upgrade2.interactable = false;
+        //Upgrade3.interactable = false;
     }
 
     public void SelectedTower(Tower tower)
     {
-        selectedTower = tower;
+        selectedTower = tower;  
     }
     public void UpgradeButton1()
     {
@@ -40,7 +45,10 @@ public class UpgradeButton : MonoBehaviour
             CurrencyManager.instance.DeductCurrency(5);
 
             selectedTower.Upgrade1();
-            //ArcherBeeTower.Instance.Upgrade1();
+            Upgrades.SetActive(false);
+            //Upgrade1.interactable = false;
+            //Upgrade2.interactable = true;
+            
         }
     }
 
@@ -52,7 +60,9 @@ public class UpgradeButton : MonoBehaviour
             CurrencyManager.instance.DeductCurrency(10);
 
             selectedTower.Upgrade2();
-           
+            Upgrades.SetActive(false);
+            //Upgrade2.interactable = false;
+            //Upgrade3.interactable = true;
         }
     }
 
@@ -64,35 +74,9 @@ public class UpgradeButton : MonoBehaviour
             CurrencyManager.instance.DeductCurrency(13);
 
             selectedTower.Upgrade3();
-            
+            Upgrades.SetActive(false);
+            //Upgrade3.interactable= false;
         }
     }
-    /*
-    public TowerTypeSO tower;
-    public int Upgrade1Cost = 5;
-    public Button button;
-    private bool isUpgrade1Purchased = false;
-
-    private void Start()
-    {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(UpgradeButton1);
-    }
-
-    private void UpgradeButtonState()
-    {
-        bool canAffordUpgrade1 = !isUpgrade1Purchased && CurrencyManager.instance.CanAfford(Upgrade1Cost);
-    }
-    public void UpgradeButton1()
-    {
-        if (!isUpgrade1Purchased && CurrencyManager.instance.CanAfford(Upgrade1Cost))
-        {
-            CurrencyManager.instance.DeductCurrency(Upgrade1Cost);
-            //tower.Upgrade1();
-            isUpgrade1Purchased=true;
-
-        }
-        
-    }
-    */
+  
 }
