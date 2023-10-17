@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57d63bacd805934b88407fe0454dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTowerType: {fileID: 11400000, guid: cb4457b38a172f049ad317837023a0c0, type: 2}
-  canPlaceTower: 0
+  ActiveTowerType: {fileID: 0}
+  CanPlaceTower: 0
 --- !u!4 &155909820
 Transform:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06d10cf1a002948a7816fe77e11e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: {fileID: 11400000, guid: cb4457b38a172f049ad317837023a0c0, type: 2}
+  TowerType: {fileID: 0}
 --- !u!114 &660077366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06d10cf1a002948a7816fe77e11e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: {fileID: 11400000, guid: e3a663df8d42e1247aff307c6ac35d0e, type: 2}
+  TowerType: {fileID: 11400000, guid: e3a663df8d42e1247aff307c6ac35d0e, type: 2}
 --- !u!114 &841472438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4828,7 +4828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06d10cf1a002948a7816fe77e11e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: {fileID: 11400000, guid: 0eb868defbee9034bb9f4e80c8453cad, type: 2}
+  TowerType: {fileID: 0}
 --- !u!114 &1469689637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5021,6 +5021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInputInstance: {fileID: 1510806099}
   WaveManager: {fileID: 1272942399}
+  Upgrades: {fileID: 0}
 --- !u!114 &1510806099
 MonoBehaviour:
   m_ObjectHideFlags: 0

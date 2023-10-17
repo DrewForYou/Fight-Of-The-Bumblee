@@ -12,12 +12,15 @@ public class MageBeeCode : Tower
     public GameObject FireBall;
     public GameObject Freeze;
     public GameObject Lightning;
+    public GameObject UpgradeSprite1;
+    public GameObject UpgradeSprite2;
+    //public GameObject UpgradeSprite3;
     public float BaseAttackingRate;
     public float FireballAttackingRate;
     public float LightningAttackingRate;
     public Vector2 Direction;
-    public Vector2 Direction2;
-    public Vector2 Direction3;
+    //public Vector2 Direction2;
+    //public Vector2 Direction3;
     float nextTimeToBaseAttack = 0;
     float nextTimeToFireballAttack = 0;
     float nextTimeToLightningAttack = 0;
@@ -133,11 +136,13 @@ public class MageBeeCode : Tower
     public override void Upgrade1()
     {
         FireballOn = true;
+        UpgradeSprite1.gameObject.SetActive(true);
     }
 
     public override void Upgrade2()
     {
         Freeze.gameObject.SetActive(true);
+        UpgradeSprite2.SetActive(true);
     }
 
     public override void Upgrade3()
