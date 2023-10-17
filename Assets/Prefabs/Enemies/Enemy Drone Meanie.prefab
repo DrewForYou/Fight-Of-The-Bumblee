@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7836950595652352836}
   - component: {fileID: 8634389694260645085}
   - component: {fileID: 4912921532520221536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Drone Meanie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -172,3 +172,4 @@ MonoBehaviour:
   - {fileID: 0}
   GameManager: {fileID: 0}
   CurrencyManager: {fileID: 0}
+  Frozen: 0
