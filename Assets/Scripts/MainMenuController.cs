@@ -5,24 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class MainMenuController : MonoBehaviour
-{
-    public PlayerController playerController;
-
-    void Start()
-    {
-        playerController = FindObjectOfType<PlayerController>();
-    }
-    public void StartGame()
-    {
-        playerController.StartGame();
-    }
-
-    public void QuitGame()
-    {
-        playerController.QuitGame();
-    }
-
-    /*
+{  
     public void StartGame()
     {
         SceneManager.LoadScene(1);
@@ -33,5 +16,5 @@ public class MainMenuController : MonoBehaviour
         Application.Quit();
         Debug.Log("Game Quit");
     }
-    */
+    
 }

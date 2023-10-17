@@ -105,15 +105,4 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("Player Clicked");        // let's us know the player is able
                                             // to click
     }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);    
-    }
-
-    public void QuitGame()
-    {
-       Application.Quit();
-       Debug.Log("Game Quit");  
-    }
 }
