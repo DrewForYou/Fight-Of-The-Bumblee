@@ -1512,7 +1512,11 @@ MonoBehaviour:
   Upgrade1: {fileID: 1447848574}
   Upgrade2: {fileID: 1681049404}
   Upgrade3: {fileID: 2093501013}
+<<<<<<< HEAD
   Upgrades: {fileID: 0}
+=======
+  Upgrades: {fileID: 642077289}
+>>>>>>> Upgrades
 --- !u!114 &642077291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,7 +1575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 124.85535, y: 35.111084}
+  m_AnchoredPosition: {x: -21, y: 35.111084}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &642344886
@@ -1752,7 +1756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInputInstance: {fileID: 703565063}
   WaveManager: {fileID: 1887800812}
-  Upgrades: {fileID: 0}
+  Upgrades: {fileID: 642077289}
 --- !u!114 &703565063
 MonoBehaviour:
   m_ObjectHideFlags: 0
