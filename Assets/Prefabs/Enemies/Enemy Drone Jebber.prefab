@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3659522517378227455}
   - component: {fileID: 6495425971958636674}
   - component: {fileID: 8082479017207233145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Drone Jebber
   m_TagString: Enemy
   m_Icon: {fileID: 0}

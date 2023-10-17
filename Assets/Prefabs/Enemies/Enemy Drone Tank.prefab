@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3182632500591877794}
   - component: {fileID: 8877447672620928690}
   - component: {fileID: 3971774898247776145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Drone Tank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
