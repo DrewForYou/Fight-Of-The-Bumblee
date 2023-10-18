@@ -39,7 +39,13 @@ public class WarriorBeeCode : Tower
 
     public int Damage = 3;
 
+    public GameObject upgrade1;
+    public GameObject upgrade2;
+    public GameObject upgrade3;
+
     // Update is called once per frame
+
+    public AudioClip upgrade;
     void Update()
     {
         //just saying 
@@ -101,24 +107,32 @@ public class WarriorBeeCode : Tower
     {
         if(UpgradeLevel == 0)
         {
+            AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
             AttackingRate = 2;
             ++UpgradeLevel;
+            upgrade1.SetActive(true);
         }
     }
     public override void Upgrade2()
     {
         if (UpgradeLevel == 1)
         {
+            AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
             Damage = 6;
             ++UpgradeLevel;
+            upgrade2.SetActive(true);
+            upgrade1.SetActive(false);
         }
     }
     public override void Upgrade3()
     {
         if (UpgradeLevel == 2)
         {
+            AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
             AttackingRate = 5;
             ++UpgradeLevel;
+            upgrade3.SetActive(true);
+            upgrade2.SetActive(false);
         }
     }
 }

@@ -6,13 +6,14 @@ public class SwordSweep : MonoBehaviour
 {
    
     public int Hits=3;
+    //public AudioClip hit;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         WarriorBeeCode wb = GameObject.FindObjectOfType<WarriorBeeCode>();
         if (collision.gameObject.tag == "Enemy")
         {
-            
+           // AudioSource.PlayClipAtPoint(hit, Camera.main.transform.position);
             collision.GetComponent<EnemyAI>().Damaged(wb.Damage);
             if(Hits <= 0)
             {

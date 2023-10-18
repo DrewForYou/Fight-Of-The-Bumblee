@@ -30,9 +30,10 @@ public class MageBeeCode : Tower
     public bool FireballOn = false;
     public bool LightningOn = false;
     public List<GameObject> EnemyTargets;
-    
+    public AudioClip upgrade;
 
- 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -135,18 +136,21 @@ public class MageBeeCode : Tower
 
     public override void Upgrade1()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         FireballOn = true;
         UpgradeSprite1.gameObject.SetActive(true);
     }
 
     public override void Upgrade2()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         Freeze.gameObject.SetActive(true);
         UpgradeSprite2.SetActive(true);
     }
 
     public override void Upgrade3()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         LightningOn = true;
     }
 

@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private InputAction space;
 
     public GameObject Upgrades;
+    public AudioClip waveStart;
     //private ArcherBeeTower selectedTower;
     void Start()
     {
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private void Space_performed(InputAction.CallbackContext obj)
     {
         WaveManager.TempStart = true;
+        AudioSource.PlayClipAtPoint(waveStart, Camera.main.transform.position);
     }
 
     private void OnDestroy()

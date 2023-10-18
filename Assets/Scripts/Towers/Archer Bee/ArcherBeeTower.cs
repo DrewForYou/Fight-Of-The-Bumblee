@@ -24,7 +24,11 @@ public class ArcherBeeTower : Tower
 
     public static ArcherBeeTower Instance;
     //public TowerTypeSO ArcherTower;
-    
+    public AudioClip upgrade;
+    //public GameObject upgrade0;
+   // public GameObject upgrade1;
+   // public GameObject upgrade2;
+    //public GameObject upgrade3;
     private void Awake()
     {
         if (Instance == null)
@@ -131,20 +135,29 @@ public class ArcherBeeTower : Tower
 
     public override void Upgrade1()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         AttackRange = 4f;
         attackRate = 3f;
+        //upgrade1.SetActive(true);
+        //upgrade0.SetActive(false);
     }
 
     public override void Upgrade2()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         AttackDamage = 2;
         AttackRange = 5f;
+        //upgrade2.SetActive(true);
+       // upgrade1.SetActive(false);
     }
 
     public override void Upgrade3()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         AttackDamage = 3;
         attackRate = 5f;
+       // upgrade3.SetActive(true);
+       // upgrade2.SetActive(false);
     }
     
 }
