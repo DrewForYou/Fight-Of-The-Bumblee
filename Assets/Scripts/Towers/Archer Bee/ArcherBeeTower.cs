@@ -113,10 +113,10 @@ public class ArcherBeeTower : Tower
     private void OnDrawGizmosSelected()
     {
         // this draws a red circle around the archer bee
-        Handles.color = Color.red;
+        //Handles.color = Color.red;
 
         // the red circle is the bee's attack range
-        Handles.DrawWireDisc(transform.position, transform.forward, AttackRange);
+        //Handles.DrawWireDisc(transform.position, transform.forward, AttackRange);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
