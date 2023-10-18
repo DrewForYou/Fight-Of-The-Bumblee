@@ -54,6 +54,6 @@ public class CurrencyManager : MonoBehaviour
     private void UpdateCurrencyText()
     {
         // updates the TMP text with the current currency balance
-        currencyText.text = "$ " + currentCurrency.ToString();
+        currencyText.text = ": " + currentCurrency.ToString();
     }
 }

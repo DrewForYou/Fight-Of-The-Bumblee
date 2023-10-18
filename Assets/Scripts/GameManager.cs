@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class GameManager : MonoBehaviour
     public GameObject WinScreen;
     public GameObject LoseScreen;
     //public bool StopGame 
+    public TMP_Text healthText;
 
     public void Hurt(int damage)
     {
         Health -= damage;
+        healthText.text = ": " + Health.ToString();
         if (Health <= 0 )
         {
             LoseScreen.SetActive(true);
