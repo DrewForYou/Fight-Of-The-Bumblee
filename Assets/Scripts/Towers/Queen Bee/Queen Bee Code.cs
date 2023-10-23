@@ -12,9 +12,14 @@ public class QueenBeeCode : Tower
     public int UpgradeLevel = 0;
     public int Damage = 3;
 
+    private void Start()
+    {
+        GameManager = FindAnyObjectByType<GameManager>();
+        WaveManager = FindAnyObjectByType<WaveManager>();
+    }
+
     void Update()
     {
-       
         if (GameManager.IsRunning && !WaveManager.WaveOver)
         {
            

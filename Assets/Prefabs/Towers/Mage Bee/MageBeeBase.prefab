@@ -31,8 +31,8 @@ Transform:
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7430172477497786602}
   - {fileID: 1334588623329054490}
+  - {fileID: 7430172477497786602}
   - {fileID: 2455634461650321985}
   - {fileID: 1478802463509717187}
   - {fileID: 2983331219017590111}
@@ -106,7 +106,7 @@ MonoBehaviour:
   Weapon: {fileID: 4701996641064554177}
   BaseAttack: {fileID: 1800465011939978231, guid: 2cda82fb3d4360a48b2166476c99c3b3, type: 3}
   FireBall: {fileID: 4705436946817001722, guid: 94dd116ed430c504e9df4c6ae5bbd016, type: 3}
-  Freeze: {fileID: 1015915339809750866, guid: 563642e48f35d6f42b4b6f4185a048d5, type: 3}
+  Freeze: {fileID: 324014061836488084}
   Lightning: {fileID: 1565853196625214422, guid: b1f0136e89c944642ace1d2cafbe810c, type: 3}
   UpgradeSprite1: {fileID: 1248259151532563075}
   UpgradeSprite2: {fileID: 7320545816094922430}
@@ -625,6 +625,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 563642e48f35d6f42b4b6f4185a048d5, type: 3}
+--- !u!1 &324014061836488084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1015915339809750866, guid: 563642e48f35d6f42b4b6f4185a048d5, type: 3}
+  m_PrefabInstance: {fileID: 749392546287071942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1334588623329054490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1793287817397960156, guid: 563642e48f35d6f42b4b6f4185a048d5, type: 3}
