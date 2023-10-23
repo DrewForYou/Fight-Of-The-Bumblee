@@ -1838,6 +1838,7 @@ MonoBehaviour:
   PlayerInputInstance: {fileID: 703565063}
   WaveManager: {fileID: 1887800812}
   Upgrades: {fileID: 642077289}
+  waveStart: {fileID: 8300000, guid: 0c7ad672489e60644b8922a721149c99, type: 3}
 --- !u!114 &703565063
 MonoBehaviour:
   m_ObjectHideFlags: 0
