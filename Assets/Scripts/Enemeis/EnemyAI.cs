@@ -43,7 +43,10 @@ public class EnemyAI : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, goal.transform.position) > 0.2f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, Time.deltaTime * Speed);
+            if (GameManager.IsRunning)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, Time.deltaTime * Speed);
+            }
             yield return null;
         }
 
