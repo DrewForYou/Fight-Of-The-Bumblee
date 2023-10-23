@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     public List<GameObject> MapPoints;
     public GameObject WinScreen;
     public GameObject LoseScreen;
-    //public bool StopGame 
+    public GameObject PauseScreen;
     public TMP_Text healthText;
+    public bool IsRunning = true;
 
     public void Hurt(int damage)
     {
@@ -22,13 +23,27 @@ public class GameManager : MonoBehaviour
         if (Health <= 0 )
         {
             LoseScreen.SetActive(true);
-            //StopGame = true;
+            IsRunning = false;
         }
     }
 
     public void Win()
     {
         WinScreen.SetActive(true);
-        //StopGame = true;
+        IsRunning = false;
+    }
+
+    public void Pause()
+    {
+        if(IsRunning)
+        {
+            IsRunning = false;
+            PauseScreen.SetActive(true);
+        }
+        else
+        {
+            IsRunning = true;
+            PauseScreen.SetActive(false);
+        }
     }
 }
