@@ -59,9 +59,11 @@ public class WaveManager : MonoBehaviour
         
         while(count != 0)
         {
-            print("Got to Corutine");
-            Instantiate(enemy, SpawnPoint.transform);
-            count--;
+            if(GameManager.IsRunning)
+            {
+                Instantiate(enemy, SpawnPoint.transform);
+                count--;
+            }
             yield return new WaitForSeconds(delay);
         }
 
