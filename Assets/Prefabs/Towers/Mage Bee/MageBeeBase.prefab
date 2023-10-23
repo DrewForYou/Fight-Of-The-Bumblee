@@ -116,8 +116,9 @@ MonoBehaviour:
   Direction: {x: 0, y: 0}
   AttackPoint: {fileID: 3668941636649190233}
   Force: 100
-  FireballOn: 1
-  LightningOn: 1
+  FireballOn: 0
+  LightningOn: 0
+  GameManager: {fileID: 0}
   EnemyTargets: []
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
 --- !u!58 &664067619854467221
