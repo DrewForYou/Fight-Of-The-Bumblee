@@ -74,13 +74,10 @@ public class WaveManager : MonoBehaviour
             if (FindAnyObjectByType<EnemyAI>() == null && HasEverythingSpawned(enemy, wave))
             {
                 WaveOver = true;
-                print("I have been run");
                 CurrencyManager.AddCurrency(wave.WaveCompletionReward);
             }
             yield return null;
         }
-        
-        print("Exited corutine");
     }
 
     //This checks to make sure all enemies have been spawned
