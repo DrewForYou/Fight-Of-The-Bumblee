@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject PauseScreen;
     public TMP_Text healthText;
     public bool IsRunning = true;
+    public bool SpeedMultiply;
+    private bool alreadySpeedy;
 
     public void Hurt(int damage)
     {
@@ -25,6 +27,18 @@ public class GameManager : MonoBehaviour
             LoseScreen.SetActive(true);
             IsRunning = false;
         }
+    }
+
+    private void Update()
+    {
+        if(SpeedMultiply && !alreadySpeedy)
+        {
+            Time.timeScale = 2;
+        }
+        else if(!SpeedMultiply && alreadySpeedy) 
+       {
+            Time.timeScale = 1;
+       }
     }
 
     public void Win()

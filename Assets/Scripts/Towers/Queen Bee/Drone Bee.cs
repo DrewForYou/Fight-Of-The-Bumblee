@@ -1,35 +1,29 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class DroneBee : MonoBehaviour
 {
-    public int Health;
     public int Strength;
     public int Value;
     public float Speed;
-    public Rigidbody2D EnemyRB;
-    public Collider2D EnemyCollider;
+    public Rigidbody2D DroneRB;
+    public Collider2D DroneCollider;
     public List<GameObject> Pathing;
     public GameManager GameManager;
-    public CurrencyManager CurrencyManager;
-    public bool Frozen;
-    //private int currentTarget;
-    //private GameObject goal;
+    public WaveManager WaveManager;
 
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         GameManager = FindAnyObjectByType<GameManager>();
-        CurrencyManager = FindAnyObjectByType<CurrencyManager>();
+        WaveManager = FindAnyObjectByType<WaveManager>();
 
         Pathing = new List<GameObject>(GameManager.MapPoints);
+        Pathing.Reverse();
         EnemyMove();
     }
 
-    
     //Moves the enemy
     public void EnemyMove()
     {
@@ -54,30 +48,13 @@ public class EnemyAI : MonoBehaviour
         Pathing.Remove(goal);
 
         if (Pathing.Count > 0)
-        { 
+        {
             EnemyMove();
         }
         else
         {
             ReachedEnd();
         }
-    }
-    
-
-    //Damages the enemy and checks if it has died
-    public void Damaged(int damage)
-    {
-        Health -= damage;
-        if(Health <= 0 )
-        {
-            GainHoney();
-        }
-    }
-  
-    public void GainHoney()
-    {
-        CurrencyManager.AddCurrency(Value);
-        Destroy(gameObject);
     }
 
     public void ReachedEnd()
