@@ -11,7 +11,6 @@ public class QueenBeeCode : Tower
     public WaveManager WaveManager;
     public List<GameObject> Pathing;
     public float NextTimeToAttack = 0;
-    public int UpgradeLevel = 0;
     public int Damage;
     public float Speed;
     public Coroutine QueenBeeDronesRef;
@@ -48,19 +47,5 @@ public class QueenBeeCode : Tower
             yield return new WaitForSeconds(NextTimeToAttack);
         }
         QueenBeeDronesRef = null;
-    }
-
-
-    public override void Upgrade1()
-    {
-
-    }
-    public override void Upgrade2()
-    {
-       
-    }
-    public override void Upgrade3()
-    {
-        
     }
 }
