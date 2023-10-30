@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     private void Space_performed(InputAction.CallbackContext obj)
     {
         WaveManager.TempStart = true;
-        AudioSource.PlayClipAtPoint(WaveStart, Camera.main.transform.position);
+        //AudioSource.PlayClipAtPoint(WaveStart, Camera.main.transform.position);
     }
 
     private void OnDestroy()

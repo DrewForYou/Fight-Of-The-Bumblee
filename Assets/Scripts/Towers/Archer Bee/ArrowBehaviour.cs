@@ -2,56 +2,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class ArrowBehaviour : MonoBehaviour
 {
-    private float bulletSpeed = 5f;
-    public int Damage;
+    public Transform target;
 
-    private Transform Target;
+    //public int Hits = 3;
+    //public AudioClip hit;
 
-    public Rigidbody2D Rb2d;
+    private Rigidbody2D rb;
 
-
-    private void FixedUpdate()
-    {
-        // checks there's a target
-        if (Target != null)
-        {
-            // calculates the direction of the arrow to the enemy
-            Vector2 direction = (Target.position - transform.position);
-
-            // this calculates the angle to point the arrow towards the enemy
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
-
-            // this rotates the arrow so it will face the enemy
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-            // moves the arrow in the calculated direction 
-            Rb2d.velocity = direction * bulletSpeed;
-
-        }
-    }
-
-    public void SetTarget(Transform target)
-    {
-        // sets the enemy the arrow will follow
-        Target = target;
-    }
+    public float speed = 5f;
+    public float rotateSpeed = 200f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // if the arrow collides with an enemy, destroy the arrow 
-        if (collision.gameObject.CompareTag("Enemy"))
+        ReworkedArcherBee ab = GameObject.FindObjectOfType<ReworkedArcherBee>();
+        if (collision.gameObject.tag == "Enemy")
         {
-            EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+            // AudioSource.PlayClipAtPoint(hit, Camera.main.transform.position);
+            collision.GetComponent<EnemyAI>().Damaged(ab.Damage);
+            
+                Destroy(this.gameObject);          
 
-            if (enemy != null)
-            {
-                enemy.Damaged(Damage);
-                Debug.Log("Arrow hit enemy" + enemy.Health);
-            }
-            //collision.GetComponent<EnemyAI>().Damaged(Damage);
-            Destroy(gameObject);
         }
     }
+
+    private void FixedUpdate()
+    {
+       if(target != null)
+        {
+            Vector2 direction = (Vector2)target.position - rb.position;
+
+            direction.Normalize();
+
+            float rotateAmount = Vector3.Cross(direction, transform.up).z;
+
+            rb.angularVelocity = -rotateAmount * rotateSpeed;
+
+            rb.velocity = transform.up * speed;
+        }
+      else
+        {
+            Object.Destroy(this.gameObject);
+        }
+
+    }
+
+    private void Awake()
+    {
+        // StartCoroutine(Duration());
+        target = GameObject.FindGameObjectWithTag("Enemy").transform;
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+   /*
+    IEnumerator Duration()
+    {
+        yield return new WaitForSeconds(.2f);
+        Object.Destroy(this.gameObject);
+    }
+   */
 }
