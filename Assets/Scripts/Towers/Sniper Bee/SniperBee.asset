@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b616f4dee3b0c494d8f2e827e4436276, type: 3}
+  m_Name: SniperBee
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 6207956602389435621, guid: c102f476068b69d43bd4616e5b7d76ee, type: 3}
+  TowerPrice: 10
+  TowerSprite: {fileID: 1758297730, guid: cc3008e135a72e641a8b2f7067cf1dc5, type: 3}
