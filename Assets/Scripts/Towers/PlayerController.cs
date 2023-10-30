@@ -9,10 +9,14 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerInput PlayerInputInstance;
     public WaveManager WaveManager;
+    public GameManager GameManager;
  
     private InputAction leftClick;
     private InputAction rightClick;
     private InputAction space;
+    private InputAction quit;
+    private InputAction restart;
+    private InputAction pause;
 
     public UpgradeButton UpgradeButton;
     //public GameObject Upgrades;
@@ -28,16 +32,38 @@ public class PlayerController : MonoBehaviour
         leftClick = PlayerInputInstance.currentActionMap.FindAction("LeftClick");
         rightClick = PlayerInputInstance.currentActionMap.FindAction("RightClick");
         space = PlayerInputInstance.currentActionMap.FindAction("Space");
+        quit = PlayerInputInstance.currentActionMap.FindAction("Quit");
+        restart = PlayerInputInstance.currentActionMap.FindAction("Restart");
+        pause = PlayerInputInstance.currentActionMap.FindAction("Pause");
 
         leftClick.performed += LeftClick_performed;
         rightClick.performed += RightClick_performed;
         space.performed += Space_performed;
+        quit.performed += Quit_performed;
+        restart.performed += Restart_performed;
+        pause.performed += Pause_performed;
+    }
+
+    private void Pause_performed(InputAction.CallbackContext obj)
+    {
+        GameManager.Pause();
+    }
+
+    private void Restart_performed(InputAction.CallbackContext obj)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void Quit_performed(InputAction.CallbackContext obj)
+    {
+        print("Quit");
+        Application.Quit();
     }
 
     private void Space_performed(InputAction.CallbackContext obj)
     {
         WaveManager.TempStart = true;
-        AudioSource.PlayClipAtPoint(waveStart, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(WaveStart, Camera.main.transform.position);
     }
 
     private void OnDestroy()
@@ -45,6 +71,9 @@ public class PlayerController : MonoBehaviour
         leftClick.performed -= LeftClick_performed;
         rightClick.performed -= RightClick_performed;
         space.performed -= Space_performed;
+        quit.performed -= Quit_performed;
+        restart.performed -= Restart_performed;
+        pause.performed -= Pause_performed;
     }
 
     public void RightClick_performed(InputAction.CallbackContext obj)

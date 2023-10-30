@@ -29,21 +29,22 @@ public class MageBeeCode : Tower
     bool Detected = false;
     public bool FireballOn = false;
     public bool LightningOn = false;
+    public GameManager GameManager;
     public List<GameObject> EnemyTargets;
     public AudioClip upgrade;
 
-
+    private void Start()
+    {
+        GameManager = FindAnyObjectByType<GameManager>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (EnemyTargets.Count > 0)
+        if (EnemyTargets.Count > 0 && GameManager.IsRunning)
         {
             if(GetFirstEnemy() != null)
             {
-                /*Vector2 targetpos2;
-                Vector2 targetpos3;*/
-
                 //Determiens when to fire base attack
                 Weapon.transform.up = Direction;
                 if (Time.time > nextTimeToBaseAttack)
@@ -52,7 +53,6 @@ public class MageBeeCode : Tower
                     {
                         nextTimeToBaseAttack = Time.time + 1 / BaseAttackingRate;
                         Combat(BaseAttack, Direction);
-                        //BaseAttackTarget();
                     }
 
                 }
@@ -63,7 +63,6 @@ public class MageBeeCode : Tower
                     {
                         nextTimeToFireballAttack = Time.time + 1 / FireballAttackingRate;
                         Combat(FireBall, Direction);
-                        //FireballTarget();
                     }
                 }
 
@@ -72,30 +71,11 @@ public class MageBeeCode : Tower
                 {
                     if (Detected && GetFirstEnemy() != null)
                     {
-                        /*
-                        if (EnemyTargets.Count > 2)
-                        {
-                            targetpos3 = EnemyTargets[2].transform.position;
-                            Direction3 = targetpos3 - (Vector2)transform.position;
-
-                            Combat(Lightning, Direction3);
-                        }
-
-                        if (EnemyTargets.Count > 1)
-                        {
-                            targetpos2 = EnemyTargets[1].transform.position;
-                            Direction2 = targetpos2 - (Vector2)transform.position;
-                            Combat(Lightning, Direction2);
-                        }*/
-
                         nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
                         Combat(Lightning, Direction);
                     }
                 }
             }
-            
-
-            
         }
     }
 
