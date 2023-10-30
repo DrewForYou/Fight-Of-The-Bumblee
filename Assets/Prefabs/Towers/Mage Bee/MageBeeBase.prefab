@@ -36,6 +36,7 @@ Transform:
   - {fileID: 2455634461650321985}
   - {fileID: 1478802463509717187}
   - {fileID: 2983331219017590111}
+  - {fileID: 5648971653903295959}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -107,7 +108,7 @@ MonoBehaviour:
   BaseAttack: {fileID: 1800465011939978231, guid: 2cda82fb3d4360a48b2166476c99c3b3, type: 3}
   FireBall: {fileID: 4705436946817001722, guid: 94dd116ed430c504e9df4c6ae5bbd016, type: 3}
   Freeze: {fileID: 324014061836488084}
-  Lightning: {fileID: 1565853196625214422, guid: b1f0136e89c944642ace1d2cafbe810c, type: 3}
+  Lightning: {fileID: 7523917579953747037}
   UpgradeSprite1: {fileID: 1248259151532563075}
   UpgradeSprite2: {fileID: 7320545816094922430}
   BaseAttackingRate: 1
@@ -121,6 +122,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   EnemyTargets: []
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  LightningAttackActive: 0
 --- !u!58 &664067619854467221
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -634,4 +636,79 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1793287817397960156, guid: 563642e48f35d6f42b4b6f4185a048d5, type: 3}
   m_PrefabInstance: {fileID: 749392546287071942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5059865502030015580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5390878058619954969}
+    m_Modifications:
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337752201047382017, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_Name
+      value: Lightning Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337752201047382017, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+--- !u!4 &5648971653903295959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 602757873019685259, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+  m_PrefabInstance: {fileID: 5059865502030015580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7523917579953747037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3337752201047382017, guid: 39a61aabdb178f6419a6f8d2d3b79ac2, type: 3}
+  m_PrefabInstance: {fileID: 5059865502030015580}
   m_PrefabAsset: {fileID: 0}

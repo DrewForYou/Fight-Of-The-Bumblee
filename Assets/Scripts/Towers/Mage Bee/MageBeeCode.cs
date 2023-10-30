@@ -32,6 +32,7 @@ public class MageBeeCode : Tower
     public GameManager GameManager;
     public List<GameObject> EnemyTargets;
     public AudioClip upgrade;
+    public bool LightningAttackActive;
 
     private void Start()
     {
@@ -72,7 +73,8 @@ public class MageBeeCode : Tower
                     if (Detected && GetFirstEnemy() != null)
                     {
                         nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
-                        Combat(Lightning, Direction);
+                        LightningAttackActive = !LightningAttackActive;
+                        Lightning.SetActive(LightningAttackActive);
                     }
                 }
             }
