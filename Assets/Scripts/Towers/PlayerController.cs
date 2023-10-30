@@ -167,14 +167,6 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    public void OnMouseEnter(InputAction.CallbackContext obj)
-    {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-    }
-
-    public void OnMouseExit(InputAction.CallbackContext obj)
-    {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-    }
+   
 
 }
