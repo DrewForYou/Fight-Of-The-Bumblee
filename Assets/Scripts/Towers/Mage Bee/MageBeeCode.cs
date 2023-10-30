@@ -125,6 +125,7 @@ public class MageBeeCode : Tower
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         FireballOn = true;
         UpgradeSprite1.gameObject.SetActive(true);
+        
     }
 
     public override void Upgrade2()

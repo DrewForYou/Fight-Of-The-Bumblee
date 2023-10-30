@@ -7,14 +7,18 @@ using UnityEngine.UI;
 public class TowerSelectUI : MonoBehaviour
 {
     public TowerTypeSO TowerType;
-
+    
+    
     private Button button;
+ 
+  
     private void Start()
     {
         button = GetComponent<Button>();
         //Button button = GetComponent<Button>();
         
         button.onClick.AddListener(SelectTower);
+        //isPreviewingTower = false;
         
         //CanAffordButton();
     }
@@ -41,9 +45,19 @@ public class TowerSelectUI : MonoBehaviour
             // enables tower placement when button is selected
             TowerPlacement.instance.CanPlaceTower = true;
 
-            
+            Sprite towerSprite = TowerType.TowerSprite;
+
+            if (towerSprite != null)
+            {
+                TowerPlacementUI.instance.Activate(towerSprite);
+            }
+            else
+            {
+                //Debug.Log("No sprite renderer found");
+            }
         }  
     }
 
+    
 
 }

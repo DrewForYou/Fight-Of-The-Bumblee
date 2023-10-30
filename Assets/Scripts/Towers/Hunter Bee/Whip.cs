@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class SwordSweep : MonoBehaviour
+public class Whip : MonoBehaviour
 {
     public Transform target;
 
-    public int Hits=3;
     //public AudioClip hit;
 
     private Rigidbody2D rb;
@@ -19,20 +18,12 @@ public class SwordSweep : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        WarriorBeeCode wb = GameObject.FindObjectOfType<WarriorBeeCode>();
+        HunterBee hb = GameObject.FindObjectOfType<HunterBee>();
         if (collision.gameObject.tag == "Enemy")
         {
-           // AudioSource.PlayClipAtPoint(hit, Camera.main.transform.position);
-            collision.GetComponent<EnemyAI>().Damaged(wb.Damage);
-            if(Hits <= 0)
-            {
-                Destroy(this.gameObject);
-            }
-            else
-            { 
-                --Hits; 
-            }
-            
+            // AudioSource.PlayClipAtPoint(hit, Camera.main.transform.position);
+            collision.GetComponent<EnemyAI>().Damaged(hb.Damage);
+        
         }
     }
 
@@ -66,8 +57,7 @@ public class SwordSweep : MonoBehaviour
 
     IEnumerator Duration()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         Object.Destroy(this.gameObject);
     }
-
 }
