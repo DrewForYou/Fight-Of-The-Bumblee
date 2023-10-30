@@ -34,9 +34,13 @@ public class MageBeeCode : Tower
     public AudioClip upgrade;
     public bool LightningAttackActive;
 
+    public CurrencyManager CurrencyManager;
+    public int SellPrice;
+
     private void Start()
     {
         GameManager = FindAnyObjectByType<GameManager>();
+        CurrencyManager = FindAnyObjectByType<CurrencyManager>();
     }
 
     // Update is called once per frame
@@ -147,5 +151,11 @@ public class MageBeeCode : Tower
             }
         }
         return null; 
+    }
+
+    public void Sell()
+    {
+        CurrencyManager.AddCurrency(SellPrice);
+        Object.Destroy(this.gameObject);
     }
 }

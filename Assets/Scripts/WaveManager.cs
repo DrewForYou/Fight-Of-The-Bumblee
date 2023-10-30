@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class WaveManager : MonoBehaviour
     public GameObject SpawnPoint;
     public CurrencyManager CurrencyManager;
     public GameManager GameManager;
+    public TMP_Text WhatWave;
 
     private void Start()
     {
@@ -30,6 +32,7 @@ public class WaveManager : MonoBehaviour
                 WaveOver = false;
                 TempStart = false;
                 WaveRun(Waves[CurrentWave]);
+                UpdateWave();
             }
         }
         if(WaveOver && CurrentWave >= Waves.Count)
@@ -106,5 +109,10 @@ public class WaveManager : MonoBehaviour
         { 
             return false; 
         }
+    }
+    
+    public void UpdateWave()
+    {
+        WhatWave.text = "Wave: " + CurrentWave;
     }
 }
