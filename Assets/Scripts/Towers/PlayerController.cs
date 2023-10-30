@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public UpgradeButton UpgradeButton;
     //public GameObject Upgrades;
-    public AudioClip waveStart;
+    public AudioClip WaveStart;
     //private ArcherBeeTower selectedTower;
     void Start()
     {
