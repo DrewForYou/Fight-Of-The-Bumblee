@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class ArrowBehaviour : MonoBehaviour
+public class KunaiBehavior : MonoBehaviour
 {
     public Transform target;
 
+    //public AudioClip hit;
 
     private Rigidbody2D rb;
 
@@ -15,20 +16,20 @@ public class ArrowBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ReworkedArcherBee ab = GameObject.FindObjectOfType<ReworkedArcherBee>();
+        NinjaBee nb = GameObject.FindObjectOfType<NinjaBee>();
         if (collision.gameObject.tag == "Enemy")
         {
             // AudioSource.PlayClipAtPoint(hit, Camera.main.transform.position);
-            collision.GetComponent<EnemyAI>().Damaged(ab.Damage);
-            
-                Destroy(this.gameObject);          
+            collision.GetComponent<EnemyAI>().Damaged(nb.Damage);
+
+            Destroy(this.gameObject);
 
         }
     }
 
     private void FixedUpdate()
     {
-       if(target != null)
+        if (target != null)
         {
             Vector2 direction = (Vector2)target.position - rb.position;
 
@@ -40,7 +41,7 @@ public class ArrowBehaviour : MonoBehaviour
 
             rb.velocity = transform.up * speed;
         }
-      else
+        else
         {
             Object.Destroy(this.gameObject);
         }
@@ -49,9 +50,7 @@ public class ArrowBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        // StartCoroutine(Duration());
         target = GameObject.FindGameObjectWithTag("Enemy").transform;
         rb = GetComponent<Rigidbody2D>();
     }
-
 }

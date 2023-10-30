@@ -32,7 +32,7 @@ public class NinjaBee : Tower
 
     public int UpgradeLevel = 0;
 
-    public int Damage = 3;
+    public int Damage = 1;
 
     public GameObject upgrade1;
     public GameObject upgrade2;

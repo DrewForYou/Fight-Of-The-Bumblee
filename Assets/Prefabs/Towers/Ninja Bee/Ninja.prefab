@@ -180,8 +180,8 @@ GameObject:
   - component: {fileID: 8267260242917306463}
   - component: {fileID: 7216196081207665172}
   - component: {fileID: 1061067033637414845}
-  - component: {fileID: 3279906009403306054}
   - component: {fileID: 4018681635536116490}
+  - component: {fileID: 6233400740159341371}
   m_Layer: 0
   m_Name: Warrior Tower
   m_TagString: Untagged
@@ -197,8 +197,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3346737220012606516}
   m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
-  m_LocalScale: {x: 2.343887, y: 2.343887, z: 2.343887}
+  m_LocalPosition: {x: -0.02, y: -0.04, z: 0}
+  m_LocalScale: {x: 4.5758934, y: 4.5758934, z: 4.5758934}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8553014815619490341}
@@ -283,30 +283,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3279906009403306054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3346737220012606516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 055623e5f48fb874bb2cd16cd60aee4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 1305660284935224498}
-  Attack: {fileID: 8348761637227034447, guid: 7480ab0b6b5d2384cb51cd16b89591a8, type: 3}
-  AttackingRate: 0.5
-  AttackPoint: {fileID: 4872740281947290698}
-  Force: 50
-  EnemyTargets: []
-  UpgradeLevel: 0
-  Damage: 3
-  upgrade1: {fileID: 1295554430481092770}
-  upgrade2: {fileID: 5351976955472767361}
-  upgrade3: {fileID: 4663524820873457201}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
 --- !u!58 &4018681635536116490
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -342,6 +318,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6233400740159341371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346737220012606516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9688978a88c7e0f428e60c595e2597e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  Weapon: {fileID: 1305660284935224498}
+  Attack: {fileID: 2113468107881602900, guid: 1c5afbfd9bdc65c4ab2fe1cb4bc59247, type: 3}
+  AttackingRate: 5
+  AttackPoint: {fileID: 4872740281947290698}
+  Force: 300
+  EnemyTargets: []
+  UpgradeLevel: 0
+  Damage: 1
+  upgrade1: {fileID: 0}
+  upgrade2: {fileID: 0}
+  upgrade3: {fileID: 0}
+  upgrade: {fileID: 0}
 --- !u!1 &3730196468633870500
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8553014815619490341}
   - component: {fileID: 808350643517032632}
+  - component: {fileID: 5492451903349258209}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Tower
@@ -492,7 +494,7 @@ Transform:
   - {fileID: 3792688533073664901}
   - {fileID: 5537768197888842654}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &808350643517032632
 SpriteRenderer:
@@ -546,6 +548,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5492451903349258209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168559369094026502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9688978a88c7e0f428e60c595e2597e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  Weapon: {fileID: 0}
+  Attack: {fileID: 0}
+  AttackingRate: 0
+  AttackPoint: {fileID: 0}
+  Force: 0
+  EnemyTargets: []
+  UpgradeLevel: 0
+  Damage: 1
+  upgrade1: {fileID: 0}
+  upgrade2: {fileID: 0}
+  upgrade3: {fileID: 0}
+  upgrade: {fileID: 0}
 --- !u!1 &5351976955472767361
 GameObject:
   m_ObjectHideFlags: 0
