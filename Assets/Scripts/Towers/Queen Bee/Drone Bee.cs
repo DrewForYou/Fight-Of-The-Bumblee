@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class DroneBee : MonoBehaviour
 {
-    public int Strength;
-    public int Value;
+    public int Damage;
     public float Speed;
     public Rigidbody2D DroneRB;
     public Collider2D DroneCollider;
     public List<GameObject> Pathing;
     public GameManager GameManager;
     public WaveManager WaveManager;
+    public QueenBeeCode QueenBeeCode;
 
     // Start is called before the first frame update
     void Start()
     {
         GameManager = FindAnyObjectByType<GameManager>();
         WaveManager = FindAnyObjectByType<WaveManager>();
+        QueenBeeCode = FindAnyObjectByType<QueenBeeCode>();
+
+        Damage = QueenBeeCode.Damage;
+        Speed = QueenBeeCode.Speed;
 
         Pathing = new List<GameObject>(GameManager.MapPoints);
         Pathing.Reverse();
-        EnemyMove();
+        DroneMove();
     }
 
     //Moves the enemy
-    public void EnemyMove()
+    public void DroneMove()
     {
         StartCoroutine(MoveMe(Pathing[0]));
 
@@ -49,7 +53,7 @@ public class DroneBee : MonoBehaviour
 
         if (Pathing.Count > 0)
         {
-            EnemyMove();
+            DroneMove();
         }
         else
         {
@@ -57,9 +61,18 @@ public class DroneBee : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.GetComponent<EnemyAI>().Damaged(Damage);
+            Destroy(this.gameObject);
+        }
+    }
+
     public void ReachedEnd()
     {
-        GameManager.Hurt(Strength);
+        GameManager.Hurt(Damage);
         Destroy(gameObject);
     }
 }
