@@ -15,4 +15,9 @@ public class RestartAndQuitButtons : MonoBehaviour
         print("Quit");
         Application.Quit();
     }
+
+    public void MainMenu()
+    {
+            SceneManager.LoadScene(0);
+    }
 }

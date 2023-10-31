@@ -34,13 +34,15 @@ public class GameManager : MonoBehaviour
         if(SpeedMultiply && !alreadySpeedy)
         {
             Time.timeScale = 2;
+            alreadySpeedy = true;
         }
         else if(!SpeedMultiply && alreadySpeedy) 
        {
             Time.timeScale = 1;
-       }
+            alreadySpeedy = false;
+        }
     }
-
+    
     public void Win()
     {
         WinScreen.SetActive(true);
@@ -59,5 +61,10 @@ public class GameManager : MonoBehaviour
             IsRunning = true;
             PauseScreen.SetActive(false);
         }
+    }
+
+    public void SpeedUp()
+    {
+        SpeedMultiply = !SpeedMultiply;
     }
 }
