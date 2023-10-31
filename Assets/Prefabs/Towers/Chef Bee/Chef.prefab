@@ -35,7 +35,7 @@ Transform:
   - {fileID: 4084223518096744830}
   - {fileID: 4565867638685470497}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &4844403261554620960
 SpriteRenderer:
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 4252754822830448125}
   - component: {fileID: 4160414615176024963}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: whisk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,10 +468,10 @@ GameObject:
   - component: {fileID: 2917548276646216291}
   - component: {fileID: 4494301709760904228}
   - component: {fileID: 3447237607541813971}
-  - component: {fileID: 5485469759884980438}
   - component: {fileID: 8887869936909263207}
+  - component: {fileID: 7365995522021499654}
   m_Layer: 0
-  m_Name: Warrior Tower
+  m_Name: Chef Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,30 +571,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5485469759884980438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016007145175349651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 055623e5f48fb874bb2cd16cd60aee4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 3258054854274246076}
-  Attack: {fileID: 8348761637227034447, guid: 7480ab0b6b5d2384cb51cd16b89591a8, type: 3}
-  AttackingRate: 0.5
-  AttackPoint: {fileID: 8784963686896778182}
-  Force: 50
-  EnemyTargets: []
-  UpgradeLevel: 0
-  Damage: 3
-  upgrade1: {fileID: 1568719221526222542}
-  upgrade2: {fileID: 2732288319469653863}
-  upgrade3: {fileID: 5250006138733365658}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
 --- !u!58 &8887869936909263207
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -630,3 +606,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7365995522021499654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016007145175349651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0781e1acf737b2043be7f5208d2343f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  Weapon: {fileID: 3258054854274246076}
+  Attack: {fileID: 7123954639274776677, guid: dd8ff75e46cf17c4cbfe94ced1f5a799, type: 3}
+  AttackingRate: 1
+  AttackPoint: {fileID: 8784963686896778182}
+  Force: 50
+  EnemyTargets: []
+  UpgradeLevel: 0
+  Damage: 1
+  upgrade1: {fileID: 0}
+  upgrade2: {fileID: 0}
+  upgrade3: {fileID: 0}
+  upgrade: {fileID: 0}

@@ -32,7 +32,7 @@ public class WaveManager : MonoBehaviour
                 WaveOver = false;
                 TempStart = false;
                 WaveRun(Waves[CurrentWave]);
-                UpdateWave();
+                //UpdateWave();
             }
         }
         if(WaveOver && CurrentWave >= Waves.Count)
@@ -111,8 +111,10 @@ public class WaveManager : MonoBehaviour
         }
     }
     
+    /*
     public void UpdateWave()
     {
         WhatWave.text = "Wave: " + CurrentWave;
     }
+    */
 }

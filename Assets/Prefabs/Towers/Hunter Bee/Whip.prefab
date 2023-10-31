@@ -173,4 +173,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 5
-  rotateSpeed: 200
+  rotateSpeed: 500
