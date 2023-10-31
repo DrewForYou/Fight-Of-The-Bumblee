@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class WaveManager : MonoBehaviour
     public GameObject SpawnPoint;
     public CurrencyManager CurrencyManager;
     public GameManager GameManager;
+    public TMP_Text WhatWave;
 
     private void Start()
     {
@@ -30,6 +32,7 @@ public class WaveManager : MonoBehaviour
                 WaveOver = false;
                 TempStart = false;
                 WaveRun(Waves[CurrentWave]);
+                UpdateWave();
             }
         }
         if(WaveOver && CurrentWave >= Waves.Count)
@@ -59,9 +62,11 @@ public class WaveManager : MonoBehaviour
         
         while(count != 0)
         {
-            print("Got to Corutine");
-            Instantiate(enemy, SpawnPoint.transform);
-            count--;
+            if(GameManager.IsRunning)
+            {
+                Instantiate(enemy, SpawnPoint.transform);
+                count--;
+            }
             yield return new WaitForSeconds(delay);
         }
 
@@ -72,13 +77,10 @@ public class WaveManager : MonoBehaviour
             if (FindAnyObjectByType<EnemyAI>() == null && HasEverythingSpawned(enemy, wave))
             {
                 WaveOver = true;
-                print("I have been run");
                 CurrencyManager.AddCurrency(wave.WaveCompletionReward);
             }
             yield return null;
         }
-        
-        print("Exited corutine");
     }
 
     //This checks to make sure all enemies have been spawned
@@ -107,5 +109,10 @@ public class WaveManager : MonoBehaviour
         { 
             return false; 
         }
+    }
+    
+    public void UpdateWave()
+    {
+        WhatWave.text = "Wave: " + CurrentWave;
     }
 }

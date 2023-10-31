@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Android;
 using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
@@ -11,15 +12,17 @@ public class UpgradeButton : MonoBehaviour
     public Button Upgrade2;
     public Button Upgrade3;
 
+    public List<Button> UpgradeButtons;
+
     public GameObject Upgrades;
 
-    private Tower selectedTower;
-   
+    public Tower selectedTower;
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+
         }
     }
 
@@ -29,13 +32,46 @@ public class UpgradeButton : MonoBehaviour
         Upgrade2.onClick.AddListener(UpgradeButton2);
         Upgrade3.onClick.AddListener(UpgradeButton3);
 
-        //Upgrade2.interactable = false;
-        //Upgrade3.interactable = false;
+        gameObject.SetActive(false);
     }
 
     public void SelectedTower(Tower tower)
     {
-        selectedTower = tower;  
+        selectedTower = tower;
+
+        gameObject.SetActive(true);
+
+        for (int i = 0; i < UpgradeButtons.Count; i++)
+        {
+            if (i <= selectedTower.Level)
+            {
+                UpgradeButtons[i].interactable = true;
+
+            }
+            else
+            {
+                UpgradeButtons[i].interactable = false;
+            }
+            
+        }
+
+        // disables upgrade 1 button once player has used it 
+        if (selectedTower.Level >= 1)
+        {
+            UpgradeButtons[0].interactable = false;
+        }
+
+        // disables upgrade 2 button once player has used it
+        if (selectedTower.Level >= 2)
+        {
+            UpgradeButtons[1].interactable = false;
+        }
+
+        // disables upgrade 3 button once player has used it 
+        if (selectedTower.Level >= 3)
+        {
+            UpgradeButtons[2].interactable = false;
+        }
     }
     public void UpgradeButton1()
     {
@@ -46,8 +82,9 @@ public class UpgradeButton : MonoBehaviour
 
             selectedTower.Upgrade1();
             Upgrades.SetActive(false);
+
             //Upgrade1.interactable = false;
-            //Upgrade2.interactable = true;
+           //UpgradeButtons[0].interactable = false;
             
         }
     }
@@ -61,8 +98,6 @@ public class UpgradeButton : MonoBehaviour
 
             selectedTower.Upgrade2();
             Upgrades.SetActive(false);
-            //Upgrade2.interactable = false;
-            //Upgrade3.interactable = true;
         }
     }
 
@@ -75,8 +110,8 @@ public class UpgradeButton : MonoBehaviour
 
             selectedTower.Upgrade3();
             Upgrades.SetActive(false);
-            //Upgrade3.interactable= false;
         }
     }
-  
+
+    
 }

@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     private InputAction restart;
     private InputAction pause;
 
-    public GameObject Upgrades;
+    public UpgradeButton UpgradeButton;
+    //public GameObject Upgrades;
     public AudioClip WaveStart;
     //private ArcherBeeTower selectedTower;
     void Start()
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
     private void Space_performed(InputAction.CallbackContext obj)
     {
         WaveManager.TempStart = true;
-        AudioSource.PlayClipAtPoint(WaveStart, Camera.main.transform.position);
+        //AudioSource.PlayClipAtPoint(WaveStart, Camera.main.transform.position);
     }
 
     private void OnDestroy()
@@ -89,7 +90,6 @@ public class PlayerController : MonoBehaviour
             
             if (tower != null)
             {
-                Upgrades.SetActive(true);
                 UpgradeButton.Instance.SelectedTower(tower);
             }
 
@@ -100,7 +100,6 @@ public class PlayerController : MonoBehaviour
 
             if (tower != null)
             {
-                Upgrades.SetActive(true);
                 UpgradeButton.Instance.SelectedTower(tower);
             }
 
@@ -112,7 +111,17 @@ public class PlayerController : MonoBehaviour
 
             if (tower != null)
             {
-                Upgrades.SetActive(true);
+                UpgradeButton.Instance.SelectedTower(tower);
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            SniperBee tower = hit.collider.GetComponent<SniperBee>();
+
+            if (tower != null)
+            {
                 UpgradeButton.Instance.SelectedTower(tower);
             }
 
@@ -132,8 +141,61 @@ public class PlayerController : MonoBehaviour
         
         // instantiate the tower at the player's mouse position
         TowerPlacement.instance.PlaceTower(mousePosition);
-        
+
         //Debug.Log("Player Clicked");        // let's us know the player is able
-                                            // to click
+        // to click
+
+        // detect tower the player is clicking
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+
+        if (hit.collider != null)
+        {
+            //selectedTower = hit.collider.GetComponent<UpgradeButton>();
+            ArcherBeeTower tower = hit.collider.GetComponent<ArcherBeeTower>();
+            //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+            }
+
+        }
+        if (hit.collider != null)
+        {
+            MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            WarriorBeeCode tower = hit.collider.GetComponent<WarriorBeeCode>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            SniperBee tower = hit.collider.GetComponent<SniperBee>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+                
+            }
+
+        }
     }
+    
+   
+
 }

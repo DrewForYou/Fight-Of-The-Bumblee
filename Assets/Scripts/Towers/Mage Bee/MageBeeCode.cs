@@ -32,10 +32,15 @@ public class MageBeeCode : Tower
     public GameManager GameManager;
     public List<GameObject> EnemyTargets;
     public AudioClip upgrade;
+    public bool LightningAttackActive;
+
+    public CurrencyManager CurrencyManager;
+    public int SellPrice;
 
     private void Start()
     {
         GameManager = FindAnyObjectByType<GameManager>();
+        CurrencyManager = FindAnyObjectByType<CurrencyManager>();
     }
 
     // Update is called once per frame
@@ -72,7 +77,8 @@ public class MageBeeCode : Tower
                     if (Detected && GetFirstEnemy() != null)
                     {
                         nextTimeToLightningAttack = Time.time + 1 / LightningAttackingRate;
-                        Combat(Lightning, Direction);
+                        LightningAttackActive = !LightningAttackActive;
+                        Lightning.SetActive(LightningAttackActive);
                     }
                 }
             }
@@ -119,6 +125,7 @@ public class MageBeeCode : Tower
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         FireballOn = true;
         UpgradeSprite1.gameObject.SetActive(true);
+        
     }
 
     public override void Upgrade2()
@@ -145,5 +152,11 @@ public class MageBeeCode : Tower
             }
         }
         return null; 
+    }
+
+    public void Sell()
+    {
+        CurrencyManager.AddCurrency(SellPrice);
+        Object.Destroy(this.gameObject);
     }
 }

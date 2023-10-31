@@ -141,9 +141,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
-  upgrade1: {fileID: 0}
-  upgrade2: {fileID: 0}
-  upgrade3: {fileID: 0}
 --- !u!61 &-5796066028016787715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5672169883876058567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2516, y: 0.5284, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0.13, z: 0}
   m_LocalScale: {x: 1.5032495, y: 1.5032495, z: 1.5032495}
   m_ConstrainProportionsScale: 0
   m_Children:

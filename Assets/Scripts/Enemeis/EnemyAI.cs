@@ -62,30 +62,7 @@ public class EnemyAI : MonoBehaviour
             ReachedEnd();
         }
     }
-    /*
-
-    private void Update()
-    {
-        float step = Time.deltaTime * Speed;
-
-        if (Vector3.Distance(transform.position, goal.transform.position) > 0.2f)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, goal.transform.position, step);
-            
-        }
-
-        //print(Pathing.Count);
-        Pathing.Remove(goal);
-
-        if (Pathing.Count > 0)
-        {
-            //EnemyMove();
-        }
-        else
-        {
-            ReachedEnd();
-        }
-    }*/
+    
 
     //Damages the enemy and checks if it has died
     public void Damaged(int damage)
@@ -96,18 +73,6 @@ public class EnemyAI : MonoBehaviour
             GainHoney();
         }
     }
-    
- 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Impliment Proejctile Damage
-        if(collision.gameObject.tag == "Projectile")
-        {
-            *//*Impliment getting damage type*//*
-            Damaged(1);
-            //Damaged(collision.GetComponenet
-        }
-    }*/
   
     public void GainHoney()
     {

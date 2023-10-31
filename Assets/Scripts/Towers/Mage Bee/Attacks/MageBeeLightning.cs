@@ -13,9 +13,5 @@ public class MageBeeLightning : MonoBehaviour
             collision.GetComponent<EnemyAI>().Damaged(Damage);
             //Destroy(this.gameObject);
         }
-        if (collision.gameObject.tag == "Border")
-        {
-            Destroy(this.gameObject);
-        }
     }
 }

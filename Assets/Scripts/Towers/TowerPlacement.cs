@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 public class TowerPlacement : MonoBehaviour
 {
     public static TowerPlacement instance;
-
+   
     public TowerTypeSO ActiveTowerType;
 
     public bool CanPlaceTower = false;
@@ -53,7 +53,7 @@ public class TowerPlacement : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("Tower"))
                 {
                     CanPlaceTower = false;
-
+                    
                     Debug.Log("can't place tower here");
                 }
 
@@ -67,9 +67,13 @@ public class TowerPlacement : MonoBehaviour
 
                     // disable tower placement until player clicks another button
                     CanPlaceTower = false;
+                    TowerPlacementUI.instance.Deactivate();
                 }
                
             }
         }
     }
+
+
+
 }
