@@ -21,10 +21,13 @@ public class TowerPlacement : MonoBehaviour
         {
             instance = this;
         }
+
     }
 
     public void PlaceTower(Vector2 position)
     {
+
+        CanPlaceTower = true;
         // checks if the player can place tower
                
         if (!CanPlaceTower)
@@ -44,8 +47,8 @@ public class TowerPlacement : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("Path"))
                 {
                     CanPlaceTower = false;
-                    Debug.Log("Hit object with tag: " + hit.collider.tag);
-                    Debug.Log("can't place tower here");
+                    //Debug.Log("Hit object with tag: " + hit.collider.tag);
+                    //Debug.Log("can't place tower here");
                 }
 
                 // this code makes it so you can't place the towers on top of
@@ -54,7 +57,7 @@ public class TowerPlacement : MonoBehaviour
                 {
                     CanPlaceTower = false;
                     
-                    Debug.Log("can't place tower here");
+                    //Debug.Log("can't place tower here");
                 }
 
                 else
