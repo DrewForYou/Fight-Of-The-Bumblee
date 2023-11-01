@@ -53,6 +53,7 @@ public class WaveManager : MonoBehaviour
         }
         CurrentWave += 1;
         AudioSource.PlayClipAtPoint(StartSound, Camera.main.transform.position);
+        WhatWave.text = "Wave: " + CurrentWave;
 
         //Don't forget to impliment me.
         //GameManger.Reward(wave.WaveCompletionReward);
@@ -113,10 +114,5 @@ public class WaveManager : MonoBehaviour
         }
     }
     
-    /*
-    public void UpdateWave()
-    {
-        WhatWave.text = "Wave: " + CurrentWave;
-    }
-    */
+    
 }
