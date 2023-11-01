@@ -8535,7 +8535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422d11985c2721548b8df68c27080c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaveManager: {fileID: 0}
+  WaveManager: {fileID: 1887800812}
 --- !u!114 &1071582229
 MonoBehaviour:
   m_ObjectHideFlags: 0
