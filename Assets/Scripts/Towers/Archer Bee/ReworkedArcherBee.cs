@@ -34,6 +34,7 @@ public class ReworkedArcherBee : Tower
 
     public int Damage = 3;
 
+    public GameObject upgrade0;
     public GameObject upgrade1;
     public GameObject upgrade2;
     public GameObject upgrade3;
@@ -107,6 +108,7 @@ public class ReworkedArcherBee : Tower
             AttackingRate = 2;
             
             upgrade1.SetActive(true);
+        upgrade0.SetActive(false);
         Level = 1;
         
     }
