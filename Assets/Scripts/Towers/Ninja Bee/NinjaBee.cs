@@ -30,7 +30,7 @@ public class NinjaBee : Tower
     //list of enemies
     public List<GameObject> EnemyTargets;
 
-    public int UpgradeLevel = 0;
+    
 
     public int Damage = 1;
 
@@ -41,6 +41,12 @@ public class NinjaBee : Tower
     // Update is called once per frame
 
     public AudioClip upgrade;
+
+    public GameObject shadowClones;
+    public Transform shadowCloneOneAP;
+    public Transform shadowCloneTwoAP;
+
+    bool shadowClonesOn = false;
     void Update()
     {
         //just saying 
@@ -67,6 +73,15 @@ public class NinjaBee : Tower
     {
         GameObject AttackIns = Instantiate(Attack, AttackPoint.position, Quaternion.identity);
         AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
+
+        if(shadowClonesOn == true)
+        {
+            GameObject Shadow1AttackIns = Instantiate(Attack, shadowCloneOneAP.position, Quaternion.identity);
+            Shadow1AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
+
+            GameObject Shadow2AttackIns = Instantiate(Attack, shadowCloneTwoAP.position, Quaternion.identity);
+            Shadow2AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -97,38 +112,42 @@ public class NinjaBee : Tower
             EnemyTargets.Remove(collision.gameObject);
         }
     }
-    /*
+    
     public override void Upgrade1()
     {
-        if (UpgradeLevel == 0)
-        {
+       
+        
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            AttackingRate = 2;
-            ++UpgradeLevel;
+            AttackingRate = 8;
+            
             upgrade1.SetActive(true);
-        }
+        
     }
     public override void Upgrade2()
     {
-        if (UpgradeLevel == 1)
-        {
+        
+        
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            Damage = 6;
-            ++UpgradeLevel;
+            Damage = 3;
+            
             upgrade2.SetActive(true);
             upgrade1.SetActive(false);
-        }
+        
     }
     public override void Upgrade3()
     {
-        if (UpgradeLevel == 2)
-        {
+        
+        
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            AttackingRate = 5;
-            ++UpgradeLevel;
+            AttackingRate = 10;
+            
             upgrade3.SetActive(true);
             upgrade2.SetActive(false);
-        }
+
+            shadowClonesOn = true;
+
+            shadowClones.SetActive(true);
+
     }
-    */
+    
 }
