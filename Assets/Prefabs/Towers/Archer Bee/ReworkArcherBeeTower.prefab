@@ -472,14 +472,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
+  towerName: 
+  Upgrade1Text: 
+  Upgrade2Text: 
+  Upgrade3Text: 
   Weapon: {fileID: 7259104393347604339}
   Attack: {fileID: 1608934017633401398, guid: 074eb32d9ddfeb342b7003a5c5d27eb8, type: 3}
   AttackingRate: 2
   AttackPoint: {fileID: 5679035281159151646}
   Force: 100
   EnemyTargets: []
-  UpgradeLevel: 0
   Damage: 3
+  upgrade1: {fileID: 3878372373358989461}
+  upgrade2: {fileID: 6908406841552283136}
+  upgrade3: {fileID: 589979086070943845}
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
 --- !u!1 &4717491689790686702
 GameObject:

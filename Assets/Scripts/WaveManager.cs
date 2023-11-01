@@ -16,6 +16,7 @@ public class WaveManager : MonoBehaviour
     public CurrencyManager CurrencyManager;
     public GameManager GameManager;
     public TMP_Text WhatWave;
+    public AudioClip StartSound;
 
     private void Start()
     {
@@ -51,10 +52,11 @@ public class WaveManager : MonoBehaviour
                 wave));
         }
         CurrentWave += 1;
+        AudioSource.PlayClipAtPoint(StartSound, Camera.main.transform.position);
 
         //Don't forget to impliment me.
         //GameManger.Reward(wave.WaveCompletionReward);
-        
+
     }
 
     IEnumerator EnemySpawn(EnemyAI enemy, int count, float delay, Wave wave)
