@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2709808325964307766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.1968, y: 0.2007, z: 0}
+  m_LocalScale: {x: 1.2892901, y: 1.2892901, z: 1.2892901}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5706572118712788485}
@@ -234,7 +234,7 @@ Transform:
   m_Children:
   - {fileID: 5445720051418353280}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5893534625940651280
 MonoBehaviour:
@@ -249,6 +249,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
+  towerName: Sniper Bee
+  Upgrade1Text: 'Range: 9 Cost: 5'
+  Upgrade2Text: 'Rate: 6 Cost: 10'
+  Upgrade3Text: 'Rate: 4 Cost 13'
   AttackDamage: 8
   AttackRange: 7
   delayShots: 8
