@@ -14,14 +14,19 @@ public class SniperBee : Tower
     private float nextTimeToAttack;
     public float delayShots = 8f;
 
+    //public string Upgrade1Text;
+    //public string Upgrade2Text;
+    //public string Upgrade3Text;
+   
     public Transform SniperRotationPoint;
     public Transform BulletSpawnPoint;
 
     private Transform target;
 
     public GameObject BulletPrefab;
-
+    
     public LayerMask EnemyMask;
+
     private void Update()
     {
         if (target == null)
@@ -115,22 +120,34 @@ public class SniperBee : Tower
     public override void Upgrade1()
     {
         AttackRange = 9f;
-        AttackDamage = 2;
-
         Level = 1;
         //UpgradeButton.Instance.SelectedTower(this);
-
+        //Upgrade1Text = "Range: 9 Cost: 5";
+        //towerName = "Sniper Bee";
     }
     public override void Upgrade2()
     {
         delayShots = 6f;
         Level = 2;
         //UpgradeButton.Instance.SelectedTower(this);
+        //Upgrade2Text = "Rate: 6 Cost: 10";
+        //towerName = "Sniper Bee";
+        
     }
     public override void Upgrade3()
     {
         delayShots = 4f;
         Level = 3;
         //UpgradeButton.Instance.SelectedTower(this);
+        //Upgrade3Text = "Rate: 4 Cost 13";
+        //towerName = "Sniper Bee";
+    }
+
+    public SniperBee()
+    {
+        towerName = "Sniper Bee";
+        Upgrade1Text = "Range: 9 Cost: 5";
+        Upgrade2Text = "Rate: 6 Cost: 10";
+        Upgrade3Text = "Rate: 4 Cost 13";
     }
 }

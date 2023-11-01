@@ -125,6 +125,7 @@ public class MageBeeCode : Tower
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         FireballOn = true;
         UpgradeSprite1.gameObject.SetActive(true);
+        Level = 1;
         
     }
 
@@ -158,5 +159,13 @@ public class MageBeeCode : Tower
     {
         CurrencyManager.AddCurrency(SellPrice);
         Object.Destroy(this.gameObject);
+    }
+
+    public MageBeeCode()
+    {
+        towerName = "Mage Bee";
+        Upgrade1Text = "Fireball Cost: 5";
+        Upgrade2Text = "Rate: 6 Cost: 10";
+        Upgrade3Text = "Rate: 4 Cost 13";
     }
 }

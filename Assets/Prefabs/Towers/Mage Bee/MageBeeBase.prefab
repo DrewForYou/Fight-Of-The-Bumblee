@@ -104,6 +104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f81fa4a0445004b8cf3c981352113f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  towerName: Mage Bee
+  Upgrade1Text: 'Fireball Cost: 5'
+  Upgrade2Text: 
+  Upgrade3Text: 
   Weapon: {fileID: 4701996641064554177}
   BaseAttack: {fileID: 1800465011939978231, guid: 2cda82fb3d4360a48b2166476c99c3b3, type: 3}
   FireBall: {fileID: 4705436946817001722, guid: 94dd116ed430c504e9df4c6ae5bbd016, type: 3}
@@ -123,6 +128,8 @@ MonoBehaviour:
   EnemyTargets: []
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
   LightningAttackActive: 0
+  CurrencyManager: {fileID: 0}
+  SellPrice: 0
 --- !u!58 &664067619854467221
 CircleCollider2D:
   m_ObjectHideFlags: 0
