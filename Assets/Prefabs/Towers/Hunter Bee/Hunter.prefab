@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 6253364, guid: cc3008e135a72e641a8b2f7067cf1dc5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5283019, g: 0.39761353, b: 0.1279221, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -1854872988, guid: cc3008e135a72e641a8b2f7067cf1dc5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.4973354, b: 0.011273216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -890109858, guid: 50bcf00e95dc78b4dadff53c26769eb6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6132076, g: 0.3950643, b: 0.0154265575, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -364,7 +364,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -570170406, guid: 50bcf00e95dc78b4dadff53c26769eb6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4245283, g: 0.31766242, b: 0.13082945, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -386,13 +386,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8530b7d6e75171459d9c925eaeddcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  towerName: 
+  Upgrade1Text: 
+  Upgrade2Text: 
+  Upgrade3Text: 
   Weapon: {fileID: 0}
   Attack: {fileID: 0}
   AttackingRate: 0
   AttackPoint: {fileID: 0}
   Force: 0
   EnemyTargets: []
-  UpgradeLevel: 0
   Damage: 4
   upgrade1: {fileID: 0}
   upgrade2: {fileID: 0}
@@ -472,7 +476,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -1075077427, guid: cc3008e135a72e641a8b2f7067cf1dc5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6320754, g: 0.35298657, b: 0.0397531, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -608,13 +612,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055623e5f48fb874bb2cd16cd60aee4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  towerName: 
+  Upgrade1Text: 
+  Upgrade2Text: 
+  Upgrade3Text: 
   Weapon: {fileID: 1060212649697187174}
   Attack: {fileID: 2910793154016873052, guid: b6b14a8cf4a7a4f4489d23095778fd77, type: 3}
   AttackingRate: 2
   AttackPoint: {fileID: 8742704833688280601}
   Force: 50
   EnemyTargets: []
-  UpgradeLevel: 0
   Damage: 4
   upgrade1: {fileID: 267803731753497510}
   upgrade2: {fileID: 4258829835241931015}
