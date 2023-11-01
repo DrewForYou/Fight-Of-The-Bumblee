@@ -613,10 +613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: 
-  Upgrade1Text: 
-  Upgrade2Text: 
-  Upgrade3Text: 
+  towerName: Hunter Tower
+  Upgrade1Text: Rate = 2 Cost = 5
+  Upgrade2Text: 'Dmg = 6 Cost = 10 '
+  Upgrade3Text: Rate = 5 Cost = 13
   Weapon: {fileID: 1060212649697187174}
   Attack: {fileID: 2910793154016873052, guid: b6b14a8cf4a7a4f4489d23095778fd77, type: 3}
   AttackingRate: 2

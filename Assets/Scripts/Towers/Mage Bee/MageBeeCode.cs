@@ -134,12 +134,14 @@ public class MageBeeCode : Tower
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         Freeze.gameObject.SetActive(true);
         UpgradeSprite2.SetActive(true);
+        Level = 2;
     }
 
     public override void Upgrade3()
     {
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         LightningOn = true;
+        Level = 3;
     }
 
     public GameObject GetFirstEnemy()

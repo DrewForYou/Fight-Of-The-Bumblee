@@ -132,6 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb259a229f952614ab81967b55237cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  towerName: Archer Tower
+  Upgrade1Text: Rate = 2 Cost = 5
+  Upgrade2Text: 'Dmg = 6 Cost = 10 '
+  Upgrade3Text: Rate = 5 Cost = 13
   AttackDamage: 1
   AttackRange: 3
   ArcherRotationPoint: {fileID: 1558591547296625178}

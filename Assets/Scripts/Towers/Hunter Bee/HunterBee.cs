@@ -104,6 +104,7 @@ public class HunterBee : Tower
             AttackingRate = 2;
           
             upgrade1.SetActive(true);
+        Level = 1;
         
     }
     public override void Upgrade2()
@@ -115,6 +116,7 @@ public class HunterBee : Tower
           
             upgrade2.SetActive(true);
             upgrade1.SetActive(false);
+        Level = 2;
         
     }
     public override void Upgrade3()
@@ -126,6 +128,7 @@ public class HunterBee : Tower
            
             upgrade3.SetActive(true);
             upgrade2.SetActive(false);
+        Level = 3;
         
     }
     

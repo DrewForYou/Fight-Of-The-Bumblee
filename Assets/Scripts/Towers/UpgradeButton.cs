@@ -48,7 +48,7 @@ public class UpgradeButton : MonoBehaviour
         selectedTower = tower;
         //UpdateTowerText(selectedTower.towerName);
         UpdateTowerText();
-        Debug.Log("Selected Tower: " + selectedTower.towerName);
+        //Debug.Log("Selected Tower: " + selectedTower.towerName);
         gameObject.SetActive(true);
 
         for (int i = 0; i < UpgradeButtons.Count; i++)
@@ -141,6 +141,37 @@ public class UpgradeButton : MonoBehaviour
                 UpgradeText2.text = ((MageBeeCode)selectedTower).Upgrade2Text;
                 UpgradeText3.text = ((MageBeeCode)selectedTower).Upgrade3Text;
             }
+            if (selectedTower is ReworkedArcherBee)
+            {
+                UpgradeText1.text = ((ReworkedArcherBee)selectedTower).Upgrade1Text;
+                UpgradeText2.text = ((ReworkedArcherBee)selectedTower).Upgrade2Text;
+                UpgradeText3.text = ((ReworkedArcherBee)selectedTower).Upgrade3Text;
+            }
+            if (selectedTower is ChefBee)
+            {
+                UpgradeText1.text = ((ChefBee)selectedTower).Upgrade1Text;
+                UpgradeText2.text = ((ChefBee)selectedTower).Upgrade2Text;
+                UpgradeText3.text = ((ChefBee)selectedTower).Upgrade3Text;
+            }
+            if (selectedTower is HunterBee)
+            {
+                UpgradeText1.text = ((HunterBee)selectedTower).Upgrade1Text;
+                UpgradeText2.text = ((HunterBee)selectedTower).Upgrade2Text;
+                UpgradeText3.text = ((HunterBee)selectedTower).Upgrade3Text;
+            }
+            if (selectedTower is NinjaBee)
+            {
+                UpgradeText1.text = ((NinjaBee)selectedTower).Upgrade1Text;
+                UpgradeText2.text = ((NinjaBee)selectedTower).Upgrade2Text;
+                UpgradeText3.text = ((NinjaBee)selectedTower).Upgrade3Text;
+            }
+            if (selectedTower is WarriorBeeCode)
+            {
+                UpgradeText1.text = ((WarriorBeeCode)selectedTower).Upgrade1Text;
+                UpgradeText2.text = ((WarriorBeeCode)selectedTower).Upgrade2Text;
+                UpgradeText3.text = ((WarriorBeeCode)selectedTower).Upgrade3Text;
+            }
+
         }
     }   
 }

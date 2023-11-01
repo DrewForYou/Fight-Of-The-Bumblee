@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         // detect tower the player is clicking
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
-
+        /*
         if (hit.collider != null)
         {
             //selectedTower = hit.collider.GetComponent<UpgradeButton>();
@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+        */
         if (hit.collider != null)
         {
             MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
@@ -127,6 +128,8 @@ public class PlayerController : MonoBehaviour
 
         }
 
+
+
     }
     public void LeftClick_performed(InputAction.CallbackContext obj)
     {
@@ -152,7 +155,7 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             //selectedTower = hit.collider.GetComponent<UpgradeButton>();
-            ArcherBeeTower tower = hit.collider.GetComponent<ArcherBeeTower>();
+            ReworkedArcherBee tower = hit.collider.GetComponent<ReworkedArcherBee>();
             //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
 
             if (tower != null)
@@ -191,6 +194,42 @@ public class PlayerController : MonoBehaviour
             {
                 UpgradeButton.Instance.SelectedTower(tower);
                 
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            ChefBee tower = hit.collider.GetComponent<ChefBee>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            HunterBee tower = hit.collider.GetComponent<HunterBee>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            NinjaBee tower = hit.collider.GetComponent<NinjaBee>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+
             }
 
         }

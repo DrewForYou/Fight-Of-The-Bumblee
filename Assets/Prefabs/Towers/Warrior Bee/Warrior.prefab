@@ -583,13 +583,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055623e5f48fb874bb2cd16cd60aee4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  towerName: Warrior Tower
+  Upgrade1Text: Rate = 2 Cost = 5
+  Upgrade2Text: Dmg = 6 Cost = 10
+  Upgrade3Text: Rate = 5 Cost = 13
   Weapon: {fileID: 1937532055122464543}
   Attack: {fileID: 8348761637227034447, guid: 7480ab0b6b5d2384cb51cd16b89591a8, type: 3}
   AttackingRate: 0.5
   AttackPoint: {fileID: 848843970215053761}
   Force: 50
   EnemyTargets: []
-  UpgradeLevel: 0
   Damage: 3
   upgrade1: {fileID: 7138584486355675392}
   upgrade2: {fileID: 7443939883263969368}

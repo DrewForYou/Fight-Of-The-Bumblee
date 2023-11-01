@@ -121,6 +121,7 @@ public class NinjaBee : Tower
             AttackingRate = 8;
             
             upgrade1.SetActive(true);
+        Level = 1;
         
     }
     public override void Upgrade2()
@@ -132,6 +133,7 @@ public class NinjaBee : Tower
             
             upgrade2.SetActive(true);
             upgrade1.SetActive(false);
+        Level = 2;
         
     }
     public override void Upgrade3()
@@ -147,6 +149,7 @@ public class NinjaBee : Tower
             shadowClonesOn = true;
 
             shadowClones.SetActive(true);
+        Level = 3;
 
     }
     

@@ -452,10 +452,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: 
-  Upgrade1Text: 
-  Upgrade2Text: 
-  Upgrade3Text: 
+  towerName: Chef Tower
+  Upgrade1Text: Rate = 2 Cost = 5
+  Upgrade2Text: 'Dmg = 3 Cost = 10 '
+  Upgrade3Text: Rate = 5 Cost = 13
   Weapon: {fileID: 3258054854274246076}
   Attack: {fileID: 7123954639274776677, guid: dd8ff75e46cf17c4cbfe94ced1f5a799, type: 3}
   AttackingRate: 1

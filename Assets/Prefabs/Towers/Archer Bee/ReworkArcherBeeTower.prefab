@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.14685297, y: 0.23863566}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2937059, y: 1.4772713}
   m_EdgeRadius: 0
 --- !u!50 &5873564428213311606
 Rigidbody2D:
@@ -472,10 +472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: 
-  Upgrade1Text: 
-  Upgrade2Text: 
-  Upgrade3Text: 
+  towerName: Archer Tower
+  Upgrade1Text: Rate = 2 Cost = 5
+  Upgrade2Text: Dmg = 6 Cost = 10
+  Upgrade3Text: Rate = 5 Cost = 13
   Weapon: {fileID: 7259104393347604339}
   Attack: {fileID: 1608934017633401398, guid: 074eb32d9ddfeb342b7003a5c5d27eb8, type: 3}
   AttackingRate: 2
