@@ -84,7 +84,7 @@ public class WarriorBeeCode : Tower
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.green;
+            
             Detected = true;
         }
     }
@@ -93,7 +93,7 @@ public class WarriorBeeCode : Tower
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            //ActiveIcon.GetComponent<SpriteRenderer>().color = Color.red;
+            
             Detected = false;
         }
         if (EnemyTargets.Contains(collision.gameObject))
