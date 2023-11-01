@@ -647,6 +647,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
+  towerName: 
+  Upgrade1Text: 
+  Upgrade2Text: 
+  Upgrade3Text: 
   Weapon: {fileID: 1305660284935224498}
   Attack: {fileID: 2113468107881602900, guid: 1c5afbfd9bdc65c4ab2fe1cb4bc59247, type: 3}
   AttackingRate: 5
@@ -654,10 +658,10 @@ MonoBehaviour:
   Force: 300
   EnemyTargets: []
   Damage: 1
-  upgrade1: {fileID: 0}
-  upgrade2: {fileID: 0}
-  upgrade3: {fileID: 0}
-  upgrade: {fileID: 0}
+  upgrade1: {fileID: 2849661027062945614}
+  upgrade2: {fileID: 1953721253626157878}
+  upgrade3: {fileID: 4004669382582715377}
+  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
   shadowClones: {fileID: 2162564500431215014}
   shadowCloneOneAP: {fileID: 4906951256061560253}
   shadowCloneTwoAP: {fileID: 7617266204994314773}
@@ -1053,6 +1057,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
+  towerName: 
+  Upgrade1Text: 
+  Upgrade2Text: 
+  Upgrade3Text: 
   Weapon: {fileID: 0}
   Attack: {fileID: 0}
   AttackingRate: 0
