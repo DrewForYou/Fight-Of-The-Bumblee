@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
+using JetBrains.Annotations;
 
 public class TowerPlacement : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class TowerPlacement : MonoBehaviour
    
     public TowerTypeSO ActiveTowerType;
 
-    public bool CanPlaceTower = false;
-
+    public bool CanPlaceTower = true;
+   
     private void Awake()
     {
         if (instance == null)
@@ -27,14 +28,14 @@ public class TowerPlacement : MonoBehaviour
     public void PlaceTower(Vector2 position)
     {
 
-        CanPlaceTower = true;
+        // CanPlaceTower = true;
         // checks if the player can place tower
-               
+        
         if (!CanPlaceTower)
         {
             return;
         }
-
+        
         // makes sure player's mouse isn't over a UI object
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -59,7 +60,6 @@ public class TowerPlacement : MonoBehaviour
                     
                     //Debug.Log("can't place tower here");
                 }
-
                 else
                 {
                     // instantiates the selected tower type prefab
@@ -70,13 +70,12 @@ public class TowerPlacement : MonoBehaviour
 
                     // disable tower placement until player clicks another button
                     CanPlaceTower = false;
+                    //CanPlaceTower = true;
                     TowerPlacementUI.instance.Deactivate();
                 }
-               
+
             }
         }
     }
-
-
-
+  
 }

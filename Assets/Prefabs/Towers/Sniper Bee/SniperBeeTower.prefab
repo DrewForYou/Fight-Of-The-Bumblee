@@ -248,8 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbcdea6f50e638408bfbf2e607fa069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDamage: 1
+  Level: 0
+  AttackDamage: 8
   AttackRange: 7
+  delayShots: 8
   SniperRotationPoint: {fileID: 5445720051418353280}
   BulletSpawnPoint: {fileID: 4905868445723747503}
   BulletPrefab: {fileID: 3464181185170284321, guid: 996be63a98423944293e959c11edbd64, type: 3}
