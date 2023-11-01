@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b616f4dee3b0c494d8f2e827e4436276, type: 3}
   m_Name: ChefBee
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
-  TowerPrice: 0
-  TowerSprite: {fileID: 0}
+  Prefab: {fileID: 6362679436851029444, guid: 6704b558283c26648a70dca3e9e98509, type: 3}
+  TowerPrice: 15
+  TowerSprite: {fileID: 1055534522, guid: a4c3617f21ecab24e94783fd076505ea, type: 3}
