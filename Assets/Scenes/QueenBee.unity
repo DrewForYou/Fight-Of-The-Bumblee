@@ -1817,7 +1817,13 @@ MonoBehaviour:
   Upgrade1: {fileID: 1447848574}
   Upgrade2: {fileID: 1681049404}
   Upgrade3: {fileID: 2093501013}
+  UpgradeButtons: []
   Upgrades: {fileID: 642077289}
+  TowerText: {fileID: 0}
+  UpgradeText1: {fileID: 0}
+  UpgradeText2: {fileID: 0}
+  UpgradeText3: {fileID: 0}
+  selectedTower: {fileID: 0}
 --- !u!114 &642077291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,7 +2199,7 @@ MonoBehaviour:
   PlayerInputInstance: {fileID: 703565063}
   WaveManager: {fileID: 1887800812}
   GameManager: {fileID: 422412127}
-  Upgrades: {fileID: 642077289}
+  UpgradeButton: {fileID: 0}
   WaveStart: {fileID: 8300000, guid: 0c7ad672489e60644b8922a721149c99, type: 3}
 --- !u!114 &703565063
 MonoBehaviour:
