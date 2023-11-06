@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 2
   Strength: 1
-  Value: 1
+  Value: 2
   Speed: 4
   EnemyRB: {fileID: 7836950595652352836}
   EnemyCollider: {fileID: 7679490643356289873}
