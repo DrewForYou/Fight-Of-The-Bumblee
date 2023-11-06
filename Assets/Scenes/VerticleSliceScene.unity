@@ -19100,7 +19100,7 @@ PrefabInstance:
       objectReference: {fileID: 1160758941}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.size
-      value: 30
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.data[0].EnemyList.Array.size
@@ -19116,7 +19116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.data[1].WaveCompletionReward
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.data[2].EnemyList.Array.size
