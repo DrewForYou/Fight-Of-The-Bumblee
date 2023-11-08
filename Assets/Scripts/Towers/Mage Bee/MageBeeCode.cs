@@ -14,6 +14,7 @@ public class MageBeeCode : Tower
     public GameObject Lightning;
     public GameObject UpgradeSprite1;
     public GameObject UpgradeSprite2;
+    public GameObject UpgradeSprite3;
     //public GameObject UpgradeSprite3;
     public float BaseAttackingRate;
     public float FireballAttackingRate;
@@ -133,6 +134,7 @@ public class MageBeeCode : Tower
     {
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         Freeze.gameObject.SetActive(true);
+        UpgradeSprite1.SetActive(false);
         UpgradeSprite2.SetActive(true);
         Level = 2;
     }
@@ -141,6 +143,8 @@ public class MageBeeCode : Tower
     {
         AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         LightningOn = true;
+        UpgradeSprite2.SetActive(false);
+        UpgradeSprite3.SetActive(true);
         Level = 3;
     }
 
@@ -157,11 +161,11 @@ public class MageBeeCode : Tower
         return null; 
     }
 
-    public void Sell()
+    /*public void Sell()
     {
         CurrencyManager.AddCurrency(SellPrice);
         Object.Destroy(this.gameObject);
-    }
+    }*/
 
     public MageBeeCode()
     {

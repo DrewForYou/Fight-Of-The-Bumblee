@@ -126,10 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889a505dec80a00439a896917e0cea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 30
-  Strength: 4
-  Value: 25
-  Speed: 2
+  Health: 500
+  Strength: 100
+  Value: 0
+  Speed: 1
   EnemyRB: {fileID: 635125801003050969}
   EnemyCollider: {fileID: 4830377142544320544}
   Pathing:
