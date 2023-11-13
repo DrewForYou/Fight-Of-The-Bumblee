@@ -201,6 +201,7 @@ MonoBehaviour:
   Lightning: {fileID: 7523917579953747037}
   UpgradeSprite1: {fileID: 1248259151532563075}
   UpgradeSprite2: {fileID: 7320545816094922430}
+  UpgradeSprite3: {fileID: 32616274886393679}
   BaseAttackingRate: 1
   FireballAttackingRate: 0.05
   LightningAttackingRate: 0.1

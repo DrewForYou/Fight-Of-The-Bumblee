@@ -72,7 +72,6 @@ public class DroneBee : MonoBehaviour
 
     public void ReachedEnd()
     {
-        GameManager.Hurt(Damage);
         Destroy(gameObject);
     }
 }
