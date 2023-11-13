@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 5763929689712256178}
   - component: {fileID: 7962919666177742566}
   m_Layer: 0
-  m_Name: Hunter
+  m_Name: Vampire
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +364,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -570170406, guid: 50bcf00e95dc78b4dadff53c26769eb6, type: 3}
-  m_Color: {r: 0.4245283, g: 0.31766242, b: 0.13082945, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 6297736803347252893}
   - component: {fileID: 351285657220830507}
   m_Layer: 0
-  m_Name: Hunter Tower
+  m_Name: Vampire Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
