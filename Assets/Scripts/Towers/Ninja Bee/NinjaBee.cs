@@ -56,7 +56,7 @@ public class NinjaBee : Tower
 
             Direction = targetpos - (Vector2)transform.position;
 
-            if (Detected)
+            if (Detected && GetFirstEnemy() != null)
             {
                 Weapon.transform.up = Direction;
                 if (Time.time > nextTimeToAttack)
@@ -115,8 +115,6 @@ public class NinjaBee : Tower
     
     public override void Upgrade1()
     {
-       
-        
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
             AttackingRate = 8;
             
@@ -126,8 +124,6 @@ public class NinjaBee : Tower
     }
     public override void Upgrade2()
     {
-        
-        
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
             Damage = 3;
             
@@ -138,8 +134,6 @@ public class NinjaBee : Tower
     }
     public override void Upgrade3()
     {
-        
-        
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
             AttackingRate = 10;
             
@@ -152,5 +146,17 @@ public class NinjaBee : Tower
         Level = 3;
 
     }
-    
+
+    public GameObject GetFirstEnemy()
+    {
+        for (int i = 0; i < EnemyTargets.Count; i++)
+        {
+            if (EnemyTargets[i] != null)
+            {
+                Direction = (Vector2)EnemyTargets[i].transform.position - (Vector2)transform.position;
+                return EnemyTargets[i];
+            }
+        }
+        return null;
+    }
 }

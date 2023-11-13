@@ -17,11 +17,13 @@ public class WaveManager : MonoBehaviour
     public GameManager GameManager;
     public TMP_Text WhatWave;
     public AudioClip StartSound;
+    public GameObject WaveDone;
 
     private void Start()
     {
         CurrencyManager = FindAnyObjectByType<CurrencyManager>();
         WaveOver = true;
+        WaveDone.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -31,6 +33,7 @@ public class WaveManager : MonoBehaviour
             if (CurrentWave < Waves.Count)
             {
                 WaveOver = false;
+                WaveDone.gameObject.SetActive(false);
                 TempStart = false;
                 WaveRun(Waves[CurrentWave]);
                 //UpdateWave();
@@ -80,6 +83,7 @@ public class WaveManager : MonoBehaviour
             if (FindAnyObjectByType<EnemyAI>() == null && HasEverythingSpawned(enemy, wave))
             {
                 WaveOver = true;
+                WaveDone.gameObject.SetActive(true);
                 CurrencyManager.AddCurrency(wave.WaveCompletionReward);
             }
             yield return null;

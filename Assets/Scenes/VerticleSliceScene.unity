@@ -19911,7 +19911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.data[14].EnemySpawns.Array.data[0]
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: Waves.Array.data[14].EnemySpawns.Array.data[1]
