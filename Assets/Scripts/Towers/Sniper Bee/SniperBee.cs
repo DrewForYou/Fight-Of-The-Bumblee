@@ -96,14 +96,18 @@ public class SniperBee : Tower
         SniperRotationPoint.rotation = Quaternion.RotateTowards
             (SniperRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
+
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         // this draws a red circle around the sniper bee
-        //Handles.color = Color.red;
+        Handles.color = Color.red;
 
         // the red circle is the bee's attack range
-        //Handles.DrawWireDisc(transform.position, transform.forward, AttackRange);
+        Handles.DrawWireDisc(transform.position, transform.forward, AttackRange);
+
     }
+#endif
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))

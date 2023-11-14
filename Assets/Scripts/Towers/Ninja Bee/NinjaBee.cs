@@ -46,27 +46,46 @@ public class NinjaBee : Tower
     public Transform shadowCloneOneAP;
     public Transform shadowCloneTwoAP;
 
+    public float Range;
+
     bool shadowClonesOn = false;
     void Update()
     {
-        //just saying 
-        if (EnemyTargets.Count > 0)
-        {
-            Vector2 targetpos = EnemyTargets[0].transform.position;
+       
+            RaycastHit2D rayinfo = Physics2D.Raycast(transform.position, Direction, Range);
 
-            Direction = targetpos - (Vector2)transform.position;
-
-            if (Detected && GetFirstEnemy() != null)
+            if (rayinfo)
             {
-                Weapon.transform.up = Direction;
-                if (Time.time > nextTimeToAttack)
+                if (rayinfo.collider.gameObject.tag == "Enemy" && Detected == false && GetFirstEnemy() != null)
                 {
+                    EnemyTargets.Add(rayinfo.collider.gameObject);
+                    Detected = true;
 
-                    nextTimeToAttack = Time.time + 1 / AttackingRate;
-                    combat();
+                }
+                else
+                { 
+                   if(rayinfo.collider.gameObject.tag == "Enemy" && Detected == true)
+                {
+                    Detected = false;
+                }
+                   
                 }
             }
-        }
+        
+            if(Detected)
+        {
+
+            Vector2 targetpos = EnemyTargets[0].transform.position;
+            Direction = targetpos - (Vector2)transform.position;
+            Weapon.transform.up = Direction;
+            if (Time.time > nextTimeToAttack)
+            {
+
+                nextTimeToAttack = Time.time + 1 / AttackingRate;
+                combat();
+            }
+         }
+
     }
 
     void combat()
@@ -84,6 +103,7 @@ public class NinjaBee : Tower
         }
     }
 
+   /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -91,6 +111,9 @@ public class NinjaBee : Tower
             EnemyTargets.Add(collision.gameObject);
         }
     }
+   */
+
+    /*
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -99,7 +122,9 @@ public class NinjaBee : Tower
             Detected = true;
         }
     }
+    */
 
+   /*
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -112,7 +137,14 @@ public class NinjaBee : Tower
             EnemyTargets.Remove(collision.gameObject);
         }
     }
-    
+   */
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, Range);
+    }
+
+
     public override void Upgrade1()
     {
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
