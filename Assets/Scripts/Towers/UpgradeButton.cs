@@ -83,6 +83,11 @@ public class UpgradeButton : MonoBehaviour
             UpgradeButtons[2].interactable = false;
         }
     }
+
+    public void CloseUpgradeMenu()
+    {
+        Upgrades.SetActive(false);
+    }
     public void UpgradeButton1()
     {
         if (selectedTower != null && CurrencyManager.instance.CanAfford(5))
