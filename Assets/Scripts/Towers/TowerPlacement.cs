@@ -15,7 +15,6 @@ public class TowerPlacement : MonoBehaviour
     public TowerTypeSO ActiveTowerType;
 
     public bool CanPlaceTower = true;
-   
     private void Awake()
     {
         if (instance == null)
@@ -64,12 +63,13 @@ public class TowerPlacement : MonoBehaviour
                 {
                     // instantiates the selected tower type prefab
                     Instantiate(ActiveTowerType.Prefab, position, Quaternion.identity);
-                   
+                    
                     // deduct the cost of the tower
                     CurrencyManager.instance.DeductCurrency(ActiveTowerType.TowerPrice);
-
+                    
                     // disable tower placement until player clicks another button
                     CanPlaceTower = false;
+                    
                     //CanPlaceTower = true;
                     TowerPlacementUI.instance.Deactivate();
                 }

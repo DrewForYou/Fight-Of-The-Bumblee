@@ -10,6 +10,7 @@ public class TowerSelectUI : MonoBehaviour
     
     
     private Button button;
+    private bool buttonPressed = false;
  
   
     private void Start()
@@ -18,6 +19,7 @@ public class TowerSelectUI : MonoBehaviour
         //Button button = GetComponent<Button>();
         
         button.onClick.AddListener(SelectTower);
+        button.interactable = !buttonPressed;
         //isPreviewingTower = false;
         
         //CanAffordButton();
@@ -56,6 +58,29 @@ public class TowerSelectUI : MonoBehaviour
                 //Debug.Log("No sprite renderer found");
             }
         }  
+    }
+
+    // code for queen bee only being allowed to place once
+    public void QueenBeeButton()
+    {
+        if (!buttonPressed && CurrencyManager.instance.CanAfford(TowerType.TowerPrice))
+        {
+            buttonPressed = true;
+            button.interactable = false;
+            // enables tower placement when button is selected
+            TowerPlacement.instance.CanPlaceTower = true;
+
+            Sprite towerSprite = TowerType.TowerSprite;
+
+            if (towerSprite != null)
+            {
+                TowerPlacementUI.instance.Activate(towerSprite);
+            }
+            else
+            {
+                //Debug.Log("No sprite renderer found");
+            }
+        }
     }
 
     
