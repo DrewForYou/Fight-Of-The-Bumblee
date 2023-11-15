@@ -24,6 +24,7 @@ public class UpgradeButton : MonoBehaviour
    // public GameObject MageBeeUpgrades;
 
     public Tower selectedTower;
+
     private void Awake()
     {
         if (Instance == null)
@@ -43,6 +44,7 @@ public class UpgradeButton : MonoBehaviour
         //Debug.Log("Selected Tower: " + selectedTower.towerName);
         //UpdateTowerText();
     }
+   
     public void SelectedTower(Tower tower)
     {
         selectedTower = tower;
