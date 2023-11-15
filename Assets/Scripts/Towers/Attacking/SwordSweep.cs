@@ -13,7 +13,7 @@ public class SwordSweep : MonoBehaviour
     private Rigidbody2D rb;
 
     public float speed = 5f;
-    public float rotateSpeed = 200f;
+    public float rotateSpeed = 99999999f;
 
 
 
