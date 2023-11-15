@@ -12,7 +12,7 @@ public class KunaiBehavior : MonoBehaviour
     private Rigidbody2D rb;
 
     public float speed = 5f;
-    public float rotateSpeed = 200f;
+    public float rotateSpeed = 9999999f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
