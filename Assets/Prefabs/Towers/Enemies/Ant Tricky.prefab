@@ -138,6 +138,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   CurrencyManager: {fileID: 0}
   Frozen: 0
+  DeathEffect: {fileID: 4379589507501685432, guid: 2b11e351a7baaf74f8e096dbf883125c, type: 3}
 --- !u!61 &1704002081390092622
 BoxCollider2D:
   m_ObjectHideFlags: 0
