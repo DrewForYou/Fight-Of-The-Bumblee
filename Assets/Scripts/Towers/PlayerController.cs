@@ -80,59 +80,10 @@ public class PlayerController : MonoBehaviour
     public void RightClick_performed(InputAction.CallbackContext obj)
     {
         // detect tower the player is clicking
-        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
-        /*
-        if (hit.collider != null)
-        {
-            //selectedTower = hit.collider.GetComponent<UpgradeButton>();
-            ArcherBeeTower tower = hit.collider.GetComponent<ArcherBeeTower>();
-            //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
-            
-            if (tower != null)
-            {
-                UpgradeButton.Instance.SelectedTower(tower);
-            }
-
-        }
-        */
-        /*
-        if (hit.collider != null)
-        {
-            MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
-
-            if (tower != null)
-            {
-                UpgradeButton.Instance.SelectedTower(tower);
-            }
-
-        }
-
-        if (hit.collider != null)
-        {
-            WarriorBeeCode tower = hit.collider.GetComponent<WarriorBeeCode>();
-
-            if (tower != null)
-            {
-                UpgradeButton.Instance.SelectedTower(tower);
-            }
-
-        }
-
-        if (hit.collider != null)
-        {
-            SniperBee tower = hit.collider.GetComponent<SniperBee>();
-
-            if (tower != null)
-            {
-                UpgradeButton.Instance.SelectedTower(tower);
-            }
-
-        }
-        */
-
-
+        //Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        //RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
     }
+
     public void LeftClick_performed(InputAction.CallbackContext obj)
     {
        
@@ -154,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
         // detect tower the player is clicking
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()), Vector2.zero);
 
         if (hit.collider != null)
         {
