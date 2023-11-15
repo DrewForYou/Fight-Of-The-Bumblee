@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b616f4dee3b0c494d8f2e827e4436276, type: 3}
   m_Name: QueenBee
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 1174433555364905528, guid: 514012a20715dd440ab8f0f9059eb118, type: 3}
+  Prefab: {fileID: 905649889970210742, guid: 514012a20715dd440ab8f0f9059eb118, type: 3}
   TowerPrice: 20
   TowerSprite: {fileID: 1090211472, guid: c7eb1222872a4294cb83deb5e6ea6707, type: 3}
