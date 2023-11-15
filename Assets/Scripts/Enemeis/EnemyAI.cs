@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     public GameManager GameManager;
     public CurrencyManager CurrencyManager;
     public bool Frozen;
+    public ParticleSystem DeathEffect;
     //private int currentTarget;
     //private GameObject goal;
 
@@ -77,6 +78,8 @@ public class EnemyAI : MonoBehaviour
     public void GainHoney()
     {
         CurrencyManager.AddCurrency(Value);
+        //DeathEffect.Play();
+        Instantiate(DeathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
