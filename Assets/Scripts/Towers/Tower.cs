@@ -8,7 +8,8 @@ public class Tower : MonoBehaviour
     public string towerName;
     public string Upgrade1Text;
     public string Upgrade2Text;
-    public string Upgrade3Text; 
+    public string Upgrade3Text;
+
     public virtual void Upgrade1()
     {
 

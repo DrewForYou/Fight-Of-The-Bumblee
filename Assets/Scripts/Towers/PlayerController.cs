@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public UpgradeButton UpgradeButton;
     //public GameObject Upgrades;
     public AudioClip WaveStart;
+
     //private ArcherBeeTower selectedTower;
     void Start()
     {
@@ -95,6 +96,7 @@ public class PlayerController : MonoBehaviour
 
         }
         */
+        /*
         if (hit.collider != null)
         {
             MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
@@ -127,7 +129,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-
+        */
 
 
     }
