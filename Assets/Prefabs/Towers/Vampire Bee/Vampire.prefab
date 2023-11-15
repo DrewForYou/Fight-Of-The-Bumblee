@@ -394,7 +394,7 @@ MonoBehaviour:
   Upgrade3Text: 
   Weapon: {fileID: 0}
   Attack: {fileID: 0}
-  AttackingRate: 0
+  AttackingRate: 1
   AttackPoint: {fileID: 0}
   Force: 0
   EnemyTargets: []

@@ -1063,7 +1063,7 @@ MonoBehaviour:
   Upgrade3Text: Rate = 10 Cost = 13
   Weapon: {fileID: 0}
   Attack: {fileID: 0}
-  AttackingRate: 0
+  AttackingRate: 0.1
   AttackPoint: {fileID: 0}
   Force: 0
   EnemyTargets: []

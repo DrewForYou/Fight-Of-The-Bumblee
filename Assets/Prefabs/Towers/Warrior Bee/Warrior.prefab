@@ -675,7 +675,7 @@ MonoBehaviour:
   Upgrade3Text: Rate = 5 Cost = 13
   Weapon: {fileID: 1937532055122464543}
   Attack: {fileID: 8348761637227034447, guid: 7480ab0b6b5d2384cb51cd16b89591a8, type: 3}
-  AttackingRate: 0.5
+  AttackingRate: 0.8
   AttackPoint: {fileID: 848843970215053761}
   Force: 50
   EnemyTargets: []

@@ -19061,6 +19061,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0c7ad672489e60644b8922a721149c99, type: 3}
     - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
+      propertyPath: DeathEffect
+      value: 
+      objectReference: {fileID: 6310118539751912622, guid: 2b11e351a7baaf74f8e096dbf883125c, type: 3}
+    - target: {fileID: 112940353960621772, guid: 062d0e954b325ca419db051b17819c3a, type: 3}
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 422412127}
