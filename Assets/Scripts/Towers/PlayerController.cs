@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
     }
     public void LeftClick_performed(InputAction.CallbackContext obj)
     {
+       
         // finds the position of the player's mouse 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
@@ -145,7 +146,8 @@ public class PlayerController : MonoBehaviour
         mousePosition.y = Mathf.Round(mousePosition.y + 0.5f) - 0.5f;
         
         // instantiate the tower at the player's mouse position
-        TowerPlacement.instance.PlaceTower(mousePosition);
+        //TowerPlacement.instance.PlaceTower(mousePosition);
+        //UpgradeButton.Instance.TowerPlaced();
 
         //Debug.Log("Player Clicked");        // let's us know the player is able
         // to click
@@ -235,6 +237,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+        TowerPlacement.instance.PlaceTower(mousePosition);
     }
     
    
