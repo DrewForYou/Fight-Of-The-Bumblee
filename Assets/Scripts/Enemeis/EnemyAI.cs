@@ -17,14 +17,13 @@ public class EnemyAI : MonoBehaviour
     public GameManager GameManager;
     public CurrencyManager CurrencyManager;
     public bool Frozen;
-    public ParticleSystem DeathEffect;
-    //private int currentTarget;
-    //private GameObject goal;
+    public WaveManager WaveManage;
 
     private void Awake()
     {
         GameManager = FindAnyObjectByType<GameManager>();
         CurrencyManager = FindAnyObjectByType<CurrencyManager>();
+        WaveManage = FindAnyObjectByType<WaveManager>();
 
         Pathing = new List<GameObject>(GameManager.MapPoints);
         EnemyMove();
@@ -78,8 +77,7 @@ public class EnemyAI : MonoBehaviour
     public void GainHoney()
     {
         CurrencyManager.AddCurrency(Value);
-        //DeathEffect.Play();
-        Instantiate(DeathEffect, transform.position, Quaternion.identity);
+        WaveManage.EnemyDied(transform.position);
         Destroy(gameObject);
     }
 

@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class WaveManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class WaveManager : MonoBehaviour
     public TMP_Text WhatWave;
     public AudioClip StartSound;
     public GameObject WaveDone;
+    public GameObject DeathEffect;
+    public List<GameObject> EnemyEffects;
 
     private void Start()
     {
@@ -85,6 +88,11 @@ public class WaveManager : MonoBehaviour
                 WaveOver = true;
                 WaveDone.gameObject.SetActive(true);
                 CurrencyManager.AddCurrency(wave.WaveCompletionReward);
+
+                for(int i = EnemyEffects.Count - 1; i > 0; i--)
+                {
+                    Destroy(EnemyEffects[i]);
+                }
             }
             yield return null;
         }
@@ -116,6 +124,11 @@ public class WaveManager : MonoBehaviour
         { 
             return false; 
         }
+    }
+
+    public void EnemyDied(Vector3 position)
+    {
+        EnemyEffects.Add(Instantiate(DeathEffect, position, Quaternion.identity));
     }
     
     
