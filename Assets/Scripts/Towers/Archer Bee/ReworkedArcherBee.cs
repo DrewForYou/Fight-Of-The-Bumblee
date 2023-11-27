@@ -47,24 +47,21 @@ public class ReworkedArcherBee : Tower
         //just saying 
         if (EnemyTargets.Count > 0)
         {
-            Vector2 targetpos = EnemyTargets[0].transform.position;
+            GrabTarget();
 
-            Direction = targetpos - (Vector2)transform.position;
-
-            if (Detected)
+            if (Detected && GetFirstEnemy() != null)
             {
                 Weapon.transform.up = Direction;
                 if (Time.time > nextTimeToAttack)
                 {
-
                     nextTimeToAttack = Time.time + 1 / AttackingRate;
-                    combat();
+                    Combat();
                 }
             }
         }
     }
 
-    void combat()
+    void Combat()
     {
         GameObject AttackIns = Instantiate(Attack, AttackPoint.position, Quaternion.identity);
         AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
@@ -99,7 +96,33 @@ public class ReworkedArcherBee : Tower
         }
     }
 
-    
+    public void GrabTarget()
+    {
+        if (EnemyTargets[0] != null)
+        {
+            Vector2 targetpos = EnemyTargets[0].transform.position;
+            Direction = targetpos - (Vector2)transform.position;
+        }
+        else
+        {
+            print("Caught");
+            return;
+        }
+    }
+
+    public GameObject GetFirstEnemy()
+    {
+        for (int i = 0; i < EnemyTargets.Count; i++)
+        {
+            if (EnemyTargets[i] != null)
+            {
+                Direction = (Vector2)EnemyTargets[i].transform.position - (Vector2)transform.position;
+                return EnemyTargets[i];
+            }
+        }
+        return null;
+    }
+
     public override void Upgrade1()
     {
         
