@@ -72,11 +72,17 @@ public class TowerSelectUI : MonoBehaviour
 
             Sprite towerSprite = TowerType.TowerSprite;
 
-            if (towerSprite != null)
+            if (FindObjectOfType<QueenBeeCode>() != null)
             {
-                TowerPlacementUI.instance.Activate(towerSprite);
                 button.interactable = false;
             }
+
+            if (towerSprite != null && FindObjectOfType<QueenBeeCode>() == null)
+            {
+                TowerPlacementUI.instance.Activate(towerSprite);
+                    
+            }
+            
             else
             {
                 //Debug.Log("No sprite renderer found");

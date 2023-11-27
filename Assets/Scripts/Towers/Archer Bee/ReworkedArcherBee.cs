@@ -30,7 +30,7 @@ public class ReworkedArcherBee : Tower
     //list of enemies
     public List<GameObject> EnemyTargets;
 
-   
+    public WaveManager WaveManager;
 
     public int Damage = 3;
 
@@ -42,6 +42,12 @@ public class ReworkedArcherBee : Tower
     // Update is called once per frame
 
     public AudioClip upgrade;
+
+    void Awake()
+    {
+        WaveManager = FindAnyObjectByType<WaveManager>();
+    }
+
     void Update()
     {
         //just saying 
@@ -58,6 +64,11 @@ public class ReworkedArcherBee : Tower
                     Combat();
                 }
             }
+        }
+
+        if (WaveManager.WaveOver && EnemyTargets.Count != 0)
+        {
+            EnemyTargets.Clear();
         }
     }
 
