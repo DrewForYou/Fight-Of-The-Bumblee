@@ -97,7 +97,7 @@
                 {
                     "name": "",
                     "id": "e10089dc-0ccd-4b14-8028-d7a326bf66e9",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -119,18 +119,7 @@
                 {
                     "name": "",
                     "id": "9ca2322e-c097-4153-9398-d69f9da3a58f",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "be319cbb-a669-4dc1-9560-73a1ea787b8b",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

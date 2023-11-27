@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
     private InputAction leftClick;
     private InputAction rightClick;
     private InputAction space;
-    private InputAction quit;
-    private InputAction restart;
     private InputAction pause;
 
     public UpgradeButton UpgradeButton;
@@ -33,32 +31,17 @@ public class PlayerController : MonoBehaviour
         leftClick = PlayerInputInstance.currentActionMap.FindAction("LeftClick");
         rightClick = PlayerInputInstance.currentActionMap.FindAction("RightClick");
         space = PlayerInputInstance.currentActionMap.FindAction("Space");
-        quit = PlayerInputInstance.currentActionMap.FindAction("Quit");
-        restart = PlayerInputInstance.currentActionMap.FindAction("Restart");
         pause = PlayerInputInstance.currentActionMap.FindAction("Pause");
 
         leftClick.performed += LeftClick_performed;
         rightClick.performed += RightClick_performed;
         space.performed += Space_performed;
-        quit.performed += Quit_performed;
-        restart.performed += Restart_performed;
         pause.performed += Pause_performed;
     }
 
     private void Pause_performed(InputAction.CallbackContext obj)
     {
         GameManager.Pause();
-    }
-
-    private void Restart_performed(InputAction.CallbackContext obj)
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    private void Quit_performed(InputAction.CallbackContext obj)
-    {
-        print("Quit");
-        Application.Quit();
     }
 
     private void Space_performed(InputAction.CallbackContext obj)
@@ -72,8 +55,6 @@ public class PlayerController : MonoBehaviour
         leftClick.performed -= LeftClick_performed;
         rightClick.performed -= RightClick_performed;
         space.performed -= Space_performed;
-        quit.performed -= Quit_performed;
-        restart.performed -= Restart_performed;
         pause.performed -= Pause_performed;
     }
 
