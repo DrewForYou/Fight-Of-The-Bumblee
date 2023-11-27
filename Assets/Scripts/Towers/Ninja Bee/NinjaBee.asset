@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b616f4dee3b0c494d8f2e827e4436276, type: 3}
   m_Name: NinjaBee
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 8553014815619490341, guid: c3fd5ce0c565ba14c97a0cfc296a7d4e, type: 3}
+  Prefab: {fileID: 8689711101765160453, guid: c3fd5ce0c565ba14c97a0cfc296a7d4e, type: 3}
   TowerPrice: 15
   TowerSprite: {fileID: -1015046075, guid: c7eb1222872a4294cb83deb5e6ea6707, type: 3}

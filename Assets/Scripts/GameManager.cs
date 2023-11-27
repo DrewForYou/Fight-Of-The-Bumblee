@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         if(SpeedMultiply && !alreadySpeedy)
         {
-            Time.timeScale = 2;
+            Time.timeScale = 6;
             alreadySpeedy = true;
         }
         else if(!SpeedMultiply && alreadySpeedy) 

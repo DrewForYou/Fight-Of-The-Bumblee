@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NinjaBee : Tower
@@ -30,7 +31,7 @@ public class NinjaBee : Tower
     //list of enemies
     public List<GameObject> EnemyTargets;
 
-    
+    public WaveManager WaveManager;
 
     public int Damage = 1;
 
@@ -47,14 +48,18 @@ public class NinjaBee : Tower
     public Transform shadowCloneTwoAP;
 
     bool shadowClonesOn = false;
+
+    void Awake()
+    {
+        WaveManager = FindAnyObjectByType<WaveManager>();
+    }
+
     void Update()
     {
         //just saying 
         if (EnemyTargets.Count > 0)
         {
-            Vector2 targetpos = EnemyTargets[0].transform.position;
-
-            Direction = targetpos - (Vector2)transform.position;
+            GrabTarget();
 
             if (Detected && GetFirstEnemy() != null)
             {
@@ -63,13 +68,18 @@ public class NinjaBee : Tower
                 {
 
                     nextTimeToAttack = Time.time + 1 / AttackingRate;
-                    combat();
+                    Combat();
                 }
             }
         }
+
+        if(WaveManager.WaveOver && EnemyTargets.Count != 0)
+        {
+            EnemyTargets.Clear();
+        }
     }
 
-    void combat()
+    void Combat()
     {
         GameObject AttackIns = Instantiate(Attack, AttackPoint.position, Quaternion.identity);
         AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
@@ -158,5 +168,19 @@ public class NinjaBee : Tower
             }
         }
         return null;
+    }
+
+    public void GrabTarget()
+    {
+        if (EnemyTargets[0] != null)
+        {
+            Vector2 targetpos = EnemyTargets[0].transform.position;
+            Direction = targetpos - (Vector2)transform.position;
+        }
+        else
+        {
+            print("Caught");
+            return;
+        }
     }
 }
