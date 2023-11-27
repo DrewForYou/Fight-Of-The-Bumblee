@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject TutorialScreen;
+    public GameObject CreditsScreen;
     public void StartGame()
     {
         SceneManager.LoadScene(1);
@@ -15,7 +16,6 @@ public class MainMenuController : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Game Quit");
     }
 
     public void Tutorial()
@@ -27,5 +27,15 @@ public class MainMenuController : MonoBehaviour
     {
         TutorialScreen.SetActive(false);
     }
-    
+
+    public void Credits()
+    {
+        CreditsScreen.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        CreditsScreen.SetActive(false);
+    }
+
 }
