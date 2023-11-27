@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 4830334304042553951}
   m_Layer: 0
   m_Name: Ninja
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -956,6 +956,7 @@ MonoBehaviour:
   AttackPoint: {fileID: 0}
   Force: 0
   EnemyTargets: []
+  WaveManager: {fileID: 0}
   Damage: 1
   upgrade1: {fileID: 0}
   upgrade2: {fileID: 0}
@@ -1568,6 +1569,7 @@ MonoBehaviour:
   AttackPoint: {fileID: 8709854242153986168}
   Force: 300
   EnemyTargets: []
+  WaveManager: {fileID: 0}
   Damage: 1
   upgrade1: {fileID: 2188156107747491702}
   upgrade2: {fileID: 2035124241729267712}

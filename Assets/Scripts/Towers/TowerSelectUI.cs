@@ -66,7 +66,7 @@ public class TowerSelectUI : MonoBehaviour
         if (!buttonPressed && CurrencyManager.instance.CanAfford(TowerType.TowerPrice))
         {
             buttonPressed = true;
-            button.interactable = false;
+            
             // enables tower placement when button is selected
             TowerPlacement.instance.CanPlaceTower = true;
 
@@ -75,6 +75,7 @@ public class TowerSelectUI : MonoBehaviour
             if (towerSprite != null)
             {
                 TowerPlacementUI.instance.Activate(towerSprite);
+                button.interactable = false;
             }
             else
             {
