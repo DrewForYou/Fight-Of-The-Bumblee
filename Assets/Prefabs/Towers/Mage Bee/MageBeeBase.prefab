@@ -118,7 +118,6 @@ Transform:
   - {fileID: 6460294587621254487}
   - {fileID: 1334588623329054490}
   - {fileID: 7430172477497786602}
-  - {fileID: 2455634461650321985}
   - {fileID: 1478802463509717187}
   - {fileID: 2983331219017590111}
   - {fileID: 5693938797739194961}
@@ -185,7 +184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283840136199854200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19f81fa4a0445004b8cf3c981352113f, type: 3}
   m_Name: 
@@ -224,7 +223,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283840136199854200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -365,7 +364,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1.5631}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2455634461650321985}
   m_Father: {fileID: 5390878058619954969}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -476,7 +476,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2455634461650321985}
   - component: {fileID: 7924870292769340070}
-  m_Layer: 0
+  - component: {fileID: 6756107342585961893}
+  - component: {fileID: 6404897150196154733}
+  m_Layer: 3
   m_Name: MageSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,10 +494,10 @@ Transform:
   m_GameObject: {fileID: 3920188775465772522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1.5631}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5390878058619954969}
+  m_Father: {fileID: 6460294587621254487}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7924870292769340070
@@ -550,6 +552,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6756107342585961893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920188775465772522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f81fa4a0445004b8cf3c981352113f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  towerName: Mage Bee
+  Upgrade1Text: 'Fireball Cost: 5'
+  Upgrade2Text: 'Freeze Cost: 10'
+  Upgrade3Text: Lightning Cost 13
+  Weapon: {fileID: 4701996641064554177}
+  BaseAttack: {fileID: 1800465011939978231, guid: 2cda82fb3d4360a48b2166476c99c3b3, type: 3}
+  FireBall: {fileID: 4705436946817001722, guid: 94dd116ed430c504e9df4c6ae5bbd016, type: 3}
+  Freeze: {fileID: 324014061836488084}
+  Lightning: {fileID: 7523917579953747037}
+  UpgradeSprite1: {fileID: 1248259151532563075}
+  UpgradeSprite2: {fileID: 7320545816094922430}
+  UpgradeSprite3: {fileID: 32616274886393679}
+  BaseAttackingRate: 1
+  FireballAttackingRate: 0.05
+  LightningAttackingRate: 0.1
+  Direction: {x: 0, y: 0}
+  AttackPoint: {fileID: 3668941636649190233}
+  Force: 100
+  FireballOn: 0
+  LightningOn: 0
+  GameManager: {fileID: 0}
+  EnemyTargets: []
+  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  LightningAttackActive: 0
+  CurrencyManager: {fileID: 0}
+  SellPrice: 0
+--- !u!58 &6404897150196154733
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920188775465772522}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &4701996641064554177
 GameObject:
   m_ObjectHideFlags: 0

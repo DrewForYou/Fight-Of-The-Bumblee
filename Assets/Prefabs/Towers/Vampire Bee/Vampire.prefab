@@ -315,7 +315,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8717864223473575290}
-  - {fileID: 3364876908053339672}
   - {fileID: 4124934466111401656}
   - {fileID: 5631917728700725413}
   - {fileID: 7243476922135359867}
@@ -601,7 +600,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1720605, y: 6.1720605, z: 0.96475476}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3364876908053339672}
   m_Father: {fileID: 42993025946849947}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 2328486807905406292}
   - component: {fileID: 6297736803347252893}
   - component: {fileID: 351285657220830507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,12 +729,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8829380189673671524}
-  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
-  m_LocalScale: {x: 2.343887, y: 2.343887, z: 2.343887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0016202045, z: 0}
+  m_LocalScale: {x: 0.37975764, y: 0.37975764, z: 2.429516}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 42993025946849947}
+  m_Father: {fileID: 8717864223473575290}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2145703548810507454

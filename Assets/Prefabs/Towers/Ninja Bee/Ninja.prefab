@@ -736,7 +736,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1720605, y: 6.1720605, z: 0.96475476}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7365484503685070820}
   m_Father: {fileID: 8689711101765160453}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -868,7 +869,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5010699142582422560}
-  - {fileID: 7365484503685070820}
   - {fileID: 2183404303048732696}
   - {fileID: 8568680927470751880}
   - {fileID: 8267747724508837062}
@@ -1410,7 +1410,7 @@ GameObject:
   - component: {fileID: 4141659995637034421}
   - component: {fileID: 1020051383813190212}
   - component: {fileID: 3114942838094618784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ninja Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,12 +1424,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9075271711014675713}
-  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: -0.02, y: -0.04, z: 0}
-  m_LocalScale: {x: 4.5758934, y: 4.5758934, z: 4.5758934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.003240409, y: 0.006480818, z: 0}
+  m_LocalScale: {x: 0.74138826, y: 0.74138826, z: 4.7430634}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8689711101765160453}
+  m_Father: {fileID: 5010699142582422560}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1077639849984924573
