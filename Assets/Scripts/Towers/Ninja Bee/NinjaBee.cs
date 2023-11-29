@@ -66,7 +66,6 @@ public class NinjaBee : Tower
                 Weapon.transform.up = Direction;
                 if (Time.time > nextTimeToAttack)
                 {
-
                     nextTimeToAttack = Time.time + 1 / AttackingRate;
                     Combat();
                 }
