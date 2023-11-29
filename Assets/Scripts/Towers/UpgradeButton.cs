@@ -20,8 +20,9 @@ public class UpgradeButton : MonoBehaviour
     public TMP_Text UpgradeText1;
     public TMP_Text UpgradeText2;
     public TMP_Text UpgradeText3;
+    public Image UpgradeImage;
     //public GameObject SniperBeeUpgrades;
-   // public GameObject MageBeeUpgrades;
+    // public GameObject MageBeeUpgrades;
 
     public Tower selectedTower;
 
@@ -136,6 +137,7 @@ public class UpgradeButton : MonoBehaviour
         if (selectedTower != null)
         {
             TowerText.text = selectedTower.towerName;
+            UpgradeImage.sprite = selectedTower.UpdateSprite;
             if (selectedTower is SniperBee)
             {
                 UpgradeText1.text = ((SniperBee)selectedTower).Upgrade1Text;
