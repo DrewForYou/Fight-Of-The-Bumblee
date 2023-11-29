@@ -5173,6 +5173,9 @@ MonoBehaviour:
   PlayerInputInstance: {fileID: 703565063}
   WaveManager: {fileID: 1887800812}
   GameManager: {fileID: 422412127}
+  IgnoreAttack:
+    serializedVersion: 2
+    m_Bits: 1015
   UpgradeButton: {fileID: 123065507}
   WaveStart: {fileID: 8300000, guid: 0c7ad672489e60644b8922a721149c99, type: 3}
 --- !u!114 &703565063

@@ -66,16 +66,23 @@ public class TowerSelectUI : MonoBehaviour
         if (!buttonPressed && CurrencyManager.instance.CanAfford(TowerType.TowerPrice))
         {
             buttonPressed = true;
-            button.interactable = false;
+            
             // enables tower placement when button is selected
             TowerPlacement.instance.CanPlaceTower = true;
 
             Sprite towerSprite = TowerType.TowerSprite;
 
-            if (towerSprite != null)
+            if (FindObjectOfType<QueenBeeCode>() != null)
+            {
+                button.interactable = false;
+            }
+
+            if (towerSprite != null && FindObjectOfType<QueenBeeCode>() == null)
             {
                 TowerPlacementUI.instance.Activate(towerSprite);
+                    
             }
+            
             else
             {
                 //Debug.Log("No sprite renderer found");

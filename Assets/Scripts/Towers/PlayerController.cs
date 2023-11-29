@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private InputAction space;
     private InputAction pause;
 
+    public LayerMask IgnoreAttack;
+
     public UpgradeButton UpgradeButton;
     //public GameObject Upgrades;
     public AudioClip WaveStart;
@@ -86,12 +88,12 @@ public class PlayerController : MonoBehaviour
 
         // detect tower the player is clicking
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()), Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()), Vector2.zero, Mathf.Infinity, IgnoreAttack);
 
         if (hit.collider != null)
         {
             //selectedTower = hit.collider.GetComponent<UpgradeButton>();
-            ReworkedArcherBee tower = hit.collider.GetComponent<ReworkedArcherBee>();
+            ReworkedArcherBee tower = hit.collider.GetComponentInChildren<ReworkedArcherBee>();
             //MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
 
             if (tower != null)
@@ -102,7 +104,7 @@ public class PlayerController : MonoBehaviour
         }
         if (hit.collider != null)
         {
-            MageBeeCode tower = hit.collider.GetComponent<MageBeeCode>();
+            MageBeeCode tower = hit.collider.GetComponentInChildren<MageBeeCode>();
 
             if (tower != null)
             {
@@ -113,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            WarriorBeeCode tower = hit.collider.GetComponent<WarriorBeeCode>();
+            WarriorBeeCode tower = hit.collider.GetComponentInChildren<WarriorBeeCode>();
 
             if (tower != null)
             {
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            SniperBee tower = hit.collider.GetComponent<SniperBee>();
+            SniperBee tower = hit.collider.GetComponentInChildren<SniperBee>();
 
             if (tower != null)
             {
@@ -136,7 +138,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            ChefBee tower = hit.collider.GetComponent<ChefBee>();
+            ChefBee tower = hit.collider.GetComponentInChildren<ChefBee>();
 
             if (tower != null)
             {
@@ -148,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            HunterBee tower = hit.collider.GetComponent<HunterBee>();
+            HunterBee tower = hit.collider.GetComponentInChildren<HunterBee>();
 
             if (tower != null)
             {
@@ -160,7 +162,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            NinjaBee tower = hit.collider.GetComponent<NinjaBee>();
+            NinjaBee tower = hit.collider.GetComponentInChildren<NinjaBee>();
 
             if (tower != null)
             {

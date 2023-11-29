@@ -145,7 +145,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1720605, y: 6.1720605, z: 0.96475476}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4645803556423141331}
   m_Father: {fileID: 8938599246119198309}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -258,7 +259,7 @@ GameObject:
   - component: {fileID: 8049182988851888740}
   m_Layer: 0
   m_Name: Warrior
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,13 +276,12 @@ Transform:
   m_LocalScale: {x: 1.6202046, y: 1.6202046, z: 1.6202046}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4645803556423141331}
+  - {fileID: 5772226767724638030}
   - {fileID: 2955811501606819052}
   - {fileID: 2166165135875721808}
   - {fileID: 558429841623904157}
   - {fileID: 605143636053615573}
   - {fileID: 5346207508406928259}
-  - {fileID: 5772226767724638030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 7793171104130305308}
   - component: {fileID: 4192186803539020749}
   - component: {fileID: 5987395480404057428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Warrior Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,12 +700,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8205205904795567966}
-  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
-  m_LocalScale: {x: 2.343887, y: 2.343887, z: 2.343887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0016202045, z: 0}
+  m_LocalScale: {x: 0.37975764, y: 0.37975764, z: 2.429516}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8938599246119198309}
+  m_Father: {fileID: 5772226767724638030}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7363766742006185082
@@ -815,6 +815,7 @@ MonoBehaviour:
   upgrade2: {fileID: 7443939883263969368}
   upgrade3: {fileID: 5044491719434988913}
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  WaveManager: {fileID: 0}
 --- !u!58 &5987395480404057428
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -39,15 +39,21 @@ public class ChefBee : Tower
 
     // Update is called once per frame
 
+    public WaveManager WaveManager;
     public AudioClip upgrade;
+
+    void Awake()
+    {
+        WaveManager = FindAnyObjectByType<WaveManager>();
+    }
+
+
     void Update()
     {
         //just saying 
         if (EnemyTargets.Count > 0)
         {
-            Vector2 targetpos = EnemyTargets[0].transform.position;
-
-            Direction = targetpos - (Vector2)transform.position;
+            GrabTarget();
 
             if (Detected)
             {
@@ -56,13 +62,17 @@ public class ChefBee : Tower
                 {
 
                     nextTimeToAttack = Time.time + 1 / AttackingRate;
-                    combat();
+                    Combat();
                 }
             }
         }
+        if (WaveManager.WaveOver && EnemyTargets.Count != 0)
+        {
+            EnemyTargets.Clear();
+        }
     }
 
-    void combat()
+    void Combat()
     {
         GameObject AttackIns = Instantiate(Attack, AttackPoint.position, Quaternion.identity);
         AttackIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
@@ -96,7 +106,20 @@ public class ChefBee : Tower
             EnemyTargets.Remove(collision.gameObject);
         }
     }
-    
+    public void GrabTarget()
+    {
+        if (EnemyTargets[0] != null)
+        {
+            Vector2 targetpos = EnemyTargets[0].transform.position;
+            Direction = targetpos - (Vector2)transform.position;
+        }
+        else
+        {
+            print("Caught");
+            return;
+        }
+    }
+
     public override void Upgrade1()
     {
        
