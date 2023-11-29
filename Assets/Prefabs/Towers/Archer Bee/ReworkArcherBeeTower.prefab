@@ -29,7 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1.5631}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8066054268694231603}
   m_Father: {fileID: 8877511334150889257}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -155,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589979086070943845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.258, y: 0.506, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 9.329}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -227,7 +228,7 @@ GameObject:
   - component: {fileID: 5873564428213311606}
   m_Layer: 0
   m_Name: ReworkArcherBeeTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,12 +245,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8066054268694231603}
+  - {fileID: 3733452259089625259}
   - {fileID: 3406000302898118596}
   - {fileID: 1329478347046609009}
   - {fileID: 8256837947662930900}
   - {fileID: 7977977339692852111}
-  - {fileID: 3733452259089625259}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3878372373358989461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.259, y: 0.514, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 9.7944}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -418,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5679035281159151646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ArrowSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 7738144893487558777}
   - component: {fileID: 2570974608863652948}
   - component: {fileID: 5230792616986850266}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ArcherController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,11 +469,11 @@ Transform:
   m_GameObject: {fileID: 4559430605095668064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.099865, y: 8.099865, z: 8.099865}
+  m_LocalScale: {x: 0.80998653, y: 0.80998653, z: 5.181924}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7786284177151617882}
-  m_Father: {fileID: 8877511334150889257}
+  m_Father: {fileID: 3733452259089625259}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3282840806462254089
@@ -613,6 +613,7 @@ MonoBehaviour:
   AttackPoint: {fileID: 5679035281159151646}
   Force: 100
   EnemyTargets: []
+  WaveManager: {fileID: 0}
   Damage: 3
   upgrade0: {fileID: 4717491689790686702}
   upgrade1: {fileID: 3878372373358989461}
@@ -728,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6908406841552283136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.256, y: 0.516, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 9.2641}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -797,7 +798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7786284177151617882}
   - component: {fileID: 2105133118784823285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

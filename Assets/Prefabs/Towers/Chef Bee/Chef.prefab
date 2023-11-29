@@ -29,13 +29,13 @@ Transform:
   m_LocalScale: {x: 1.6202046, y: 1.6202046, z: 1.6202046}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3459447650512221229}
   - {fileID: 2917548276646216291}
   - {fileID: 4252754822830448125}
   - {fileID: 7946040535731472843}
   - {fileID: 7803129370783661034}
   - {fileID: 1374636929411360902}
   - {fileID: 5098045567763084644}
-  - {fileID: 3459447650512221229}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 3447237607541813971}
   - component: {fileID: 8887869936909263207}
   - component: {fileID: 7365995522021499654}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chef Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,6 +467,7 @@ MonoBehaviour:
   upgrade1: {fileID: 8685347744175783667}
   upgrade2: {fileID: 2373630155583488443}
   upgrade3: {fileID: 6575057261420192081}
+  WaveManager: {fileID: 0}
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
 --- !u!1 &6575057261420192081
 GameObject:

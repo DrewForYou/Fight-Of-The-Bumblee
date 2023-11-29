@@ -314,13 +314,13 @@ Transform:
   m_LocalScale: {x: 1.6202046, y: 1.6202046, z: 1.6202046}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8717864223473575290}
   - {fileID: 3364876908053339672}
   - {fileID: 4124934466111401656}
   - {fileID: 5631917728700725413}
   - {fileID: 7243476922135359867}
   - {fileID: 6236499268117170755}
   - {fileID: 2054088047206034375}
-  - {fileID: 8717864223473575290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -844,6 +844,7 @@ MonoBehaviour:
   upgrade2: {fileID: 4258829835241931015}
   upgrade3: {fileID: 89546559161145920}
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  WaveManager: {fileID: 0}
 --- !u!58 &351285657220830507
 CircleCollider2D:
   m_ObjectHideFlags: 0

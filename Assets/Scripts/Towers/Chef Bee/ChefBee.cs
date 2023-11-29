@@ -41,6 +41,13 @@ public class ChefBee : Tower
 
     public WaveManager WaveManager;
     public AudioClip upgrade;
+
+    void Awake()
+    {
+        WaveManager = FindAnyObjectByType<WaveManager>();
+    }
+
+
     void Update()
     {
         //just saying 
