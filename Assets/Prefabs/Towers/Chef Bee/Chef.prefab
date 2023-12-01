@@ -456,6 +456,7 @@ MonoBehaviour:
   Upgrade1Text: Rate = 2 Cost = 5
   Upgrade2Text: 'Dmg = 3 Cost = 10 '
   Upgrade3Text: Rate = 5 Cost = 13
+  UpdateSprite: {fileID: -1677713868, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 3258054854274246076}
   Attack: {fileID: 7123954639274776677, guid: dd8ff75e46cf17c4cbfe94ced1f5a799, type: 3}
   AttackingRate: 1

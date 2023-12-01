@@ -104,6 +104,7 @@ MonoBehaviour:
   Upgrade1Text: 
   Upgrade2Text: 
   Upgrade3Text: 
+  UpdateSprite: {fileID: 624193634, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   BeeDrone: {fileID: 3128469825476434143, guid: 2750014c3890c3f43909dbf119f590ba, type: 3}
   SpawnPoint: {fileID: 0}
   GameManager: {fileID: 0}
