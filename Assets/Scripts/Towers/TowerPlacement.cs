@@ -70,6 +70,7 @@ public class TowerPlacement : MonoBehaviour
                     // disable tower placement until player clicks another button
                     CanPlaceTower = false;
                     
+
                     //CanPlaceTower = true;
                     TowerPlacementUI.instance.Deactivate();
                 }
