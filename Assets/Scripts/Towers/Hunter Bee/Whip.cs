@@ -23,6 +23,7 @@ public class Whip : MonoBehaviour
         {
             // AudioSource.PlayClipAtPoint(hit, Camera.main.transform.position);
             collision.GetComponent<EnemyAI>().Damaged(hb.Damage);
+            Destroy(this.gameObject);
         
         }
     }
@@ -60,4 +61,5 @@ public class Whip : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         Object.Destroy(this.gameObject);
     }
+
 }
