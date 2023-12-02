@@ -5255,7 +5255,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1015
   UpgradeButton: {fileID: 123065507}
-  WaveStart: {fileID: 8300000, guid: 0c7ad672489e60644b8922a721149c99, type: 3}
+  WaveStart: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
 --- !u!114 &703565063
 MonoBehaviour:
   m_ObjectHideFlags: 0

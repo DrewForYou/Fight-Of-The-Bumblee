@@ -14,11 +14,14 @@ public class QueenBeeCode : Tower
     public int Damage;
     public float Speed;
     public Coroutine QueenBeeDronesRef;
+    //public TowerSelectUI SelectUI;
 
     private void Start()
     {
         GameManager = FindAnyObjectByType<GameManager>();
         WaveManager = FindAnyObjectByType<WaveManager>();
+       /* SelectUI = FindAnyObjectByType<TowerSelectUI>();
+        SelectUI.QueenPlaced = true;*/
 
         Pathing = new List<GameObject>(GameManager.MapPoints);
         Pathing.Reverse();
