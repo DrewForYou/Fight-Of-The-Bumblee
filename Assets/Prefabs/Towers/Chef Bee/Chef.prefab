@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4844403261554620960}
   m_Layer: 0
   m_Name: Chef
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,13 +29,12 @@ Transform:
   m_LocalScale: {x: 1.6202046, y: 1.6202046, z: 1.6202046}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2917548276646216291}
+  - {fileID: 3459447650512221229}
   - {fileID: 4252754822830448125}
   - {fileID: 7946040535731472843}
   - {fileID: 7803129370783661034}
   - {fileID: 1374636929411360902}
   - {fileID: 5098045567763084644}
-  - {fileID: 3459447650512221229}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -116,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2373630155583488443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: -0.008, y: 0.022, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.477253, y: 6.477253, z: 6.477253}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,7 +303,7 @@ GameObject:
   - component: {fileID: 3447237607541813971}
   - component: {fileID: 8887869936909263207}
   - component: {fileID: 7365995522021499654}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chef Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,12 +317,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6016007145175349651}
-  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
-  m_LocalScale: {x: 2.343887, y: 2.343887, z: 2.343887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0016202045, z: 0}
+  m_LocalScale: {x: 0.37975764, y: 0.37975764, z: 2.429516}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6362679436851029444}
+  m_Father: {fileID: 3459447650512221229}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4494301709760904228
@@ -457,6 +456,7 @@ MonoBehaviour:
   Upgrade1Text: Rate = 2 Cost = 5
   Upgrade2Text: 'Dmg = 3 Cost = 10 '
   Upgrade3Text: Rate = 5 Cost = 13
+  UpdateSprite: {fileID: -1677713868, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 3258054854274246076}
   Attack: {fileID: 7123954639274776677, guid: dd8ff75e46cf17c4cbfe94ced1f5a799, type: 3}
   AttackingRate: 1
@@ -467,6 +467,7 @@ MonoBehaviour:
   upgrade1: {fileID: 8685347744175783667}
   upgrade2: {fileID: 2373630155583488443}
   upgrade3: {fileID: 6575057261420192081}
+  WaveManager: {fileID: 0}
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
 --- !u!1 &6575057261420192081
 GameObject:
@@ -493,7 +494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6575057261420192081}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: 0.017, y: 0.034, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.781792, y: 6.781792, z: 6.781792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -581,7 +582,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1720605, y: 6.1720605, z: 0.96475476}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2917548276646216291}
   m_Father: {fileID: 6362679436851029444}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -791,7 +793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8685347744175783667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: -0.004, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1528816, y: 6.1528816, z: 6.1528816}
   m_ConstrainProportionsScale: 0
   m_Children: []

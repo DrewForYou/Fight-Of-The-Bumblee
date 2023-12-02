@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 7962919666177742566}
   m_Layer: 0
   m_Name: Vampire
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,13 +314,12 @@ Transform:
   m_LocalScale: {x: 1.6202046, y: 1.6202046, z: 1.6202046}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3364876908053339672}
+  - {fileID: 8717864223473575290}
   - {fileID: 4124934466111401656}
   - {fileID: 5631917728700725413}
   - {fileID: 7243476922135359867}
   - {fileID: 6236499268117170755}
   - {fileID: 2054088047206034375}
-  - {fileID: 8717864223473575290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -393,6 +392,7 @@ MonoBehaviour:
   Upgrade1Text: 
   Upgrade2Text: 
   Upgrade3Text: 
+  UpdateSprite: {fileID: 1683343506, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 0}
   Attack: {fileID: 0}
   AttackingRate: 1
@@ -601,7 +601,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1720605, y: 6.1720605, z: 0.96475476}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3364876908053339672}
   m_Father: {fileID: 42993025946849947}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -715,7 +716,7 @@ GameObject:
   - component: {fileID: 2328486807905406292}
   - component: {fileID: 6297736803347252893}
   - component: {fileID: 351285657220830507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,12 +730,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8829380189673671524}
-  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
-  m_LocalScale: {x: 2.343887, y: 2.343887, z: 2.343887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0016202045, z: 0}
+  m_LocalScale: {x: 0.37975764, y: 0.37975764, z: 2.429516}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 42993025946849947}
+  m_Father: {fileID: 8717864223473575290}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2145703548810507454
@@ -829,10 +830,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: Hunter Tower
+  towerName: Vampire Tower
   Upgrade1Text: Rate = 2 Cost = 5
   Upgrade2Text: 'Dmg = 6 Cost = 10 '
   Upgrade3Text: Rate = 5 Cost = 13
+  UpdateSprite: {fileID: 1683343506, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 1060212649697187174}
   Attack: {fileID: 2910793154016873052, guid: b6b14a8cf4a7a4f4489d23095778fd77, type: 3}
   AttackingRate: 2
@@ -844,6 +846,7 @@ MonoBehaviour:
   upgrade2: {fileID: 4258829835241931015}
   upgrade3: {fileID: 89546559161145920}
   upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  WaveManager: {fileID: 0}
 --- !u!58 &351285657220830507
 CircleCollider2D:
   m_ObjectHideFlags: 0

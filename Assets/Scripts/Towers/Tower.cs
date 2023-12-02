@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     public string Upgrade1Text;
     public string Upgrade2Text;
     public string Upgrade3Text;
-
+    public Sprite UpdateSprite;
     public virtual void Upgrade1()
     {
 

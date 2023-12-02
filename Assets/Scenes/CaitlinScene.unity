@@ -1749,6 +1749,9 @@ MonoBehaviour:
   PlayerInputInstance: {fileID: 201426290}
   WaveManager: {fileID: 1498436506}
   GameManager: {fileID: 167540600}
+  IgnoreAttack:
+    serializedVersion: 2
+    m_Bits: 1015
   UpgradeButton: {fileID: 839274305}
   WaveStart: {fileID: 0}
 --- !u!114 &201426290
@@ -2989,6 +2992,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382278616}
   m_CullTransparentMesh: 1
+--- !u!1 &385771781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385771782}
+  - component: {fileID: 385771784}
+  - component: {fileID: 385771783}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &385771782
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385771781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1711198848}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 120}
+  m_SizeDelta: {x: 100, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &385771783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385771781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1075847298, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &385771784
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385771781}
+  m_CullTransparentMesh: 1
 --- !u!1 &396211689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,7 +3137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 80}
+  m_AnchoredPosition: {x: 0, y: 40}
   m_SizeDelta: {x: 130, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402337816
@@ -7205,6 +7284,7 @@ MonoBehaviour:
   UpgradeText1: {fileID: 1611207224}
   UpgradeText2: {fileID: 1940444088}
   UpgradeText3: {fileID: 1640504921}
+  UpgradeImage: {fileID: 0}
   selectedTower: {fileID: 0}
 --- !u!1 &858213761
 GameObject:
@@ -11330,6 +11410,7 @@ MonoBehaviour:
   UpgradeText1: {fileID: 0}
   UpgradeText2: {fileID: 0}
   UpgradeText3: {fileID: 0}
+  UpgradeImage: {fileID: 0}
   selectedTower: {fileID: 0}
 --- !u!114 &1299232581
 MonoBehaviour:
@@ -11814,7 +11895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 130, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359810410
@@ -15355,7 +15436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -80}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 130, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518605282
@@ -17346,13 +17427,14 @@ RectTransform:
   - {fileID: 1359810409}
   - {fileID: 1518605281}
   - {fileID: 979013721}
+  - {fileID: 385771782}
   m_Father: {fileID: 1542153654}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: -20}
-  m_SizeDelta: {x: 180, y: 300}
+  m_AnchoredPosition: {x: -130, y: 0}
+  m_SizeDelta: {x: 180, y: 400}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1711198849
 MonoBehaviour:
@@ -17378,6 +17460,7 @@ MonoBehaviour:
   UpgradeText1: {fileID: 728501692}
   UpgradeText2: {fileID: 875729082}
   UpgradeText3: {fileID: 135851329}
+  UpgradeImage: {fileID: 385771783}
   selectedTower: {fileID: 0}
 --- !u!114 &1711198850
 MonoBehaviour:
@@ -17787,6 +17870,7 @@ MonoBehaviour:
   UpgradeText1: {fileID: 0}
   UpgradeText2: {fileID: 0}
   UpgradeText3: {fileID: 0}
+  UpgradeImage: {fileID: 0}
   selectedTower: {fileID: 0}
 --- !u!114 &1746802702
 MonoBehaviour:
@@ -19707,6 +19791,7 @@ MonoBehaviour:
   UpgradeText1: {fileID: 0}
   UpgradeText2: {fileID: 0}
   UpgradeText3: {fileID: 0}
+  UpgradeImage: {fileID: 0}
   selectedTower: {fileID: 0}
 --- !u!114 &1930824237
 MonoBehaviour:
