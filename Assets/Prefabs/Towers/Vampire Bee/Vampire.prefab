@@ -1217,7 +1217,7 @@ MonoBehaviour:
   upgrade2: {fileID: 0}
   upgrade3: {fileID: 0}
   WaveManager: {fileID: 0}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
 --- !u!61 &2931125620651435266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   upgrade1: {fileID: 267803731753497510}
   upgrade2: {fileID: 4258829835241931015}
   upgrade3: {fileID: 89546559161145920}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
   WaveManager: {fileID: 0}
 --- !u!58 &351285657220830507
 CircleCollider2D:
@@ -1604,4 +1604,4 @@ MonoBehaviour:
   upgrade2: {fileID: 4258829835241931015}
   upgrade3: {fileID: 89546559161145920}
   WaveManager: {fileID: 0}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}

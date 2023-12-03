@@ -620,7 +620,7 @@ MonoBehaviour:
   upgrade1: {fileID: 3878372373358989461}
   upgrade2: {fileID: 6908406841552283136}
   upgrade3: {fileID: 589979086070943845}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
 --- !u!1 &4717491689790686702
 GameObject:
   m_ObjectHideFlags: 0

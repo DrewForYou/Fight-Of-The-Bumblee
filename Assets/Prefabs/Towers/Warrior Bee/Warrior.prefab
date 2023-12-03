@@ -247,7 +247,7 @@ MonoBehaviour:
   Upgrade1Text: Rate = 2 Cost = 5
   Upgrade2Text: 'Dmg = 3 Cost = 10 '
   Upgrade3Text: Rate = 5 Cost = 13
-  UpdateSprite: {fileID: -1677713868, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
+  UpdateSprite: {fileID: -1175909291, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 0}
   Attack: {fileID: 7123954639274776677, guid: dd8ff75e46cf17c4cbfe94ced1f5a799, type: 3}
   AttackingRate: 1
@@ -255,11 +255,11 @@ MonoBehaviour:
   Force: 50
   EnemyTargets: []
   Damage: 1
-  upgrade1: {fileID: 0}
-  upgrade2: {fileID: 0}
-  upgrade3: {fileID: 0}
+  upgrade1: {fileID: 7138584486355675392}
+  upgrade2: {fileID: 7443939883263969368}
+  upgrade3: {fileID: 5044491719434988913}
   WaveManager: {fileID: 0}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
 --- !u!61 &2565923018756563892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   upgrade1: {fileID: 7138584486355675392}
   upgrade2: {fileID: 7443939883263969368}
   upgrade3: {fileID: 5044491719434988913}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
   WaveManager: {fileID: 0}
 --- !u!1 &3683692805211109208
 GameObject:
@@ -805,11 +805,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: Chef Tower
+  towerName: Warrior Tower
   Upgrade1Text: Rate = 2 Cost = 5
   Upgrade2Text: 'Dmg = 3 Cost = 10 '
   Upgrade3Text: Rate = 5 Cost = 13
-  UpdateSprite: {fileID: -1677713868, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
+  UpdateSprite: {fileID: -1175909291, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 0}
   Attack: {fileID: 7123954639274776677, guid: dd8ff75e46cf17c4cbfe94ced1f5a799, type: 3}
   AttackingRate: 1
@@ -817,11 +817,11 @@ MonoBehaviour:
   Force: 50
   EnemyTargets: []
   Damage: 1
-  upgrade1: {fileID: 0}
-  upgrade2: {fileID: 0}
-  upgrade3: {fileID: 0}
+  upgrade1: {fileID: 7138584486355675392}
+  upgrade2: {fileID: 7443939883263969368}
+  upgrade3: {fileID: 5044491719434988913}
   WaveManager: {fileID: 0}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
 --- !u!1 &6733987421954127320
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +965,7 @@ MonoBehaviour:
   upgrade2: {fileID: 0}
   upgrade3: {fileID: 0}
   WaveManager: {fileID: 0}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
 --- !u!61 &4657986866950973531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1537,7 +1537,7 @@ MonoBehaviour:
   upgrade1: {fileID: 7138584486355675392}
   upgrade2: {fileID: 7443939883263969368}
   upgrade3: {fileID: 5044491719434988913}
-  upgrade: {fileID: 8300000, guid: d18ec76dc419fc548a4d409fd981290d, type: 3}
+  upgrade: {fileID: 8300000, guid: efea7dc148c4cff4c94f5569e7779e70, type: 3}
   WaveManager: {fileID: 0}
 --- !u!58 &5987395480404057428
 CircleCollider2D:
