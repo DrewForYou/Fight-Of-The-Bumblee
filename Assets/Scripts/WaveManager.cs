@@ -17,7 +17,7 @@ public class WaveManager : MonoBehaviour
     public CurrencyManager CurrencyManager;
     public GameManager GameManager;
     public TMP_Text WhatWave;
-    public AudioClip StartSound;
+    //public AudioClip StartSound;
     public GameObject WaveDone;
     public GameObject DeathEffect;
     public List<GameObject> EnemyEffects;
@@ -63,7 +63,7 @@ public class WaveManager : MonoBehaviour
                 wave));
         }
         CurrentWave += 1;
-        AudioSource.PlayClipAtPoint(StartSound, Camera.main.transform.position);
+        //AudioSource.PlayClipAtPoint(StartSound, Camera.main.transform.position);
         WhatWave.text = "Wave: " + CurrentWave;
 
         //Don't forget to impliment me.
