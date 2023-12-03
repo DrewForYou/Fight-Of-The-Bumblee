@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: 
-  Upgrade1Text: 
-  Upgrade2Text: 
-  Upgrade3Text: 
+  towerName: Queen Bee Tower
+  Upgrade1Text: No Upgrades
+  Upgrade2Text: No Upgrades
+  Upgrade3Text: No Upgrades
   UpdateSprite: {fileID: 624193634, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   BeeDrone: {fileID: 3128469825476434143, guid: 2750014c3890c3f43909dbf119f590ba, type: 3}
   SpawnPoint: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 922101093402723332}
   - component: {fileID: 1471268837002698850}
   - component: {fileID: 2093360427237412726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MagePlacementColider
   m_TagString: Tower
   m_Icon: {fileID: 0}

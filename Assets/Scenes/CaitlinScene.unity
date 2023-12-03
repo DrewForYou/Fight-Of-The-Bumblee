@@ -1753,6 +1753,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1015
   UpgradeButton: {fileID: 839274305}
+  Upgrade1: {fileID: 1711198849}
   WaveStart: {fileID: 0}
 --- !u!114 &201426290
 MonoBehaviour:
@@ -10315,19 +10316,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1201773542}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1201773540}
-        m_TargetAssemblyTypeName: TowerSelectUI, Assembly-CSharp
-        m_MethodName: QueenBeeButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1201773542
 MonoBehaviour:
   m_ObjectHideFlags: 0

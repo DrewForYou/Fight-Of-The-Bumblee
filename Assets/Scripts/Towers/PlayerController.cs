@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask IgnoreAttack;
 
     public UpgradeButton UpgradeButton;
+    public UpgradeButton Upgrade1;
     //public GameObject Upgrades;
     public AudioClip WaveStart;
 
@@ -168,6 +169,18 @@ public class PlayerController : MonoBehaviour
             {
                 UpgradeButton.Instance.SelectedTower(tower);
 
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            QueenBeeCode tower = hit.collider.GetComponentInChildren<QueenBeeCode>();
+
+            if (tower != null)
+            {
+                UpgradeButton.Instance.SelectedTower(tower);
+                Upgrade1.UpgradeButtons[0].interactable = false;
             }
 
         }

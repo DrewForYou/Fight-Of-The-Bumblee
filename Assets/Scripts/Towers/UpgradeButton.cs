@@ -180,6 +180,12 @@ public class UpgradeButton : MonoBehaviour
                 UpgradeText2.text = ((WarriorBeeCode)selectedTower).Upgrade2Text;
                 UpgradeText3.text = ((WarriorBeeCode)selectedTower).Upgrade3Text;
             }
+            if (selectedTower is QueenBeeCode)
+            {
+                UpgradeText1.text = ((QueenBeeCode)selectedTower).Upgrade1Text;
+                UpgradeText2.text = ((QueenBeeCode)selectedTower).Upgrade2Text;
+                UpgradeText3.text = ((QueenBeeCode)selectedTower).Upgrade3Text;
+            }
 
         }
     }   
