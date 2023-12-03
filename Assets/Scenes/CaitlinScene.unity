@@ -19987,7 +19987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf3cc48b7a3d444f89e0d2cbc7d29a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingCurrency: 50
+  startingCurrency: 2147483647
   currencyText: {fileID: 705103666}
 --- !u!114 &1947239862
 MonoBehaviour:

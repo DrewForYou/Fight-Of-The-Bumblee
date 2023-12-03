@@ -388,10 +388,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
-  towerName: 
-  Upgrade1Text: 
-  Upgrade2Text: 
-  Upgrade3Text: 
+  towerName: Vampire Tower
+  Upgrade1Text: 'Rate: 2 Cost: 250'
+  Upgrade2Text: 'Dmg: 100 Cost: 500'
+  Upgrade3Text: 'Rate: 5 Cost: 1000'
   UpdateSprite: {fileID: 1683343506, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 0}
   Attack: {fileID: 0}
@@ -833,9 +833,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: 0
   towerName: Vampire Tower
-  Upgrade1Text: Rate = 2 Cost = 5
-  Upgrade2Text: 'Dmg = 6 Cost = 10 '
-  Upgrade3Text: Rate = 5 Cost = 13
+  Upgrade1Text: 'Rate: 2 Cost: 250'
+  Upgrade2Text: 'Dmg: 100 Cost: 500'
+  Upgrade3Text: 'Rate: 5 Cost: 1000'
   UpdateSprite: {fileID: 1683343506, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 1060212649697187174}
   Attack: {fileID: 2910793154016873052, guid: b6b14a8cf4a7a4f4489d23095778fd77, type: 3}
@@ -898,9 +898,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: 0
   towerName: Vampire Tower
-  Upgrade1Text: Rate = 2 Cost = 5
-  Upgrade2Text: 'Dmg = 6 Cost = 10 '
-  Upgrade3Text: Rate = 5 Cost = 13
+  Upgrade1Text: 'Rate: 2 Cost: 250'
+  Upgrade2Text: 'Dmg: 100 Cost: 500 '
+  Upgrade3Text: 'Rate: 5 Cost: 1000'
   UpdateSprite: {fileID: 1683343506, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   Weapon: {fileID: 1060212649697187174}
   Attack: {fileID: 2910793154016873052, guid: b6b14a8cf4a7a4f4489d23095778fd77, type: 3}

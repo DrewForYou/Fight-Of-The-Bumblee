@@ -280,9 +280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: 0
   towerName: Sniper Bee
-  Upgrade1Text: 'Range: 9 Cost: 5'
-  Upgrade2Text: 'Rate: 6 Cost: 10'
-  Upgrade3Text: 'Rate: 4 Cost 13'
+  Upgrade1Text: 'Range: 9 Cost: 250'
+  Upgrade2Text: 'Rate: 6 Cost: 500'
+  Upgrade3Text: 'Rate: 4 Cost: 1000'
   UpdateSprite: {fileID: 1075847298, guid: 102b9e14ebbf0674785eec75c96afcd7, type: 3}
   AttackDamage: 300
   AttackRange: 7
