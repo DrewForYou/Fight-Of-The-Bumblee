@@ -33,7 +33,7 @@ public class NinjaBee : Tower
 
     public WaveManager WaveManager;
 
-    public int Damage = 1;
+    public int Damage = 5;
 
     public GameObject upgrade1;
     public GameObject upgrade2;
@@ -134,7 +134,7 @@ public class NinjaBee : Tower
     public override void Upgrade2()
     {
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            Damage = 3;
+            Damage = 15;
             
             upgrade2.SetActive(true);
             upgrade1.SetActive(false);

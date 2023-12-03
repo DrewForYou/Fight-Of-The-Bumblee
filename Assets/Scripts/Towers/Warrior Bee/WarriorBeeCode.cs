@@ -36,7 +36,7 @@ public class WarriorBeeCode : Tower
     public List<GameObject> EnemyTargets;
 
 
-    public int Damage = 3;
+    public int Damage = 50;
 
     public GameObject upgrade1;
     public GameObject upgrade2;
@@ -138,7 +138,7 @@ public class WarriorBeeCode : Tower
     {
       
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            Damage = 6;
+            Damage = 150;
          
             upgrade2.SetActive(true);
             upgrade1.SetActive(false);

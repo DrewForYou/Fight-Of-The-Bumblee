@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889a505dec80a00439a896917e0cea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 500
   Strength: 2
-  Value: 10
+  Value: 20
   Speed: 3
   EnemyRB: {fileID: 3659522517378227455}
   EnemyCollider: {fileID: 1704002081390092622}
@@ -139,8 +139,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   CurrencyManager: {fileID: 0}
   Frozen: 0
-  DeathEffect: {fileID: 4379589507501685432, guid: 2b11e351a7baaf74f8e096dbf883125c, type: 3}
-  DeathSound: {fileID: 5633056305691114367}
+  WaveManage: {fileID: 0}
 --- !u!61 &1704002081390092622
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889a505dec80a00439a896917e0cea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 40
+  Health: 700
   Strength: 5
   Value: 40
   Speed: 3
@@ -139,8 +139,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   CurrencyManager: {fileID: 0}
   Frozen: 0
-  DeathEffect: {fileID: 4379589507501685432, guid: 2b11e351a7baaf74f8e096dbf883125c, type: 3}
-  DeathSound: {fileID: 7016708671146019337}
+  WaveManage: {fileID: 0}
 --- !u!61 &132951835319285471
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1572,7 +1572,7 @@ MonoBehaviour:
   Force: 300
   EnemyTargets: []
   WaveManager: {fileID: 0}
-  Damage: 1
+  Damage: 5
   upgrade1: {fileID: 2188156107747491702}
   upgrade2: {fileID: 2035124241729267712}
   upgrade3: {fileID: 2186702886493163613}

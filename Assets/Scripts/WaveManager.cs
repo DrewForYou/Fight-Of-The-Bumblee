@@ -21,6 +21,7 @@ public class WaveManager : MonoBehaviour
     public GameObject WaveDone;
     public GameObject DeathEffect;
     public List<GameObject> EnemyEffects;
+    public GameObject starthelp;
 
     private void Start()
     {
@@ -31,7 +32,11 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
-        if (WaveOver && TempStart)
+        if (CurrentWave >= 1)
+        {
+            starthelp.SetActive(false);
+        }
+            if (WaveOver && TempStart)
         {
             if (CurrentWave < Waves.Count)
             {

@@ -31,7 +31,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3459447650512221229}
-  - {fileID: 4252754822830448125}
   - {fileID: 7946040535731472843}
   - {fileID: 7803129370783661034}
   - {fileID: 1374636929411360902}
@@ -275,13 +274,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3258054854274246076}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.49, y: -0.032, z: 0}
-  m_LocalScale: {x: 3.3461866, y: 4.211058, z: 3.3461854}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 0.20905446, y: 0.013652535, z: 0}
+  m_LocalScale: {x: 1.4276228, y: 1.796613, z: 1.4276224}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8784963686896778182}
-  m_Father: {fileID: 6362679436851029444}
+  m_Father: {fileID: 4816663530741835980}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &4160414615176024963
@@ -509,7 +508,7 @@ MonoBehaviour:
   AttackPoint: {fileID: 8784963686896778182}
   Force: 50
   EnemyTargets: []
-  Damage: 1
+  Damage: 5
   upgrade1: {fileID: 8685347744175783667}
   upgrade2: {fileID: 2373630155583488443}
   upgrade3: {fileID: 6575057261420192081}
@@ -762,7 +761,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.37975764, y: 0.37975764, z: 2.429516}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4252754822830448125}
   m_Father: {fileID: 3459447650512221229}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -869,7 +869,7 @@ MonoBehaviour:
   AttackPoint: {fileID: 8784963686896778182}
   Force: 50
   EnemyTargets: []
-  Damage: 1
+  Damage: 5
   upgrade1: {fileID: 8685347744175783667}
   upgrade2: {fileID: 2373630155583488443}
   upgrade3: {fileID: 6575057261420192081}

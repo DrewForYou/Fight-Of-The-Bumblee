@@ -111,7 +111,7 @@ MonoBehaviour:
   WaveManager: {fileID: 0}
   Pathing: []
   NextTimeToAttack: 20
-  Damage: 3
+  Damage: 300
   Speed: 3
 --- !u!61 &1974495209511532468
 BoxCollider2D:

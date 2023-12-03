@@ -93,10 +93,10 @@ public class UpgradeButton : MonoBehaviour
     }
     public void UpgradeButton1()
     {
-        if (selectedTower != null && CurrencyManager.instance.CanAfford(5))
+        if (selectedTower != null && CurrencyManager.instance.CanAfford(250))
         //(ArcherBeeTower.Instance != null && CurrencyManager.instance.CanAfford(5))
         {
-            CurrencyManager.instance.DeductCurrency(5);
+            CurrencyManager.instance.DeductCurrency(250);
 
             selectedTower.Upgrade1();
             Upgrades.SetActive(false);
@@ -109,10 +109,10 @@ public class UpgradeButton : MonoBehaviour
 
     public void UpgradeButton2()
     {
-        if (selectedTower != null && CurrencyManager.instance.CanAfford(10))
+        if (selectedTower != null && CurrencyManager.instance.CanAfford(500))
      
         {
-            CurrencyManager.instance.DeductCurrency(10);
+            CurrencyManager.instance.DeductCurrency(500);
 
             selectedTower.Upgrade2();
             Upgrades.SetActive(false);
@@ -121,10 +121,10 @@ public class UpgradeButton : MonoBehaviour
 
     public void UpgradeButton3()
     {
-        if (selectedTower != null && CurrencyManager.instance.CanAfford(13))
+        if (selectedTower != null && CurrencyManager.instance.CanAfford(1000))
       
         {
-            CurrencyManager.instance.DeductCurrency(13);
+            CurrencyManager.instance.DeductCurrency(1000);
 
             selectedTower.Upgrade3();
             Upgrades.SetActive(false);

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SniperBee
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2728857379578880700, guid: c102f476068b69d43bd4616e5b7d76ee, type: 3}
-  TowerPrice: 15
+  TowerPrice: 550
   TowerSprite: {fileID: -39976023, guid: c7eb1222872a4294cb83deb5e6ea6707, type: 3}

@@ -31,7 +31,7 @@ public class ChefBee : Tower
     public List<GameObject> EnemyTargets;
 
 
-    public int Damage = 1;
+    public int Damage = 5;
 
     public GameObject upgrade1;
     public GameObject upgrade2;
@@ -125,7 +125,7 @@ public class ChefBee : Tower
        
         
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            AttackingRate = 2;
+            AttackingRate = 10;
             
             upgrade1.SetActive(true);
         Level = 1;
@@ -136,7 +136,7 @@ public class ChefBee : Tower
         
         
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            Damage = 3;
+            Damage = 15;
            
             upgrade2.SetActive(true);
             upgrade1.SetActive(false);
@@ -148,7 +148,7 @@ public class ChefBee : Tower
         
         
             AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
-            AttackingRate = 5;
+            AttackingRate = 20;
             
             upgrade3.SetActive(true);
             upgrade2.SetActive(false);

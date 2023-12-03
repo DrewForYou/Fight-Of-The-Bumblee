@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HunterBee
   m_EditorClassIdentifier: 
   Prefab: {fileID: 42993025946849947, guid: 58e78bfc0ed6d34489ebba4ea5df83e1, type: 3}
-  TowerPrice: 15
+  TowerPrice: 650
   TowerSprite: {fileID: 211694454, guid: c7eb1222872a4294cb83deb5e6ea6707, type: 3}
