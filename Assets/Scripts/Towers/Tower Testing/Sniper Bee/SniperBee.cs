@@ -27,6 +27,11 @@ public class SniperBee : Tower
     
     public LayerMask EnemyMask;
 
+    public AudioClip upgrade;
+    public GameObject upgrade0;
+    public GameObject upgrade1;
+    public GameObject upgrade2;
+    public GameObject upgrade3;
     private void Update()
     {
         if (target == null)
@@ -119,25 +124,35 @@ public class SniperBee : Tower
    
     public override void Upgrade1()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         AttackRange = 9f;
         Level = 1;
+
+        upgrade1.SetActive(true);
+        upgrade0.SetActive(false);
         //UpgradeButton.Instance.SelectedTower(this);
         //Upgrade1Text = "Range: 9 Cost: 5";
         //towerName = "Sniper Bee";
     }
     public override void Upgrade2()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         delayShots = 6f;
         Level = 2;
+        upgrade2.SetActive(true);
+        upgrade1.SetActive(false);
         //UpgradeButton.Instance.SelectedTower(this);
         //Upgrade2Text = "Rate: 6 Cost: 10";
         //towerName = "Sniper Bee";
-        
+
     }
     public override void Upgrade3()
     {
+        AudioSource.PlayClipAtPoint(upgrade, Camera.main.transform.position);
         delayShots = 4f;
         Level = 3;
+        upgrade3.SetActive(true);
+        upgrade2.SetActive(false);
         //UpgradeButton.Instance.SelectedTower(this);
         //Upgrade3Text = "Rate: 4 Cost 13";
         //towerName = "Sniper Bee";

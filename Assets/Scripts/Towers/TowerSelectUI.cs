@@ -11,8 +11,8 @@ public class TowerSelectUI : MonoBehaviour
     
     private Button button;
     private bool buttonPressed = false;
- 
-  
+   
+
     private void Start()
     {
         button = GetComponent<Button>();
@@ -20,23 +20,21 @@ public class TowerSelectUI : MonoBehaviour
         
         button.onClick.AddListener(SelectTower);
         button.interactable = !buttonPressed;
+        TowerCost();
         //isPreviewingTower = false;
         
         //CanAffordButton();
     }
-    /*
-    public void CanAffordButton()
+    
+    private void TowerCost()
     {
-        bool canAfford = (CurrencyManager.instance.CanAfford(TowerType.TowerPrice));
-        button.interactable = canAfford;
-        button.interactable = false;
-
-        if (!canAfford)
-        {
-            button.interactable = true;
-        }
+        button.interactable = !buttonPressed && CurrencyManager.instance.CanAfford(TowerType.TowerPrice);
     }
-    */
+
+    private void Update()
+    {
+        TowerCost();
+    }
     private void SelectTower()
     {
         if (CurrencyManager.instance.CanAfford(TowerType.TowerPrice))
@@ -53,11 +51,10 @@ public class TowerSelectUI : MonoBehaviour
             {
                 TowerPlacementUI.instance.Activate(towerSprite);
             }
-            else
-            {
-                //Debug.Log("No sprite renderer found");
-            }
-        }  
+        
+        }
+
+        TowerCost();
     }
 
     // code for queen bee only being allowed to place once
@@ -67,29 +64,25 @@ public class TowerSelectUI : MonoBehaviour
         {
             buttonPressed = true;
             
+
             // enables tower placement when button is selected
             TowerPlacement.instance.CanPlaceTower = true;
 
             Sprite towerSprite = TowerType.TowerSprite;
 
+            
             if (towerSprite != null)
             {
                 TowerPlacementUI.instance.Activate(towerSprite);
-                button.interactable = false;
+                //button.interactable = false;
             }
             
+            /*
             if(FindAnyObjectByType<QueenBeeCode>() == null)
             {
                 button.interactable = true;
             }
-
-            else
-            {
-                //Debug.Log("No sprite renderer found");
-            }
+            */
         }
     }
-
-    
-
 }
